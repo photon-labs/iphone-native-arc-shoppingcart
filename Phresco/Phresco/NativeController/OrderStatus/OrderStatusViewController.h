@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class BrowseViewController;
+@class Tabbar;
 @interface OrderStatusViewController : UIViewController
+{
+    UITextView* orderStatusTextView;//orderStatusTextView
+    BrowseViewController* browseViewController;
+    Tabbar *tabbar;
+}
+@property (nonatomic, retain) UITextView* orderStatusTextView;
+@property (nonatomic, retain) BrowseViewController* browseViewController;
 
+-(void) loadNavigationBar;
+-(void) initializeTextView;
+-(void)goBack:(id)sender;
 @end
