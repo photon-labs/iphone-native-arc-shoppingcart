@@ -14,7 +14,7 @@
 #import "DataModelEntities.h"
 #import "SharedObjects.h"
 #import "ProductDetailsViewController.h"
-//#import "CheckOutViewController.h"
+#import "CheckOutViewController.h"
 #import "BrowseViewController.h"
 //#import "SpecialOffersViewController.h"
 #import "ServiceHandler.h"
@@ -24,8 +24,6 @@
 @interface AddToBagViewController ()
 
 @end
-
-
 
 
 @implementation AddToBagViewController
@@ -660,7 +658,7 @@
 //    
 //    [self.view addSubview:checkCartController.view];
 //    
-//    [checkViewCartController = nil;
+//    checkViewCartController = nil;
     
 }
 

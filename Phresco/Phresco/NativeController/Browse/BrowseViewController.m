@@ -696,19 +696,19 @@
     [assetsData updateProductModel:data];
     
     
-//    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-//        
-////        ResultViewController *tempResultViewController = [[ResultViewController alloc] initWithNibName:@"ResultsViewController-iPAd" bundle:nil];
-////        
-////        self.resultViewController = tempResultViewController;
-////        
-////        [self.view addSubview:resultViewController.view];
-////        
-////        tempResultViewController = nil;        
-//    }
-//    else {
-//        
-//        
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        
+        ResultViewController *tempResultViewController = [[ResultViewController alloc] initWithNibName:@"ResultsViewController-iPAd" bundle:nil];
+        
+        self.resultViewController = tempResultViewController;
+        
+        [self.view addSubview:resultViewController.view];
+        
+        tempResultViewController = nil;        
+    }
+    else {
+        
+        
         if(loginChk == YES) {
             
             ResultViewController *tempResultViewController = [[ResultViewController alloc] initWithNibName:@"ResultViewController" bundle:nil];
@@ -734,7 +734,7 @@
             
             tempResultViewController =nil;
         }
-   // }
+    }
 }
 
 

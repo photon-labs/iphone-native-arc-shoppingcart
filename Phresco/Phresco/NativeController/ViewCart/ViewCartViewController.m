@@ -9,9 +9,9 @@
 #import "ViewCartViewController.h"
 #import "DataModelEntities.h"
 #import "SharedObjects.h"
-//#import "CheckOutViewController.h"
+#import "CheckOutViewController.h"
 #import "BrowseViewController.h"
-//#import "CheckOutOVerallViewController.h"
+#import "CheckOutOVerallViewController.h"
 #import "ServiceHandler.h"
 //#import "SpecialOffersViewController.h"
 #import "Tabbar.h"
@@ -418,23 +418,23 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-//        CheckOutViewController  *checkViewCartController = [[CheckOutViewController alloc] initWithNibName:@"ViewCartController-iPad" bundle:nil];
-//        checkViewCartController.checkTotalPrice =[NSString stringWithFormat:@"%@",cartPurchaseTotal];
-//        self.checkCartController = checkViewCartController;
-//        
-//        [self.view addSubview:checkCartController.view];
-//        
-//        [checkViewCartController release];
+        CheckOutViewController  *checkViewCartController = [[CheckOutViewController alloc] initWithNibName:@"ViewCartController-iPad" bundle:nil];
+        checkViewCartController.checkTotalPrice =[NSString stringWithFormat:@"%@",cartPurchaseTotal];
+        self.checkCartController = checkViewCartController;
+        
+        [self.view addSubview:checkCartController.view];
+        
+        checkViewCartController =nil;
     }
     else {
         
-//        CheckOutViewController  *checkViewCartController = [[CheckOutViewController alloc] initWithNibName:@"ViewCartController" bundle:nil];
-//        checkViewCartController.checkTotalPrice =[NSString stringWithFormat:@"%@",cartPurchaseTotal];
-//        self.checkCartController = checkViewCartController;
-//        
-//        [self.view addSubview:checkCartController.view];
-//        
-//        [checkViewCartController release];
+        CheckOutViewController  *checkViewCartController = [[CheckOutViewController alloc] initWithNibName:@"ViewCartController" bundle:nil];
+        checkViewCartController.checkTotalPrice =[NSString stringWithFormat:@"%@",cartPurchaseTotal];
+        self.checkCartController = checkViewCartController;
+        
+        [self.view addSubview:checkCartController.view];
+        
+        checkViewCartController =nil;
     }
     
     

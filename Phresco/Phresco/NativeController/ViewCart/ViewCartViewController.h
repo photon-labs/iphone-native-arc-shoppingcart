@@ -11,7 +11,7 @@
 @class BrowseViewController;
 @class SpecialOffersViewController;
 @class Tabbar;
-@interface ViewCartViewController : UIViewController
+@interface ViewCartViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
     UITableView* viewCartTable;
     UILabel* Quantity;

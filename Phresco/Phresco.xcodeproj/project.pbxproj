@@ -47,6 +47,13 @@
 		EAC8D4F2161D9E6400D80B5A /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8D4ED161D9E6300D80B5A /* UIUtils.m */; };
 		EAC8D4F3161D9E6400D80B5A /* UIWebView_PageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8D4EF161D9E6300D80B5A /* UIWebView_PageTransition.m */; };
 		EAC8D4F4161D9E6400D80B5A /* WebUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8D4F1161D9E6300D80B5A /* WebUtils.m */; };
+		EACD04FC1625480400DE1505 /* CheckOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD04FA1625480400DE1505 /* CheckOutViewController.m */; };
+		EACD04FD1625480400DE1505 /* CheckOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACD04FB1625480400DE1505 /* CheckOutViewController.xib */; };
+		EACD05021625488700DE1505 /* CheckoutOverAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD05001625488700DE1505 /* CheckoutOverAllViewController.m */; };
+		EACD05031625488700DE1505 /* CheckoutOverAllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACD05011625488700DE1505 /* CheckoutOverAllViewController.xib */; };
+		EACD05061625497B00DE1505 /* DTCustomColoredAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD05051625497B00DE1505 /* DTCustomColoredAccessory.m */; };
+		EACD050A1625701100DE1505 /* OrderStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD05081625701100DE1505 /* OrderStatusViewController.m */; };
+		EACD050B1625701100DE1505 /* OrderStatusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACD05091625701100DE1505 /* OrderStatusViewController.xib */; };
 		EACFA7481622DF720066D798 /* BrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACFA7461622DF720066D798 /* BrowseViewController.m */; };
 		EACFA7491622DF720066D798 /* BrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACFA7471622DF720066D798 /* BrowseViewController.xib */; };
 		EACFA74C1622E09B0066D798 /* BrowseViewCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EACFA74B1622E09B0066D798 /* BrowseViewCustomCell.m */; };
@@ -300,6 +307,17 @@
 		EAC8D4EF161D9E6300D80B5A /* UIWebView_PageTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebView_PageTransition.m; sourceTree = "<group>"; };
 		EAC8D4F0161D9E6300D80B5A /* WebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUtils.h; sourceTree = "<group>"; };
 		EAC8D4F1161D9E6300D80B5A /* WebUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebUtils.m; sourceTree = "<group>"; };
+		EACD04F91625480400DE1505 /* CheckOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckOutViewController.h; sourceTree = "<group>"; };
+		EACD04FA1625480400DE1505 /* CheckOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckOutViewController.m; sourceTree = "<group>"; };
+		EACD04FB1625480400DE1505 /* CheckOutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckOutViewController.xib; sourceTree = "<group>"; };
+		EACD04FF1625488700DE1505 /* CheckoutOverAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutOverAllViewController.h; sourceTree = "<group>"; };
+		EACD05001625488700DE1505 /* CheckoutOverAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutOverAllViewController.m; sourceTree = "<group>"; };
+		EACD05011625488700DE1505 /* CheckoutOverAllViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckoutOverAllViewController.xib; sourceTree = "<group>"; };
+		EACD05041625497B00DE1505 /* DTCustomColoredAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCustomColoredAccessory.h; sourceTree = "<group>"; };
+		EACD05051625497B00DE1505 /* DTCustomColoredAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTCustomColoredAccessory.m; sourceTree = "<group>"; };
+		EACD05071625701100DE1505 /* OrderStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderStatusViewController.h; sourceTree = "<group>"; };
+		EACD05081625701100DE1505 /* OrderStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderStatusViewController.m; sourceTree = "<group>"; };
+		EACD05091625701100DE1505 /* OrderStatusViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderStatusViewController.xib; sourceTree = "<group>"; };
 		EACFA7451622DF720066D798 /* BrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowseViewController.h; sourceTree = "<group>"; };
 		EACFA7461622DF720066D798 /* BrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowseViewController.m; sourceTree = "<group>"; };
 		EACFA7471622DF720066D798 /* BrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowseViewController.xib; sourceTree = "<group>"; };
@@ -710,6 +728,14 @@
 		EAD0DB1D1624029D00A966BD /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
+				EACD04F91625480400DE1505 /* CheckOutViewController.h */,
+				EACD04FA1625480400DE1505 /* CheckOutViewController.m */,
+				EACD04FB1625480400DE1505 /* CheckOutViewController.xib */,
+				EACD04FF1625488700DE1505 /* CheckoutOverAllViewController.h */,
+				EACD05001625488700DE1505 /* CheckoutOverAllViewController.m */,
+				EACD05011625488700DE1505 /* CheckoutOverAllViewController.xib */,
+				EACD05041625497B00DE1505 /* DTCustomColoredAccessory.h */,
+				EACD05051625497B00DE1505 /* DTCustomColoredAccessory.m */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -731,6 +757,9 @@
 		EAD0DB201624029D00A966BD /* OrderStatus */ = {
 			isa = PBXGroup;
 			children = (
+				EACD05071625701100DE1505 /* OrderStatusViewController.h */,
+				EACD05081625701100DE1505 /* OrderStatusViewController.m */,
+				EACD05091625701100DE1505 /* OrderStatusViewController.xib */,
 			);
 			path = OrderStatus;
 			sourceTree = "<group>";
@@ -1330,6 +1359,9 @@
 				EAD0DB3A1624223300A966BD /* ProductDetailsViewController.xib in Resources */,
 				EAD0DB3F162434E700A966BD /* AddToBagViewController.xib in Resources */,
 				EAD0DB4816244E9F00A966BD /* ViewCartViewController.xib in Resources */,
+				EACD04FD1625480400DE1505 /* CheckOutViewController.xib in Resources */,
+				EACD05031625488700DE1505 /* CheckoutOverAllViewController.xib in Resources */,
+				EACD050B1625701100DE1505 /* OrderStatusViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1378,6 +1410,10 @@
 				EAD0DB3E162434E700A966BD /* AddToBagViewController.m in Sources */,
 				EAD0DB4216243BCD00A966BD /* AddToBagCustomCell.m in Sources */,
 				EAD0DB4716244E9F00A966BD /* ViewCartViewController.m in Sources */,
+				EACD04FC1625480400DE1505 /* CheckOutViewController.m in Sources */,
+				EACD05021625488700DE1505 /* CheckoutOverAllViewController.m in Sources */,
+				EACD05061625497B00DE1505 /* DTCustomColoredAccessory.m in Sources */,
+				EACD050A1625701100DE1505 /* OrderStatusViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
