@@ -29,13 +29,15 @@
 #import "Tabbar.h"
 #import "BrowseViewController.h"
 #import "ResultViewController.h"
-
+#import "SpecialOffersViewController.h"
 @implementation HomeViewController
 
 @synthesize searchTextField;
 @synthesize activityIndicator;
 @synthesize array_;
 @synthesize browseViewController;
+@synthesize resultViewController;
+@synthesize specialOffersViewController;
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -443,7 +445,7 @@
 //            
 //            [self.view addSubview:loginViewController.view];
 //            
-//            [tempLoginViewController release];
+//            tempLoginViewController = nil;
         }
         else {
             
@@ -453,7 +455,7 @@
 //            
 //            [self.view addSubview:loginViewController.view];
 //            
-//            [tempLoginViewController release];
+//            tempLoginViewController = nil;
         }
 		
 	}
@@ -467,7 +469,7 @@
 //            
 //            [self.view addSubview:registrationViewController.view];
 //            
-//            [tempRegistrationViewController release];
+//            tempRegistrationViewController = nil;
         }
         else {
             
@@ -478,7 +480,7 @@
 //            
 //            [self.view addSubview:registrationViewController.view];
 //            
-//            [tempRegistrationViewController release];
+//            tempRegistrationViewController = nil;
         }
         
     }
@@ -535,7 +537,7 @@
 //        
 //        [self.view addSubview:browseViewController.view];
 //        
-//        [tempBrowseViewController release];
+//        tempBrowseViewController = nil;
     }
     else {
 //        if(loginViewController.isLogin == YES) {
@@ -547,7 +549,7 @@
 //            tempBrowseViewController.array_ = array;
 //            [self.view addSubview:browseViewController.view];
 //            
-//            [tempBrowseViewController release];
+//            tempBrowseViewController = nil;
        }
         //else {
             BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController" bundle:nil];
@@ -556,7 +558,7 @@
             
             [self.view addSubview:browseViewController.view];
             
-            //[tempBrowseViewController release];
+    tempBrowseViewController =nil;
        // }
     }
     
@@ -570,18 +572,18 @@
     
     [assetsData updateSpecialproductsModel:data];
     
-//    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-//        
-//        SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController-iPad" bundle:nil];
-//        
-//        self.specialOffersViewController = tempSpecialOffersViewController;
-//        
-//        [self.view addSubview:specialOffersViewController.view];
-//        
-//        [tempSpecialOffersViewController release];
-//    }
-//    else {
-//        
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        
+        SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController-iPad" bundle:nil];
+        
+        self.specialOffersViewController = tempSpecialOffersViewController;
+        
+        [self.view addSubview:specialOffersViewController.view];
+        
+        tempSpecialOffersViewController = nil;
+    }
+    else {
+        
 //        if(loginViewController.isLogin == YES) {
 //            
 //            SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
@@ -592,24 +594,24 @@
 //            
 //            [self.view addSubview:specialOffersViewController.view];
 //            
-//            [tempSpecialOffersViewController release];
-//            
-//        }
-//        
-//        else {
-//            
-//            
-//            SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
-//            
-//            self.specialOffersViewController = tempSpecialOffersViewController;
-//            
-//            [self.view addSubview:specialOffersViewController.view];
-//            
-//            [tempSpecialOffersViewController release];
+//            tempSpecialOffersViewController = nil;
 //            
 //        }
         
-   // }
+//        else {
+            
+            
+            SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
+            
+            self.specialOffersViewController = tempSpecialOffersViewController;
+            
+            [self.view addSubview:specialOffersViewController.view];
+            
+            tempSpecialOffersViewController = nil;
+            
+       // }
+        
+    }
     
 }
 /*

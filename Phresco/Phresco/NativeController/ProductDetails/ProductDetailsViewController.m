@@ -14,7 +14,7 @@
 #import "AsyncImageView.h"
 #import "ServiceHandler.h"
 #import "AddtoBagCustomCell.h"
-//#import "ReviewViewController.h"
+#import "ReviewViewController.h"
 #import "Tabbar.h"
 
 #define NUMBER_OF_RATINGS	5
@@ -23,7 +23,7 @@
 
 @synthesize scrollView;
 @synthesize addToBagController;
-//@synthesize reviewViewController;
+@synthesize reviewViewController;
 @synthesize loginChk;
 @synthesize index;
 
@@ -700,42 +700,42 @@
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
         
-//        ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController-iPAd" bundle:nil];
-//        
-//        self.reviewViewController = tempReviewViewController;
-//        
-//        [self.view addSubview:reviewViewController.view];
-//        
-//        [tempReviewViewController release];
+        ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController-iPAd" bundle:nil];
+        
+        self.reviewViewController = tempReviewViewController;
+        
+        [self.view addSubview:reviewViewController.view];
+        
+        tempReviewViewController = nil;
     }
     else {
         
         
         if(loginChk == YES) { //When the user is logged in
             
-//            ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController" bundle:nil];
-//            
-//            self.reviewViewController = tempReviewViewController;
-//            
-//            reviewViewController.loginChk = YES;
-//            
-//            reviewViewController.reviewProductId =  index;
-//            
-//            [self.view addSubview:reviewViewController.view];
+            ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController" bundle:nil];
             
-            //[tempReviewViewController release]; 
+            self.reviewViewController = tempReviewViewController;
+            
+            reviewViewController.loginChk = YES;
+            
+            reviewViewController.reviewProductId =  index;
+            
+            [self.view addSubview:reviewViewController.view];
+            
+            tempReviewViewController = nil; 
             
         }
         
         else {
-//            
-//            ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController" bundle:nil];
-//            
-//            self.reviewViewController = tempReviewViewController;
-//            
-//            [self.view addSubview:reviewViewController.view];
-//            
-//            [tempReviewViewController release];
+            
+            ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController" bundle:nil];
+            
+            self.reviewViewController = tempReviewViewController;
+            
+            [self.view addSubview:reviewViewController.view];
+            
+            tempReviewViewController = nil;
             
         }
     }

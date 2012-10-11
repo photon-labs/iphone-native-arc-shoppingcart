@@ -37,6 +37,18 @@
 		EAAA0666161C722000BD06EF /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAA0661161C722000BD06EF /* Base64.m */; };
 		EAAA0667161C722000BD06EF /* NSData-AES.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAA0663161C722000BD06EF /* NSData-AES.m */; };
 		EAAA0668161C722000BD06EF /* rijndael.c in Sources */ = {isa = PBXBuildFile; fileRef = EAAA0664161C722000BD06EF /* rijndael.c */; };
+		EAC5FB2B1626908E00C11516 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5FB291626908E00C11516 /* ReviewViewController.m */; };
+		EAC5FB2C1626908E00C11516 /* ReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC5FB2A1626908E00C11516 /* ReviewViewController.xib */; };
+		EAC5FB31162690AB00C11516 /* ReviewCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5FB2F162690AB00C11516 /* ReviewCommentsViewController.m */; };
+		EAC5FB32162690AB00C11516 /* ReviewCommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC5FB30162690AB00C11516 /* ReviewCommentsViewController.xib */; };
+		EAC5FB36162690BE00C11516 /* SubmitReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5FB34162690BE00C11516 /* SubmitReviewViewController.m */; };
+		EAC5FB37162690BE00C11516 /* SubmitReviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC5FB35162690BE00C11516 /* SubmitReviewViewController.xib */; };
+		EAC5FB3A162690D400C11516 /* ReviewCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5FB39162690D400C11516 /* ReviewCustomCell.m */; };
+		EAC5FB3E1626A49D00C11516 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5FB3C1626A49D00C11516 /* MoreViewController.m */; };
+		EAC5FB3F1626A49D00C11516 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC5FB3D1626A49D00C11516 /* MoreViewController.xib */; };
+		EAC5FB431626AEAB00C11516 /* SpecialOffersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5FB411626AEAB00C11516 /* SpecialOffersViewController.m */; };
+		EAC5FB441626AEAB00C11516 /* SpecialOffersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC5FB421626AEAB00C11516 /* SpecialOffersViewController.xib */; };
+		EAC5FB471626AED800C11516 /* SpecialOfferCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5FB461626AED800C11516 /* SpecialOfferCustomCell.m */; };
 		EAC8A961161EC5DE004D05CF /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8A960161EC5DE004D05CF /* AsyncImageView.m */; };
 		EAC8D4D2161D8FB200D80B5A /* phresco-env-config.xml in Resources */ = {isa = PBXBuildFile; fileRef = EAC8D4D1161D8FB200D80B5A /* phresco-env-config.xml */; };
 		EAC8D4DF161D94F900D80B5A /* Tabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8D4DE161D94F900D80B5A /* Tabbar.m */; };
@@ -289,6 +301,25 @@
 		EAAA0663161C722000BD06EF /* NSData-AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData-AES.m"; sourceTree = "<group>"; };
 		EAAA0664161C722000BD06EF /* rijndael.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rijndael.c; sourceTree = "<group>"; };
 		EAAA0665161C722000BD06EF /* rijndael.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rijndael.h; sourceTree = "<group>"; };
+		EAC5FB281626908E00C11516 /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
+		EAC5FB291626908E00C11516 /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
+		EAC5FB2A1626908E00C11516 /* ReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewViewController.xib; sourceTree = "<group>"; };
+		EAC5FB2E162690AB00C11516 /* ReviewCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewCommentsViewController.h; sourceTree = "<group>"; };
+		EAC5FB2F162690AB00C11516 /* ReviewCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCommentsViewController.m; sourceTree = "<group>"; };
+		EAC5FB30162690AB00C11516 /* ReviewCommentsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewCommentsViewController.xib; sourceTree = "<group>"; };
+		EAC5FB33162690BE00C11516 /* SubmitReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitReviewViewController.h; sourceTree = "<group>"; };
+		EAC5FB34162690BE00C11516 /* SubmitReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitReviewViewController.m; sourceTree = "<group>"; };
+		EAC5FB35162690BE00C11516 /* SubmitReviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubmitReviewViewController.xib; sourceTree = "<group>"; };
+		EAC5FB38162690D400C11516 /* ReviewCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewCustomCell.h; sourceTree = "<group>"; };
+		EAC5FB39162690D400C11516 /* ReviewCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCustomCell.m; sourceTree = "<group>"; };
+		EAC5FB3B1626A49D00C11516 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		EAC5FB3C1626A49D00C11516 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		EAC5FB3D1626A49D00C11516 /* MoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
+		EAC5FB401626AEAB00C11516 /* SpecialOffersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialOffersViewController.h; sourceTree = "<group>"; };
+		EAC5FB411626AEAB00C11516 /* SpecialOffersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialOffersViewController.m; sourceTree = "<group>"; };
+		EAC5FB421626AEAB00C11516 /* SpecialOffersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialOffersViewController.xib; sourceTree = "<group>"; };
+		EAC5FB451626AED800C11516 /* SpecialOfferCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialOfferCustomCell.h; sourceTree = "<group>"; };
+		EAC5FB461626AED800C11516 /* SpecialOfferCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialOfferCustomCell.m; sourceTree = "<group>"; };
 		EAC8A95F161EC5DE004D05CF /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		EAC8A960161EC5DE004D05CF /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		EAC8D4D1161D8FB200D80B5A /* phresco-env-config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "phresco-env-config.xml"; sourceTree = "<group>"; };
@@ -750,6 +781,9 @@
 		EAD0DB1F1624029D00A966BD /* MoreOption */ = {
 			isa = PBXGroup;
 			children = (
+				EAC5FB3B1626A49D00C11516 /* MoreViewController.h */,
+				EAC5FB3C1626A49D00C11516 /* MoreViewController.m */,
+				EAC5FB3D1626A49D00C11516 /* MoreViewController.xib */,
 			);
 			path = MoreOption;
 			sourceTree = "<group>";
@@ -796,6 +830,17 @@
 		EAD0DB241624029D00A966BD /* ReviewView */ = {
 			isa = PBXGroup;
 			children = (
+				EAC5FB281626908E00C11516 /* ReviewViewController.h */,
+				EAC5FB291626908E00C11516 /* ReviewViewController.m */,
+				EAC5FB2A1626908E00C11516 /* ReviewViewController.xib */,
+				EAC5FB2E162690AB00C11516 /* ReviewCommentsViewController.h */,
+				EAC5FB2F162690AB00C11516 /* ReviewCommentsViewController.m */,
+				EAC5FB30162690AB00C11516 /* ReviewCommentsViewController.xib */,
+				EAC5FB33162690BE00C11516 /* SubmitReviewViewController.h */,
+				EAC5FB34162690BE00C11516 /* SubmitReviewViewController.m */,
+				EAC5FB35162690BE00C11516 /* SubmitReviewViewController.xib */,
+				EAC5FB38162690D400C11516 /* ReviewCustomCell.h */,
+				EAC5FB39162690D400C11516 /* ReviewCustomCell.m */,
 			);
 			path = ReviewView;
 			sourceTree = "<group>";
@@ -803,6 +848,11 @@
 		EAD0DB251624029D00A966BD /* SpecialOffer */ = {
 			isa = PBXGroup;
 			children = (
+				EAC5FB401626AEAB00C11516 /* SpecialOffersViewController.h */,
+				EAC5FB411626AEAB00C11516 /* SpecialOffersViewController.m */,
+				EAC5FB421626AEAB00C11516 /* SpecialOffersViewController.xib */,
+				EAC5FB451626AED800C11516 /* SpecialOfferCustomCell.h */,
+				EAC5FB461626AED800C11516 /* SpecialOfferCustomCell.m */,
 			);
 			path = SpecialOffer;
 			sourceTree = "<group>";
@@ -1362,6 +1412,11 @@
 				EACD04FD1625480400DE1505 /* CheckOutViewController.xib in Resources */,
 				EACD05031625488700DE1505 /* CheckoutOverAllViewController.xib in Resources */,
 				EACD050B1625701100DE1505 /* OrderStatusViewController.xib in Resources */,
+				EAC5FB2C1626908E00C11516 /* ReviewViewController.xib in Resources */,
+				EAC5FB32162690AB00C11516 /* ReviewCommentsViewController.xib in Resources */,
+				EAC5FB37162690BE00C11516 /* SubmitReviewViewController.xib in Resources */,
+				EAC5FB3F1626A49D00C11516 /* MoreViewController.xib in Resources */,
+				EAC5FB441626AEAB00C11516 /* SpecialOffersViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1414,6 +1469,13 @@
 				EACD05021625488700DE1505 /* CheckoutOverAllViewController.m in Sources */,
 				EACD05061625497B00DE1505 /* DTCustomColoredAccessory.m in Sources */,
 				EACD050A1625701100DE1505 /* OrderStatusViewController.m in Sources */,
+				EAC5FB2B1626908E00C11516 /* ReviewViewController.m in Sources */,
+				EAC5FB31162690AB00C11516 /* ReviewCommentsViewController.m in Sources */,
+				EAC5FB36162690BE00C11516 /* SubmitReviewViewController.m in Sources */,
+				EAC5FB3A162690D400C11516 /* ReviewCustomCell.m in Sources */,
+				EAC5FB3E1626A49D00C11516 /* MoreViewController.m in Sources */,
+				EAC5FB431626AEAB00C11516 /* SpecialOffersViewController.m in Sources */,
+				EAC5FB471626AED800C11516 /* SpecialOfferCustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class ViewCartViewController;
-//@class CheckOutViewController;
+@class CheckOutViewController;
 @class BrowseViewController;
 //@class SpecialOffersViewController;
 @class Tabbar;
@@ -48,7 +48,7 @@
     Tabbar *tabbar;
     BrowseViewController* browseViewController;
 //    SpecialOffersViewController* specialOffersViewController;
-//    CheckOutViewController* checkCartController;
+    CheckOutViewController* checkCartController;
     ViewCartViewController  *viewCartController;
     
 }
@@ -68,9 +68,7 @@
 //@property (nonatomic, strong) SpecialOffersViewController* specialOffersViewController;
 //
 @property (nonatomic, strong) ViewCartViewController  *viewCartController;
-//
-//@property (nonatomic, strong) CheckOutViewController* checkCartController;
-//
+@property (nonatomic, strong) CheckOutViewController* checkCartController;
 
 -(void)goBack:(id)sender;
 

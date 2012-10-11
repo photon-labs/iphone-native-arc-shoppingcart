@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @class Tabbar;
-//@class ReviewViewController;
-//@class AddToBagViewController;
+@class ReviewViewController;
+@class AddToBagViewController;
 //@class SpecialOffersViewController;
-//@class Tabbar;
 //@class LoginViewController;
 @class ProductDetailsViewController;
 
@@ -27,8 +26,6 @@
 	
 	NSMutableArray	*priceArray;
     
-    
-    
     NSMutableArray* array_;
     
     BOOL loginChk;
@@ -38,11 +35,11 @@
     UIActivityIndicatorView* activityIndicator;
     
 	ProductDetailsViewController *productDetailsViewController;
-//    
-//	ReviewViewController* reviewViewController;
-//    
-//    AddToBagViewController* addToBagViewController;
-//    
+    
+	ReviewViewController* reviewViewController;
+    
+    AddToBagViewController* addToBagViewController;
+    
 //    SpecialOffersViewController *specialOffersViewController;
 //    
 //    LoginViewController* loginViewController;
@@ -65,7 +62,7 @@
 
 @property (nonatomic, strong) NSMutableArray* array_;
 
-//@property (nonatomic, retain) AddToBagViewController* addToBagViewController;
+@property (nonatomic, strong) AddToBagViewController* addToBagViewController;
 
 //@property (nonatomic, retain) SpecialOffersViewController *specialOffersViewController;
 
@@ -75,7 +72,7 @@
 
 @property (nonatomic, strong) ProductDetailsViewController *productDetailsViewController;
 
-//@property (nonatomic, retain) ReviewViewController *reviewViewController;
+@property (nonatomic, strong) ReviewViewController *reviewViewController;
 
 
 -(void) loadNavigationBar;

@@ -11,7 +11,7 @@
 //@class LoginViewController;
 //@class RegistrationViewController;
 @class BrowseViewController;
-//@class SpecialOffersViewController;
+@class SpecialOffersViewController;
 @class ResultViewController;
 @class Tabbar;
 //@class SubmitReviewViewController;
@@ -38,7 +38,7 @@
 //	
 //	BrowseViewController		*browseViewController;
 //    
-//    SpecialOffersViewController *specialOffersViewController;
+    SpecialOffersViewController *specialOffersViewController;
     
     ResultViewController        *resultViewController;
 
@@ -57,9 +57,9 @@
 //@property (nonatomic, retain) RegistrationViewController  *registrationViewController;
 //
 
-//@property (nonatomic, retain) SpecialOffersViewController *specialOffersViewController;
+@property (nonatomic, strong) SpecialOffersViewController *specialOffersViewController;
 
-@property (nonatomic, retain) ResultViewController        *resultViewController;
+@property (nonatomic, strong) ResultViewController        *resultViewController;
 
 //@property (nonatomic, retain) SubmitReviewViewController *submitReviewViewController;
 

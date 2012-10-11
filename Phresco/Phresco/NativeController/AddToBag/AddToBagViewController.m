@@ -33,7 +33,7 @@
 @synthesize addToBagTable;
 @synthesize productImageArray;
 @synthesize productNameArray;
-//@synthesize checkCartController;
+@synthesize checkCartController;
 @synthesize cartCount;
 @synthesize browseViewController;
 //@synthesize specialOffersViewController;
@@ -652,13 +652,13 @@
 -(void)viewAction:(id)sender
 {
 	
-//    CheckOutViewController  *checkViewCartController = [[CheckOutViewController alloc] initWithNibName:@"ViewCartController" bundle:nil];
-//    
-//    self.checkCartController = checkViewCartController;
-//    
-//    [self.view addSubview:checkCartController.view];
-//    
-//    checkViewCartController = nil;
+    CheckOutViewController  *checkViewCartController = [[CheckOutViewController alloc] initWithNibName:@"CheckOutViewController" bundle:nil];
+    
+    self.checkCartController = checkViewCartController;
+    
+    [self.view addSubview:checkCartController.view];
+    
+    checkViewCartController = nil;
     
 }
 

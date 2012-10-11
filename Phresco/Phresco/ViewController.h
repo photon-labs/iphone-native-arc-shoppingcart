@@ -12,7 +12,7 @@
 @class HomeViewController;
 @class NavigationBar;
 @class WebContainer;
-
+@class MoreViewController;
 @interface ViewController : UIViewController
 {
     IBOutlet UIView *loading;
@@ -23,11 +23,16 @@
      WebContainer    *webContainer;
     ServiceHandler *serviceHandler;
     HomeViewController	 *homeViewController;
+    
+    MoreViewController *moreViewController;
+
 }
 @property (nonatomic, strong) HomeViewController	 *homeViewController;
 @property(nonatomic, strong) WebContainer    *webContainer;
 @property(nonatomic, strong) NavigationBar   *navigationBar;
 @property(nonatomic, strong) Tabbar *tabbar;
+@property (nonatomic, strong) MoreViewController *moreViewController;
+
 
 -(void)addLoadingScreen;
 -(void)removeLoadingScreen;

@@ -18,6 +18,7 @@
 #import "NavigationBar.h"
 #import "HomeViewController.h"
 #import "UIUtils.h"
+#import "MoreViewController.h"
 
 @interface ViewController ()
 
@@ -28,7 +29,7 @@
 @synthesize navigationBar;
 @synthesize webContainer;
 @synthesize tabbar;
-
+@synthesize moreViewController;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -630,10 +631,10 @@
         {
             if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
                 
-              /*  MoreViewController	*tempmyCartController = [[MoreViewController alloc] initWithNibName:@"MoreViewController-iPad" bundle:nil];
+                MoreViewController	*tempmyCartController = [[MoreViewController alloc] initWithNibName:@"MoreViewController-iPad" bundle:nil];
                 
                 self.moreViewController = tempmyCartController;
-                [self.view addSubview:moreViewController.view];*/
+                [self.view addSubview:moreViewController.view];
                 tabbar = [[Tabbar alloc] initWithFrame:CGRectMake(0, 935, 768, 99)];
                 
                 NSMutableArray *names = [NSMutableArray array];
@@ -654,11 +655,10 @@
             }
             else {
                 
-                /*MoreViewController	*tempmyCartController = [[MoreViewController alloc] initWithNibName:@"MoreViewController" bundle:nil];
+                MoreViewController	*tempmyCartController = [[MoreViewController alloc] initWithNibName:@"MoreViewController" bundle:nil];
                 
                 self.moreViewController = tempmyCartController;
-                [self.view addSubview:moreViewController.view];*/
-                
+                [self.view addSubview:moreViewController.view];                
                 /*tabbar = [[Tabbar alloc] initWithFrame:kTabbarRect];
                  
                  NSMutableArray *names = [NSMutableArray array];

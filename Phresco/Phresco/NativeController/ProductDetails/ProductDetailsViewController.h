@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class AddToBagViewController;
-//@class ReviewViewController;
+@class ReviewViewController;
 @class Tabbar;
 
 @interface ProductDetailsViewController : UIViewController
@@ -20,7 +20,7 @@
     int index;
     
     Tabbar *tabbar;
-//    ReviewViewController* reviewViewController;
+    ReviewViewController* reviewViewController;
     AddToBagViewController *addToBagController;
     
 }
@@ -28,8 +28,8 @@
 @property (nonatomic, retain) UIScrollView *scrollView;
 
 @property (nonatomic, strong) AddToBagViewController *addToBagController;
-//
-//@property (nonatomic, retain) ReviewViewController* reviewViewController;
+
+@property (nonatomic, strong) ReviewViewController* reviewViewController;
 
 @property (nonatomic) BOOL loginChk;
 

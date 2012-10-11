@@ -419,17 +419,22 @@ static int extraAssetsCounter = 0;
     if(nil != data)
     {
         NSArray* productReviewModelArray = [data objectForKey:@"review"];
+//        NSArray* productReviewModelArray2 = [data objectForKey:@"average"];
+//        NSArray* productReviewModelArray = [data objectForKey:@"comments"];
+//        
+        NSLog(@"productReviewModelArray :%@", productReviewModelArray);
         
         for(int i = 0; i<[productReviewModelArray count]; i++)
         {
-            NSDictionary *assetProperties = (NSDictionary*)[productReviewModelArray objectAtIndex:i];
+            NSArray* productReviewModelArray1 = [data objectForKey:@"comments"];
+            
+            NSDictionary *assetProperties = (NSDictionary*)[productReviewModelArray1 objectAtIndex:i];
             
             productReview *service = [[productReview alloc] init];
             
             [service setProperties:(NSMutableDictionary*)assetProperties];
             
             [self.productReviewArray addObject:service];
-            
             
             service = nil;
             
