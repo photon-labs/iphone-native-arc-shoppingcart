@@ -75,4 +75,5 @@
 
 - (void)searchButtonSelected;
 
+-(void) finishedCatalogService:(id) data;
 @end

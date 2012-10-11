@@ -5,21 +5,6 @@
 //  Created by Rojaramani on 04/10/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
-
-#import "HomeViewController.h"
-
-@interface HomeViewController ()
-
-@end
-
-//
-//  HomeViewController.m
-//  Phresco
-//
-//  Created by photon on 11/2/11.
-//  Copyright 2011 EWR. All rights reserved.
-//
-
 #import "HomeViewController.h"
 #import "ServiceHandler.h"
 #import "SharedObjects.h"
@@ -30,14 +15,15 @@
 #import "BrowseViewController.h"
 #import "ResultViewController.h"
 #import "SpecialOffersViewController.h"
+
 @implementation HomeViewController
 
 @synthesize searchTextField;
 @synthesize activityIndicator;
 @synthesize array_;
 @synthesize browseViewController;
-@synthesize resultViewController;
 @synthesize specialOffersViewController;
+@synthesize resultViewController;
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -439,23 +425,23 @@
 	if([button.titleLabel.text isEqualToString:@"Login"])
 	{
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-//            LoginViewController *tempLoginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController-iPad" bundle:nil];
-//            
-//            self.loginViewController = tempLoginViewController;
-//            
-//            [self.view addSubview:loginViewController.view];
-//            
-//            tempLoginViewController = nil;
+            //            LoginViewController *tempLoginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController-iPad" bundle:nil];
+            //            
+            //            self.loginViewController = tempLoginViewController;
+            //            
+            //            [self.view addSubview:loginViewController.view];
+            //            
+            //            [tempLoginViewController release];
         }
         else {
             
-//            LoginViewController *tempLoginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-//            
-//            self.loginViewController = tempLoginViewController;
-//            
-//            [self.view addSubview:loginViewController.view];
-//            
-//            tempLoginViewController = nil;
+            //            LoginViewController *tempLoginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+            //            
+            //            self.loginViewController = tempLoginViewController;
+            //            
+            //            [self.view addSubview:loginViewController.view];
+            //            
+            //            [tempLoginViewController release];
         }
 		
 	}
@@ -463,24 +449,24 @@
     else if([button.titleLabel.text isEqualToString:@"Register"])
     {
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-//            RegistrationViewController *tempRegistrationViewController = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController-iPAd" bundle:nil];
-//            
-//            self.registrationViewController = tempRegistrationViewController;
-//            
-//            [self.view addSubview:registrationViewController.view];
-//            
-//            tempRegistrationViewController = nil;
+            //            RegistrationViewController *tempRegistrationViewController = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController-iPAd" bundle:nil];
+            //            
+            //            self.registrationViewController = tempRegistrationViewController;
+            //            
+            //            [self.view addSubview:registrationViewController.view];
+            //            
+            //            [tempRegistrationViewController release];
         }
         else {
             
             
-//            RegistrationViewController *tempRegistrationViewController = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
-//            
-//            self.registrationViewController = tempRegistrationViewController;
-//            
-//            [self.view addSubview:registrationViewController.view];
-//            
-//            tempRegistrationViewController = nil;
+            //            RegistrationViewController *tempRegistrationViewController = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
+            //            
+            //            self.registrationViewController = tempRegistrationViewController;
+            //            
+            //            [self.view addSubview:registrationViewController.view];
+            //            
+            //            [tempRegistrationViewController release];
         }
         
     }
@@ -531,37 +517,38 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-//        BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController-iPad" bundle:nil];
-//        
-//        self.browseViewController = tempBrowseViewController;
-//        
-//        [self.view addSubview:browseViewController.view];
-//        
-//        tempBrowseViewController = nil;
+        //        BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController-iPad" bundle:nil];
+        //        
+        //        self.browseViewController = tempBrowseViewController;
+        //        
+        //        [self.view addSubview:browseViewController.view];
+        //        
+        //        [tempBrowseViewController release];
     }
     else {
-//        if(loginViewController.isLogin == YES) {
-//            
-//            BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController" bundle:nil];
-//            
-//            self.browseViewController = tempBrowseViewController;
-//            browseViewController.loginChk  = YES;
-//            tempBrowseViewController.array_ = array;
-//            [self.view addSubview:browseViewController.view];
-//            
-//            tempBrowseViewController = nil;
-       }
-        //else {
-            BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController" bundle:nil];
-            
-            self.browseViewController = tempBrowseViewController;
-            
-            [self.view addSubview:browseViewController.view];
-            
-    tempBrowseViewController =nil;
-       // }
+        //        if(loginViewController.isLogin == YES) {
+        //            
+        //            BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController" bundle:nil];
+        //            
+        //            self.browseViewController = tempBrowseViewController;
+        //            browseViewController.loginChk  = YES;
+        //            tempBrowseViewController.array_ = array;
+        //            [self.view addSubview:browseViewController.view];
+        //            
+        //            [tempBrowseViewController release];
     }
+    //else {
+    BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController" bundle:nil];
     
+    self.browseViewController = tempBrowseViewController;
+    
+    [self.view addSubview:browseViewController.view];
+    
+    tempBrowseViewController = nil;
+    //[tempBrowseViewController release];
+    // }
+}
+
 
 
 -(void) finishedSpecialProductsService:(id) data
@@ -572,48 +559,47 @@
     
     [assetsData updateSpecialproductsModel:data];
     
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        
-        SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController-iPad" bundle:nil];
-        
-        self.specialOffersViewController = tempSpecialOffersViewController;
-        
-        [self.view addSubview:specialOffersViewController.view];
-        
-        tempSpecialOffersViewController = nil;
-    }
-    else {
-        
-//        if(loginViewController.isLogin == YES) {
-//            
-//            SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
-//            
-//            self.specialOffersViewController = tempSpecialOffersViewController;
-//            
-//            specialOffersViewController.loginChk = YES;
-//            
-//            [self.view addSubview:specialOffersViewController.view];
-//            
-//            tempSpecialOffersViewController = nil;
-//            
-//        }
-        
-//        else {
-            
-            
-            SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
-            
-            self.specialOffersViewController = tempSpecialOffersViewController;
-            
-            [self.view addSubview:specialOffersViewController.view];
-            
-            tempSpecialOffersViewController = nil;
-            
-       // }
-        
-    }
+    //    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+    //        
+    //        SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController-iPad" bundle:nil];
+    //        
+    //        self.specialOffersViewController = tempSpecialOffersViewController;
+    //        
+    //        [self.view addSubview:specialOffersViewController.view];
+    //        
+    //        [tempSpecialOffersViewController release];
+    //    }
+    //    else {
+    //        
+    //        if(loginViewController.isLogin == YES) {
+    //            
+    //            SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
+    //            
+    //            self.specialOffersViewController = tempSpecialOffersViewController;
+    //            
+    //            specialOffersViewController.loginChk = YES;
+    //            
+    //            [self.view addSubview:specialOffersViewController.view];
+    //            
+    //            [tempSpecialOffersViewController release];
+    //            
+    //        }
+    //        
+    //        else {
+               
+               
+               SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
+               
+               self.specialOffersViewController = tempSpecialOffersViewController;
+               
+               [self.view addSubview:specialOffersViewController.view];
+               
+        tempSpecialOffersViewController =nil;               
+           }
     
-}
+    // }
+    
+//}
 /*
  // Override to allow orientations other than the default portrait orientation.
  - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

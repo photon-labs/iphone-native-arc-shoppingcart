@@ -16,7 +16,7 @@
 #import "ProductDetailsViewController.h"
 #import "CheckOutViewController.h"
 #import "BrowseViewController.h"
-//#import "SpecialOffersViewController.h"
+#import "SpecialOffersViewController.h"
 #import "ServiceHandler.h"
 #import "Tabbar.h"
 
@@ -585,10 +585,8 @@
     [serviceHandler specialProductsService:self :@selector(finishedSpecialProductsService:)];
     
     serviceHandler = nil;
-    
-    
-    
 }
+
 -(void) finishedSpecialProductsService:(id) data
 {
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
@@ -596,13 +594,13 @@
     [assetsData updateSpecialproductsModel:data];
     
     
-//    SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
-//    
-//    self.specialOffersViewController = tempSpecialOffersViewController;
-//    
-//    [self.view addSubview:specialOffersViewController.view];
-//    
-//    tempSpecialOffersViewController = nil;
+    SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
+    
+    self.specialOffersViewController = tempSpecialOffersViewController;
+    
+    [self.view addSubview:specialOffersViewController.view];
+    
+    tempSpecialOffersViewController = nil;
 }
 
 -(void)updateAction:(id)sender

@@ -11,7 +11,7 @@
 @class Tabbar;
 @class ReviewViewController;
 @class AddToBagViewController;
-//@class SpecialOffersViewController;
+@class SpecialOffersViewController;
 //@class LoginViewController;
 @class ProductDetailsViewController;
 
@@ -40,7 +40,7 @@
     
     AddToBagViewController* addToBagViewController;
     
-//    SpecialOffersViewController *specialOffersViewController;
+    SpecialOffersViewController *specialOffersViewController;
 //    
 //    LoginViewController* loginViewController;
     
@@ -64,7 +64,7 @@
 
 @property (nonatomic, strong) AddToBagViewController* addToBagViewController;
 
-//@property (nonatomic, retain) SpecialOffersViewController *specialOffersViewController;
+@property (nonatomic, strong) SpecialOffersViewController *specialOffersViewController;
 
 @property (nonatomic, strong) UIActivityIndicatorView* activityIndicator;
 

@@ -15,7 +15,7 @@
 #import "ServiceHandler.h"
 #import "ReviewViewController.h"
 #import "AddToBagViewController.h"
-//#import "SpecialOffersViewController.h"
+#import "SpecialOffersViewController.h"
 #import "Tabbar.h"
 //#import "LoginViewController.h"
 
@@ -31,7 +31,7 @@
 @synthesize productDetailsViewController;
 @synthesize reviewViewController;
 @synthesize addToBagViewController;
-//@synthesize specialOffersViewController;
+@synthesize specialOffersViewController;
 @synthesize activityIndicator;
 //@synthesize loginViewController;
 @synthesize loginChk;
@@ -329,25 +329,25 @@
     [assetsData updateSpecialproductsModel:data];
     
     
-//    SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
-//    
-//    self.specialOffersViewController = tempSpecialOffersViewController;
-//    
-//    [self.view addSubview:specialOffersViewController.view];
-//    
-//    [tempSpecialOffersViewController release];
+    SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
+    
+    self.specialOffersViewController = tempSpecialOffersViewController;
+    
+    [self.view addSubview:specialOffersViewController.view];
+    
+    tempSpecialOffersViewController = nil;
 }
 
 - (void) myCartButtonSelected:(id)sender
 {
     
-//    AddToBagViewController *tempResultViewController = [[AddToBagViewController alloc] initWithNibName:@"AddToBagViewController" bundle:nil];
-//	
-//	self.addToBagViewController = tempResultViewController;
-//    
-//	[self.view addSubview:addToBagViewController.view];
-//    
-//	[tempResultViewController release];
+    AddToBagViewController *tempResultViewController = [[AddToBagViewController alloc] initWithNibName:@"AddToBagViewController" bundle:nil];
+	
+	self.addToBagViewController = tempResultViewController;
+    
+	[self.view addSubview:addToBagViewController.view];
+    
+	tempResultViewController = nil;
 }
 
 #pragma mark TableView Delegates

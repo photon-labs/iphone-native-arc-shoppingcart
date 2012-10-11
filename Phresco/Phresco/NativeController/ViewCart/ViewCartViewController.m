@@ -13,7 +13,7 @@
 #import "BrowseViewController.h"
 #import "CheckOutOVerallViewController.h"
 #import "ServiceHandler.h"
-//#import "SpecialOffersViewController.h"
+#import "SpecialOffersViewController.h"
 #import "Tabbar.h"
 @interface ViewCartViewController ()
 
@@ -399,13 +399,13 @@
     [assetsData updateSpecialproductsModel:data];
     
     
-//    SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
-//    
-//    self.specialOffersViewController = tempSpecialOffersViewController;
-//    
-//    [self.view addSubview:specialOffersViewController.view];
-//    
-    //[tempSpecialOffersViewController release];
+    SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
+    
+    self.specialOffersViewController = tempSpecialOffersViewController;
+    
+    [self.view addSubview:specialOffersViewController.view];
+    
+    tempSpecialOffersViewController = nil;
 }
 
 

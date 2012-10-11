@@ -10,7 +10,7 @@
 @class ViewCartViewController;
 @class CheckOutViewController;
 @class BrowseViewController;
-//@class SpecialOffersViewController;
+@class SpecialOffersViewController;
 @class Tabbar;
 @interface AddToBagViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
     
@@ -47,7 +47,7 @@
     
     Tabbar *tabbar;
     BrowseViewController* browseViewController;
-//    SpecialOffersViewController* specialOffersViewController;
+    SpecialOffersViewController* specialOffersViewController;
     CheckOutViewController* checkCartController;
     ViewCartViewController  *viewCartController;
     
@@ -64,9 +64,7 @@
 @property (nonatomic, strong) NSString *cartCount;
 
 @property (nonatomic, strong)  BrowseViewController* browseViewController;
-
-//@property (nonatomic, strong) SpecialOffersViewController* specialOffersViewController;
-//
+@property (nonatomic, strong) SpecialOffersViewController* specialOffersViewController;
 @property (nonatomic, strong) ViewCartViewController  *viewCartController;
 @property (nonatomic, strong) CheckOutViewController* checkCartController;
 
