@@ -401,9 +401,11 @@ static int extraAssetsCounter = 0;
             NSDictionary *assetProperties = (NSDictionary*)[productDetailModelArray objectAtIndex:i];
             productService *service = [[productService alloc] init];
             
-            NSDictionary *items = [productDetailModelArray valueForKey:@"details"];         
-            NSLog(@"items %@", items);
-        
+//            NSDictionary *items = [productDetailModelArray valueForKey:@"details"];         
+//            NSLog(@"items %@", items);
+//          NSMutableString *strTVType =  [items objectForKey:@"datails"];
+//            NSLog(@"strTVType %@", strTVType);
+//            
 //                NSMutableString *strTVType=[[NSMutableString alloc]init];
 //                NSMutableString *strScreen=[[NSMutableString alloc]init];
 //                NSMutableString *strRatio=[[NSMutableString alloc]init];
@@ -423,13 +425,13 @@ static int extraAssetsCounter = 0;
 //
 //                  [self.productDetailArray addObject:[items copy]];
 
-            }
+            //}
              [service setProperties:(NSMutableDictionary*)assetProperties];
              [self.productDetailArray addObject:service];
             service = nil;
-            
+    } 
         }
-    }
+    
 }
 
 -(void) updateProductReviewModel:(NSDictionary*) data{
