@@ -395,18 +395,37 @@ static int extraAssetsCounter = 0;
     if(nil != data)
     {
         NSArray* productDetailModelArray = [data objectForKey:@"product"];
-        
+
         for(int i = 0; i<[productDetailModelArray count]; i++)
         {
-            
             NSDictionary *assetProperties = (NSDictionary*)[productDetailModelArray objectAtIndex:i];
-            
             productService *service = [[productService alloc] init];
             
-            [service setProperties:(NSMutableDictionary*)assetProperties];
-            
-            [self.productDetailArray addObject:service];
-            
+            NSDictionary *items = [productDetailModelArray valueForKey:@"details"];         
+            NSLog(@"items %@", items);
+        
+//                NSMutableString *strTVType=[[NSMutableString alloc]init];
+//                NSMutableString *strScreen=[[NSMutableString alloc]init];
+//                NSMutableString *strRatio=[[NSMutableString alloc]init];
+//                NSMutableString *strDefinition=[[NSMutableString alloc]init];
+                
+//                NSMutableString *strTVType = [items objectForKey:@"TV Type"];
+//                NSMutableString *strScreen = [items objectForKey:@"Screen Size"];
+//                NSMutableString *strRatio = [items objectForKey:@"Screen Ratio"];
+//                NSMutableString *strDefinition = [items objectForKey:@"TV Definition"];
+//                
+//                [items setValue:strTVType forKey:@"TV Type"];
+//                [items setValue:strScreen forKey:@"Screen Size"];
+//                [items setValue:strRatio forKey:@"Screen Ratio"];
+//                [items setValue:strDefinition forKey:@"TV Definition"];
+//                  
+//                  NSLog(@"dict cat %@", items);
+//
+//                  [self.productDetailArray addObject:[items copy]];
+
+            }
+             [service setProperties:(NSMutableDictionary*)assetProperties];
+             [self.productDetailArray addObject:service];
             service = nil;
             
         }
@@ -429,7 +448,7 @@ static int extraAssetsCounter = 0;
             NSArray* productReviewModelArray1 = [data objectForKey:@"comments"];
             
             NSDictionary *assetProperties = (NSDictionary*)[productReviewModelArray1 objectAtIndex:i];
-            
+            NSLog(@"productReviewModelArray1 :%@", productReviewModelArray1);
             productReview *service = [[productReview alloc] init];
             
             [service setProperties:(NSMutableDictionary*)assetProperties];

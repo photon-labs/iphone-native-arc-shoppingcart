@@ -33,19 +33,6 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Phresco/DataLayer/DataModelEntities.m"
-         timestampString = "371630039.870289"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "416"
-         endingLineNumber = "416"
-         landmarkName = "-updateProductReviewModel:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "Phresco/NativeController/Home/HomeViewController.m"
          timestampString = "371640342.910576"
          startingColumnNumber = "9223372036854775807"
@@ -72,13 +59,26 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Phresco/NativeController/Home/HomeViewController.m"
-         timestampString = "371640342.910576"
+         filePath = "Phresco/NativeController/AddToBag/AddToBagViewController.m"
+         timestampString = "371652741.35486"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "251"
-         endingLineNumber = "251"
-         landmarkName = "-finishedProductDetialsService:"
+         startingLineNumber = "664"
+         endingLineNumber = "664"
+         landmarkName = "-viewMyCart:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Phresco/DataLayer/DataModelEntities.m"
+         timestampString = "371653484.536598"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "404"
+         endingLineNumber = "404"
+         landmarkName = "-updateProductDetailsModel:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

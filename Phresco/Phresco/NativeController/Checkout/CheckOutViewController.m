@@ -49,12 +49,12 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"ViewCartController-iPad" bundle:nil];
+		self = [super initWithNibName:@"CheckOutViewController-iPad" bundle:nil];
 		
 	}
 	else 
     {
-        self = [super initWithNibName:@"ViewCartController" bundle:nil];
+        self = [super initWithNibName:@"CheckOutViewController" bundle:nil];
         
     }
     return self;
