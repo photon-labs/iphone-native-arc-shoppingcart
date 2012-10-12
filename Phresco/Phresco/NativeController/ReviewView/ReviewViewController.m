@@ -303,6 +303,8 @@
             NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
             //            NSLog(@"rating averageCustomerReview..... :%@",string);
             [averageArray addObject:[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
+            
+            string = nil;
         }
         
         

@@ -400,38 +400,39 @@ static int extraAssetsCounter = 0;
         {
             NSDictionary *assetProperties = (NSDictionary*)[productDetailModelArray objectAtIndex:i];
             productService *service = [[productService alloc] init];
-            
-//            NSDictionary *items = [productDetailModelArray valueForKey:@"details"];         
-//            NSLog(@"items %@", items);
-//          NSMutableString *strTVType =  [items objectForKey:@"datails"];
-//            NSLog(@"strTVType %@", strTVType);
-//            
-//                NSMutableString *strTVType=[[NSMutableString alloc]init];
-//                NSMutableString *strScreen=[[NSMutableString alloc]init];
-//                NSMutableString *strRatio=[[NSMutableString alloc]init];
-//                NSMutableString *strDefinition=[[NSMutableString alloc]init];
-                
-//                NSMutableString *strTVType = [items objectForKey:@"TV Type"];
-//                NSMutableString *strScreen = [items objectForKey:@"Screen Size"];
-//                NSMutableString *strRatio = [items objectForKey:@"Screen Ratio"];
-//                NSMutableString *strDefinition = [items objectForKey:@"TV Definition"];
-//                
-//                [items setValue:strTVType forKey:@"TV Type"];
-//                [items setValue:strScreen forKey:@"Screen Size"];
-//                [items setValue:strRatio forKey:@"Screen Ratio"];
-//                [items setValue:strDefinition forKey:@"TV Definition"];
-//                  
-//                  NSLog(@"dict cat %@", items);
-//
-//                  [self.productDetailArray addObject:[items copy]];
+            NSLog(@"assetProperties %@",assetProperties);
+                                  
+                                  // Get all object
+                                  NSArray *items = [data valueForKeyPath:@"product.details"];
+                                //  NSArray *array1 = [[items objectAtIndex:i] objectForKey:@"product"];
+                                  NSEnumerator *enumerator = [items objectEnumerator];
+                                  NSMutableDictionary* item;
+                                  while (item = (NSMutableDictionary*)[enumerator nextObject]) {
+//                                      NSLog(@"clientId = %@",  [item objectForKey:@"TV Type"]);
+//                                      NSLog(@"clientName = %@",[item objectForKey:@"Screen Size"]);
+//                                      NSLog(@"job = %@",       [item objectForKey:@"Screen Ratio"]);
+//                                      NSLog(@"job = %@",       [item objectForKey:@"TV Definition"]);
+//                                      
+                                                      NSMutableString *strTVType = [item objectForKey:@"TV Type"];
+                                                      NSMutableString *strScreen = [item objectForKey:@"Screen Size"];
+                                                      NSMutableString *strRatio = [item objectForKey:@"Screen Ratio"];
+                                                      NSMutableString *strDefinition = [item objectForKey:@"TV Definition"];
 
-            //}
+                                
+                                      
+                                      [item setObject:strTVType forKey:@"TV Type"];
+                                      [item setObject:strScreen forKey:@"Screen Size"];
+                                      [item setObject:strRatio forKey:@"Screen Ratio"];
+                                      [item setObject:strDefinition forKey:@"TV Definition"];
+                                      
+                                    //  [self.productDetailArray addObject:[item copy]];
+              }
+            
              [service setProperties:(NSMutableDictionary*)assetProperties];
              [self.productDetailArray addObject:service];
             service = nil;
     } 
-        }
-    
+  }
 }
 
 -(void) updateProductReviewModel:(NSDictionary*) data{
@@ -832,7 +833,7 @@ static int extraAssetsCounter = 0;
 			
 			FeaturedAsset *asset = (FeaturedAsset*)object;
 			
-			NSString *defaultIconUrl = asset.defaultIconUrl;
+			//NSString *defaultIconUrl = asset.defaultIconUrl;
 			
 			NSString *defaultTabUrl = asset.defaultTabUrl;
 			

@@ -12,6 +12,8 @@
 @class BrowseViewController;
 @class SpecialOffersViewController;
 @class Tabbar;
+@class ServiceHandler;
+
 @interface AddToBagViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
     
     UIScrollView *scrollView;
@@ -50,7 +52,7 @@
     SpecialOffersViewController* specialOffersViewController;
     CheckOutViewController* checkCartController;
     ViewCartViewController  *viewCartController;
-    
+    ServiceHandler *serviceHandler;
 }
 
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -58,6 +60,7 @@
 @property (nonatomic, strong) UITableView		*addToBagTable;
 
 @property (nonatomic, strong) NSMutableArray *productImageArray;
+@property (nonatomic, strong) ServiceHandler *serviceHandler;
 
 @property (nonatomic, strong) NSMutableArray	*productNameArray;
 

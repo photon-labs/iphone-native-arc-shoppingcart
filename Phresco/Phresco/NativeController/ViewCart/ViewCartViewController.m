@@ -297,8 +297,8 @@
         [titleLabel setText:@"View My Cart"];
         [self.view addSubview:titleLabel];
         
-        int price;
-        int cart;
+//        int price;
+//        int cart;
         int purchase=0;
         
         AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
@@ -308,9 +308,9 @@
             NSString *cartPrice=[[assetsData.arrayAddtoCart objectAtIndex:i]objectForKey:@"ListPrice"];
             NSString *cartCount=[[assetsData.arrayAddtoCart objectAtIndex:i]objectForKey:@"Count"];
             
-            price = [cartPrice intValue];
-            
-            cart = [cartCount intValue];
+//            price = [cartPrice intValue];
+//            
+//            cart = [cartCount intValue];
             
             purchase = purchase + ([cartPrice intValue] * [cartCount intValue]);
             

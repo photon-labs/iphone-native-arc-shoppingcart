@@ -36,7 +36,8 @@
 @synthesize checkCartController;
 @synthesize cartCount;
 @synthesize browseViewController;
-//@synthesize specialOffersViewController;
+@synthesize specialOffersViewController;
+@synthesize serviceHandler;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 
@@ -53,7 +54,10 @@
         self = [super initWithNibName:@"AddToBagViewController" bundle:nil];
         
     }
-    
+    if(nil == serviceHandler)
+    {
+        serviceHandler = [[ServiceHandler alloc] init];
+    }
     return self;
 }
 
@@ -547,16 +551,11 @@
 {
     
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-    assetsData.productArray = [[NSMutableArray alloc]init];
-    assetsData.productDetailArray = [[NSMutableArray alloc]init];
-    assetsData.catalogArray = [[NSMutableArray alloc]init];
-    ServiceHandler *serviceHandler = [[ServiceHandler alloc] init];
+    [assetsData.productArray removeAllObjects];
+    [assetsData.productDetailArray removeAllObjects];
+    [assetsData.catalogArray removeAllObjects];
     
     [serviceHandler catalogService:self :@selector(finishedCatalogService:)];
-    
-    serviceHandler = nil;
-    
-    
 }
 
 -(void) finishedCatalogService:(id) data
@@ -577,15 +576,11 @@
 - (void) specialOfferButtonSelected:(id)sender 
 {
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-    assetsData.specialProductsArray = [[NSMutableArray alloc]init];
-    assetsData.productDetailArray = [[NSMutableArray alloc]init];
-    
-    ServiceHandler *serviceHandler = [[ServiceHandler alloc] init];
-    
+    [assetsData.specialProductsArray removeAllObjects];
+    [assetsData.productDetailArray removeAllObjects];
     [serviceHandler specialProductsService:self :@selector(finishedSpecialProductsService:)];
     
-    serviceHandler = nil;
-}
+   }
 
 -(void) finishedSpecialProductsService:(id) data
 {
@@ -813,7 +808,7 @@
                 Quantity.backgroundColor = [UIColor clearColor];
                 [Quantity setTextColor:[UIColor whiteColor]];
                 [cell.contentView addSubview:Quantity];
-                Quantity = nil;
+                //Quantity = nil;
                 
                 
                 UITextField *quantityTextView = [[UITextField alloc] initWithFrame:CGRectMake(270 , 90, 80, 40)];
