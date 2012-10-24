@@ -59,6 +59,10 @@
 		EAC8D4F2161D9E6400D80B5A /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8D4ED161D9E6300D80B5A /* UIUtils.m */; };
 		EAC8D4F3161D9E6400D80B5A /* UIWebView_PageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8D4EF161D9E6300D80B5A /* UIWebView_PageTransition.m */; };
 		EAC8D4F4161D9E6400D80B5A /* WebUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8D4F1161D9E6300D80B5A /* WebUtils.m */; };
+		EACC79B41637B6090099A7B2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC79B21637B6090099A7B2 /* LoginViewController.m */; };
+		EACC79B51637B6090099A7B2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACC79B31637B6090099A7B2 /* LoginViewController.xib */; };
+		EACC79BE1637C1940099A7B2 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC79BC1637C1940099A7B2 /* RegistrationViewController.m */; };
+		EACC79BF1637C1940099A7B2 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACC79BD1637C1940099A7B2 /* RegistrationViewController.xib */; };
 		EACD04FC1625480400DE1505 /* CheckOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD04FA1625480400DE1505 /* CheckOutViewController.m */; };
 		EACD04FD1625480400DE1505 /* CheckOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACD04FB1625480400DE1505 /* CheckOutViewController.xib */; };
 		EACD05021625488700DE1505 /* CheckoutOverAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD05001625488700DE1505 /* CheckoutOverAllViewController.m */; };
@@ -338,6 +342,12 @@
 		EAC8D4EF161D9E6300D80B5A /* UIWebView_PageTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebView_PageTransition.m; sourceTree = "<group>"; };
 		EAC8D4F0161D9E6300D80B5A /* WebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUtils.h; sourceTree = "<group>"; };
 		EAC8D4F1161D9E6300D80B5A /* WebUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebUtils.m; sourceTree = "<group>"; };
+		EACC79B11637B6090099A7B2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EACC79B21637B6090099A7B2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EACC79B31637B6090099A7B2 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		EACC79BB1637C1940099A7B2 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		EACC79BC1637C1940099A7B2 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		EACC79BD1637C1940099A7B2 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		EACD04F91625480400DE1505 /* CheckOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckOutViewController.h; sourceTree = "<group>"; };
 		EACD04FA1625480400DE1505 /* CheckOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckOutViewController.m; sourceTree = "<group>"; };
 		EACD04FB1625480400DE1505 /* CheckOutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckOutViewController.xib; sourceTree = "<group>"; };
@@ -774,6 +784,9 @@
 		EAD0DB1E1624029D00A966BD /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				EACC79B11637B6090099A7B2 /* LoginViewController.h */,
+				EACC79B21637B6090099A7B2 /* LoginViewController.m */,
+				EACC79B31637B6090099A7B2 /* LoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -823,6 +836,9 @@
 		EAD0DB231624029D00A966BD /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				EACC79BB1637C1940099A7B2 /* RegistrationViewController.h */,
+				EACC79BC1637C1940099A7B2 /* RegistrationViewController.m */,
+				EACC79BD1637C1940099A7B2 /* RegistrationViewController.xib */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -1417,6 +1433,8 @@
 				EAC5FB37162690BE00C11516 /* SubmitReviewViewController.xib in Resources */,
 				EAC5FB3F1626A49D00C11516 /* MoreViewController.xib in Resources */,
 				EAC5FB441626AEAB00C11516 /* SpecialOffersViewController.xib in Resources */,
+				EACC79B51637B6090099A7B2 /* LoginViewController.xib in Resources */,
+				EACC79BF1637C1940099A7B2 /* RegistrationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1476,6 +1494,8 @@
 				EAC5FB3E1626A49D00C11516 /* MoreViewController.m in Sources */,
 				EAC5FB431626AEAB00C11516 /* SpecialOffersViewController.m in Sources */,
 				EAC5FB471626AED800C11516 /* SpecialOfferCustomCell.m in Sources */,
+				EACC79B41637B6090099A7B2 /* LoginViewController.m in Sources */,
+				EACC79BE1637C1940099A7B2 /* RegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

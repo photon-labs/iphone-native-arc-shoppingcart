@@ -574,13 +574,13 @@
         
         AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
         
-        NSString *strType = [NSString stringWithFormat:@"TV TYPE:%@",[[assetsData.productDetailArray objectAtIndex:0] productTVType]];
+        NSString *strType = [NSString stringWithFormat:@"TV TYPE:%@",[[assetsData.productDetailArray objectAtIndex:1] productTVType]];
         
-        NSString *strScreen = [NSString stringWithFormat:@"Screen Size:%@",[[assetsData.productDetailArray objectAtIndex:0] productScreen]];
+        NSString *strScreen = [NSString stringWithFormat:@"Screen Size:%@",[[assetsData.productDetailArray objectAtIndex:1] productScreen]];
         
-        NSString *strRatio = [NSString stringWithFormat:@"Screen Ratio:%@",[[assetsData.productDetailArray objectAtIndex:0] productRatio]];
+        NSString *strRatio = [NSString stringWithFormat:@"Screen Ratio:%@",[[assetsData.productDetailArray objectAtIndex:1] productRatio]];
         
-        NSString *strDef = [NSString stringWithFormat:@"TV definition:%@",[[assetsData.productDetailArray objectAtIndex:0] productDefinition]];
+        NSString *strDef = [NSString stringWithFormat:@"TV definition:%@",[[assetsData.productDetailArray objectAtIndex:1] productDefinition]];
         
         
         
@@ -647,16 +647,23 @@
         //add the product description to scroll view
         
         AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
+//        NSLog(@"strType :%@", [NSString stringWithFormat:@"TV TYPE:%@",[[[[assetsData.productDetailArray objectForKey:@"products"] objectForKey:@"details"] objectAtIndex:0] objectForKey@"TV TYPE"]]);
         
-        NSString *strType = [NSString stringWithFormat:@"TV TYPE:%@",[[assetsData.productDetailArray objectAtIndex:0] productTVType]];
+    //    NSLog(@"strType :%@", [NSString stringWithFormat:@"TV TYPE:%@",[[[assetsData.productDetailArray objectAtIndex:0] objectAtIndex:1] objectAtIndex:0]]);
         
-        NSString *strScreen = [NSString stringWithFormat:@"Screen Size:%@",[[assetsData.productDetailArray objectAtIndex:0] productScreen]];
+        NSLog(@"strType :%@", [NSString stringWithFormat:@"TV TYPE:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"TV Type"]]);
+
+       NSString *strType = [NSString stringWithFormat:@"TV Type:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"TV Type"]];
+                
+        NSString *strScreen = [NSString stringWithFormat:@"Screen Size:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"Screen Size"]];
         
-        NSString *strRatio = [NSString stringWithFormat:@"Screen Ratio:%@",[[assetsData.productDetailArray objectAtIndex:0] productRatio]];
+        NSString *strRatio = [NSString stringWithFormat:@"Screen Ratio:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"Screen Ratio"]];
         
-        NSString *strDef = [NSString stringWithFormat:@"TV definition:%@",[[assetsData.productDetailArray objectAtIndex:0] productDefinition]];
+        NSString *strDef = [NSString stringWithFormat:@"TV definition:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"TV Definition"]];
         
         
+        NSLog(@"strType :%@ \n%@ \n%@ \n%@", strType, strScreen, strRatio, strDef);
+
         
         NSMutableArray *productDesc = [[NSMutableArray alloc] initWithObjects:strType, strScreen,
                                        strRatio, strDef, nil];
@@ -845,8 +852,9 @@
         AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
         
         AddToBagCustomCell *cusCell = [[AddToBagCustomCell alloc]init];
-        
+      
         NSString *strPrice = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailsPrice]];
+
         
         NSString *strImg = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailImageUrl]];
         

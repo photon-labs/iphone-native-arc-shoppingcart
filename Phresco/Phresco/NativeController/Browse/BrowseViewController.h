@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 @class Tabbar;
 @class ResultViewController;
-
+@class AddToBagViewController;
+@class ProductDetailsViewController;
+@class SpecialOffersViewController;
+@class LoginViewController;
 @interface BrowseViewController : UIViewController
                     <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate> {
     
@@ -35,15 +38,15 @@
     
     Tabbar *tabbar;
     
-//    LoginViewController* loginViewController;
-//    
+    LoginViewController* loginViewController;
+    
     ResultViewController *resultViewController;
-//    
-//    AddToBagViewController* addToBagViewController;
-//    
-//    ProductDetailsViewController* product;
-//    
-//    SpecialOffersViewController *specialOffersViewController;
+
+   AddToBagViewController* addToBagViewController;
+   
+   ProductDetailsViewController* product;
+   
+   SpecialOffersViewController *specialOffersViewController;
     
     
 }
@@ -63,14 +66,14 @@
 @property (nonatomic, strong) NSMutableArray* array_;
 
 @property (nonatomic, strong) ResultViewController *resultViewController;
-//
-//@property (nonatomic, retain) AddToBagViewController* addToBagViewController;
-//
-//@property (nonatomic, retain) SpecialOffersViewController *specialOffersViewController;
+
+@property (nonatomic, retain) AddToBagViewController* addToBagViewController;
+
+@property (nonatomic, retain) SpecialOffersViewController *specialOffersViewController;
 
 @property (nonatomic, strong) UIActivityIndicatorView* activityIndicator;
 
-//@property (nonatomic, retain) LoginViewController* loginViewController;
+@property (nonatomic, retain) LoginViewController* loginViewController;
 
 
 -(void) loadNavigationBar;

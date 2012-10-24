@@ -14,12 +14,12 @@
 #import "AddToBagViewController.h"
 #import "SubmitReviewViewController.h"
 #import "ServiceHandler.h"
-//#import "SpecialOffersViewController.h"
+#import "SpecialOffersViewController.h"
 #import "ReviewCommentsViewController.h"
 #import "ProductDetailsViewController.h"
 #import "Tabbar.h"
 #import "ReviewCustomCell.h"
-//#import "LoginViewController.h"
+#import "LoginViewController.h"
 @interface ReviewViewController ()
 
 @end
@@ -43,7 +43,7 @@
 @synthesize fiveStar;
 @synthesize average;
 @synthesize submitReview;
-//@synthesize loginViewController;
+@synthesize loginViewController;
 
 @synthesize isSpecialOffer;
 @synthesize loginChk;
@@ -791,49 +791,49 @@
         if(isSpecialOffer == YES) { //If the product selected from specialOffers
             
             if(loginChk == YES) { //If the user logged in
-//                SubmitReviewViewController* tempSubmitReviewViewCotroller = [[SubmitReviewViewController alloc]initWithNibName:@"SubmitReviewViewController" bundle:nil];
-//                
-//                self.submitReviewViewController = tempSubmitReviewViewCotroller;
-//                submitReviewViewController.isFromSpecialOffer = YES;
-//                tempSubmitReviewViewCotroller.loginChk = YES;
-//                tempSubmitReviewViewCotroller.submitProductID = reviewProductId;
-//                [self.view addSubview:submitReviewViewController.view];
-//                [tempSubmitReviewViewCotroller = nil;
-            }
+              SubmitReviewViewController* tempSubmitReviewViewCotroller = [[SubmitReviewViewController alloc]initWithNibName:@"SubmitReviewViewController" bundle:nil];
+              
+              self.submitReviewViewController = tempSubmitReviewViewCotroller;
+              submitReviewViewController.isFromSpecialOffer = YES;
+              tempSubmitReviewViewCotroller.loginChk = YES;
+              tempSubmitReviewViewCotroller.submitProductID = reviewProductId;
+              [self.view addSubview:submitReviewViewController.view];
+              tempSubmitReviewViewCotroller = nil;
+        }
             
             else { 
-//                SubmitReviewViewController* tempSubmitReviewViewCotroller = [[SubmitReviewViewController alloc]initWithNibName:@"SubmitReviewViewController" bundle:nil];
-//                
-//                self.submitReviewViewController = tempSubmitReviewViewCotroller;
-//                submitReviewViewController.isFromSpecialOffer = YES;
-//                [self.view addSubview:submitReviewViewController.view];
-//                tempSubmitReviewViewCotroller = nil;
-            }
+               SubmitReviewViewController* tempSubmitReviewViewCotroller = [[SubmitReviewViewController alloc]initWithNibName:@"SubmitReviewViewController" bundle:nil];
+               
+               self.submitReviewViewController = tempSubmitReviewViewCotroller;
+               submitReviewViewController.isFromSpecialOffer = YES;
+               [self.view addSubview:submitReviewViewController.view];
+               tempSubmitReviewViewCotroller = nil;
+         }
         }
         else 
         {
             
             if(loginChk == YES) {
+              
+                SubmitReviewViewController* tempSubmitReviewViewCotroller = [[SubmitReviewViewController alloc]initWithNibName:@"SubmitReviewViewController" bundle:nil];
                 
-//                SubmitReviewViewController* tempSubmitReviewViewCotroller = [[SubmitReviewViewController alloc]initWithNibName:@"SubmitReviewViewController" bundle:nil];
-//                
-//                tempSubmitReviewViewCotroller.loginChk = YES;
-//                tempSubmitReviewViewCotroller.submitProductID = reviewProductId;
-//                tempSubmitReviewViewCotroller.submitArray = array_;
-//                self.submitReviewViewController = tempSubmitReviewViewCotroller;
-//                [self.view addSubview:submitReviewViewController.view];
-//                tempSubmitReviewViewCotroller = nil;
-                
+                tempSubmitReviewViewCotroller.loginChk = YES;
+                tempSubmitReviewViewCotroller.submitProductID = reviewProductId;
+                tempSubmitReviewViewCotroller.submitArray = array_;
+                self.submitReviewViewController = tempSubmitReviewViewCotroller;
+                [self.view addSubview:submitReviewViewController.view];
+                tempSubmitReviewViewCotroller = nil;
+              
             }
             
             else {
                 
-//                SubmitReviewViewController* tempSubmitReviewViewCotroller = [[SubmitReviewViewController alloc]initWithNibName:@"SubmitReviewViewController" bundle:nil];
-//                
-//                self.submitReviewViewController = tempSubmitReviewViewCotroller;
-//                tempSubmitReviewViewCotroller.loginChk = NO;
-//                [self.view addSubview:submitReviewViewController.view];
-//                tempSubmitReviewViewCotroller = nil;
+                SubmitReviewViewController* tempSubmitReviewViewCotroller = [[SubmitReviewViewController alloc]initWithNibName:@"SubmitReviewViewController" bundle:nil];
+                
+                self.submitReviewViewController = tempSubmitReviewViewCotroller;
+                tempSubmitReviewViewCotroller.loginChk = NO;
+                [self.view addSubview:submitReviewViewController.view];
+                tempSubmitReviewViewCotroller = nil;
                 
             }
             

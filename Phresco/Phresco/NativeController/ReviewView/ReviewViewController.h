@@ -12,7 +12,7 @@
 @class SpecialOffersViewController;
 @class ReviewCommentsViewController;
 @class Tabbar;
-//@class LoginViewController;
+@class LoginViewController;
 @interface ReviewViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
 {
     
@@ -47,7 +47,7 @@
     Tabbar *tabbar;
     BOOL isSpecialOffer;
     
-    //LoginViewController* loginViewController;
+    LoginViewController* loginViewController;
     
     BOOL loginChk;
     int reviewProductId;
@@ -70,7 +70,7 @@
 @property (nonatomic) BOOL loginChk;
 @property (nonatomic) int reviewProductId;
 
-//@property (nonatomic, retain) LoginViewController* loginViewController;
+@property (nonatomic, retain) LoginViewController* loginViewController;
 
 @property (nonatomic, strong) AddToBagViewController* addToBagViewController;
 

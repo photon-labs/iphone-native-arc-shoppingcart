@@ -52,12 +52,12 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"CheckoutOverallViewController-iPad" bundle:nil];
+		self = [super initWithNibName:@"CheckoutOverAllViewController-iPad" bundle:nil];
 		
 	}
 	else 
     {
-        self = [super initWithNibName:@"CheckOutOVerallViewController" bundle:nil];
+        self = [super initWithNibName:@"CheckoutOverAllViewController" bundle:nil];
         
     }
     return self;}
@@ -371,7 +371,7 @@
     }
     for(int i = 0;i<[assetsData.productDetailArray count]; i++)
     {
-        [productImageArray addObject:[[assetsData.productDetailArray objectAtIndex:i] productDetailImageUrl]];
+        //[productImageArray addObject:[[assetsData.productDetailArray objectAtIndex:i] productDetailImageUrl]];
     }
 }
 

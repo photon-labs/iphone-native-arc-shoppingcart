@@ -395,44 +395,36 @@ static int extraAssetsCounter = 0;
     if(nil != data)
     {
         NSArray* productDetailModelArray = [data objectForKey:@"product"];
-
+        
         for(int i = 0; i<[productDetailModelArray count]; i++)
         {
             NSDictionary *assetProperties = (NSDictionary*)[productDetailModelArray objectAtIndex:i];
             productService *service = [[productService alloc] init];
-            NSLog(@"assetProperties %@",assetProperties);
-                                  
-                                  // Get all object
-                                  NSArray *items = [data valueForKeyPath:@"product.details"];
-                                //  NSArray *array1 = [[items objectAtIndex:i] objectForKey:@"product"];
-                                  NSEnumerator *enumerator = [items objectEnumerator];
-                                  NSMutableDictionary* item;
-                                  while (item = (NSMutableDictionary*)[enumerator nextObject]) {
-//                                      NSLog(@"clientId = %@",  [item objectForKey:@"TV Type"]);
-//                                      NSLog(@"clientName = %@",[item objectForKey:@"Screen Size"]);
-//                                      NSLog(@"job = %@",       [item objectForKey:@"Screen Ratio"]);
-//                                      NSLog(@"job = %@",       [item objectForKey:@"TV Definition"]);
-//                                      
-                                                      NSMutableString *strTVType = [item objectForKey:@"TV Type"];
-                                                      NSMutableString *strScreen = [item objectForKey:@"Screen Size"];
-                                                      NSMutableString *strRatio = [item objectForKey:@"Screen Ratio"];
-                                                      NSMutableString *strDefinition = [item objectForKey:@"TV Definition"];
-
-                                
-                                      
-                                      [item setObject:strTVType forKey:@"TV Type"];
-                                      [item setObject:strScreen forKey:@"Screen Size"];
-                                      [item setObject:strRatio forKey:@"Screen Ratio"];
-                                      [item setObject:strDefinition forKey:@"TV Definition"];
-                                      
-                                    //  [self.productDetailArray addObject:[item copy]];
-              }
+            [service setProperties:(NSMutableDictionary*)assetProperties];
+            [self.productDetailArray addObject:service];
+            // Get all object
+            NSMutableArray *items = [data valueForKeyPath:@"product.details"];
+            NSEnumerator *enumerator = [items objectEnumerator];
+            NSMutableDictionary *item= [[NSMutableDictionary alloc]init];
             
-             [service setProperties:(NSMutableDictionary*)assetProperties];
-             [self.productDetailArray addObject:service];
+            while (item = (NSMutableDictionary*)[enumerator nextObject]) {
+                NSMutableString *strTVType = [item objectForKey:@"TV Type"];
+                NSMutableString *strScreen = [item objectForKey:@"Screen Size"];
+                NSMutableString *strRatio = [item objectForKey:@"Screen Ratio"];
+                NSMutableString *strDefinition = [item objectForKey:@"TV Definition"];
+                
+                [item setObject:strTVType forKey:@"TV Type"];
+                [item setObject:strScreen forKey:@"Screen Size"];
+                [item setObject:strRatio forKey:@"Screen Ratio"];
+                [item setObject:strDefinition forKey:@"TV Definition"];
+                [self.productDetailArray addObject:item];
+            
+                NSLog(@"self.prodcut detail array :%@", self.productDetailArray);
+            }
+            
             service = nil;
-    } 
-  }
+        }
+    }
 }
 
 -(void) updateProductReviewModel:(NSDictionary*) data{
@@ -443,7 +435,7 @@ static int extraAssetsCounter = 0;
         NSArray* productReviewModelArray = [data objectForKey:@"review"];
 //        NSArray* productReviewModelArray2 = [data objectForKey:@"average"];
 //        NSArray* productReviewModelArray = [data objectForKey:@"comments"];
-//        
+//
         NSLog(@"productReviewModelArray :%@", productReviewModelArray);
         
         for(int i = 0; i<[productReviewModelArray count]; i++)
@@ -1234,7 +1226,7 @@ static int extraAssetsCounter = 0;
         self.productDetailName = [dictionary objectForKey:kProductName];
         
         self.productDetailImageUrl = [NSString stringWithFormat:@"%@://%@:%@/%@/%@%@", protocol,host, port, context,imagePath,[dictionary objectForKey:kproductImage]];
-        
+        NSLog(@"self.productDetailImageUrl :%@", self.productDetailImageUrl);
         self.productDetailsPrice = [dictionary objectForKey:kproductPrice];
         
         self.productRatingView = [dictionary objectForKey:kproductRating];

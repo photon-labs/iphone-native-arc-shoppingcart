@@ -11,7 +11,7 @@
 #import "DataModelEntities.h"
 #import "SharedObjects.h"
 #import "DTCustomColoredAccessory.h"
-#import "CheckoutOVerallViewController.h"
+#import "CheckoutOverAllViewController.h"
 #import "BrowseViewController.h"
 #import "ServiceHandler.h"
 //#import "SpecialOffersViewController.h"
@@ -532,7 +532,7 @@
     }
     for(int i = 0;i<[assetsData.productDetailArray count]; i++)
     {
-        [productImageArray addObject:[[assetsData.productDetailArray objectAtIndex:i] productDetailImageUrl]];
+       // [productImageArray addObject:[[assetsData.productDetailArray objectAtIndex:i] productDetailImageUrl]];
     }
 }
 

@@ -13,13 +13,13 @@
 #import "DataModelEntities.h"
 #import "AsyncImageView.h"
 #import "ServiceHandler.h"
-//#import "AddToBagViewController.h"
-//#import "ProductDetailsViewController.h"
+#import "AddToBagViewController.h"
+#import "ProductDetailsViewController.h"
 #import "AddToBagCustomCell.h"
 #import "HomeViewController.h"
-//#import "specialOffersViewController.h"
+#import "specialOffersViewController.h"
 #import "Tabbar.h"
-//#import "LoginViewController.h"
+#import "LoginViewController.h"
 
 
 @interface BrowseViewController ()
@@ -33,10 +33,10 @@
 @synthesize productImageArray;
 @synthesize productNameArray;
 @synthesize resultViewController;
-//@synthesize addToBagViewController;
-//@synthesize specialOffersViewController;
+@synthesize addToBagViewController;
+@synthesize specialOffersViewController;
 @synthesize productCountArray;
-//@synthesize loginViewController;
+@synthesize loginViewController;
 @synthesize activityIndicator;
 @synthesize loginChk;
 @synthesize array_;

@@ -496,7 +496,9 @@
         }
         for(int i = 0;i<[assetsData.productDetailArray count]; i++)
         {
-            [productImageArray addObject:[[assetsData.productDetailArray objectAtIndex:i] productDetailImageUrl]];
+            NSLog(@"productImageArray :%@", productImageArray);
+           //[productImageArray addObject:[[assetsData.productDetailArray objectAtIndex:i] productDetailImageUrl]];
+            
         }
     }
 }

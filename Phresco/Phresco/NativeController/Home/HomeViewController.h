@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
-//@class LoginViewController;
-//@class RegistrationViewController;
+@class LoginViewController;
+@class RegistrationViewController;
 @class BrowseViewController;
 @class SpecialOffersViewController;
 @class ResultViewController;
 @class Tabbar;
-//@class SubmitReviewViewController;
+@class SubmitReviewViewController;
 
 @interface HomeViewController : UIViewController
 {
@@ -30,14 +30,12 @@
     
     BrowseViewController		*browseViewController;
     
-//    SubmitReviewViewController* SubmitReviewViewController;
-//    
-//    LoginViewController *loginViewController;
-//    
-//    RegistrationViewController  *registrationViewController;
-//	
-//	BrowseViewController		*browseViewController;
-//    
+    SubmitReviewViewController* SubmitReviewViewController;
+    
+    LoginViewController *loginViewController;
+   
+    RegistrationViewController  *registrationViewController;
+    
     SpecialOffersViewController *specialOffersViewController;
     
     ResultViewController        *resultViewController;
@@ -52,16 +50,16 @@
 
 @property (nonatomic, strong) BrowseViewController		*browseViewController;
 
-//@property (nonatomic, retain) LoginViewController *loginViewController;
-//
-//@property (nonatomic, retain) RegistrationViewController  *registrationViewController;
-//
+@property (nonatomic, retain) LoginViewController *loginViewController;
+
+@property (nonatomic, retain) RegistrationViewController  *registrationViewController;
+
 
 @property (nonatomic, strong) SpecialOffersViewController *specialOffersViewController;
 
 @property (nonatomic, strong) ResultViewController        *resultViewController;
 
-//@property (nonatomic, retain) SubmitReviewViewController *submitReviewViewController;
+@property (nonatomic, retain) SubmitReviewViewController *submitReviewViewController;
 
 -(void) loadNavigationBar;
 

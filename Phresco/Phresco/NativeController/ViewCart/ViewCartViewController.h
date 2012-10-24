@@ -11,6 +11,7 @@
 @class BrowseViewController;
 @class SpecialOffersViewController;
 @class Tabbar;
+
 @interface ViewCartViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
     UITableView* viewCartTable;
@@ -51,8 +52,6 @@
 @property (nonatomic, strong) BrowseViewController *browseViewController;
 
 @property (nonatomic, strong) SpecialOffersViewController *specialOffersViewController;
-
-
 
 -(void) loadNavigationBar;
 -(void) initializeTableView;

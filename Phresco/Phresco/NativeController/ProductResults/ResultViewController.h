@@ -12,7 +12,7 @@
 @class ReviewViewController;
 @class AddToBagViewController;
 @class SpecialOffersViewController;
-//@class LoginViewController;
+@class LoginViewController;
 @class ProductDetailsViewController;
 
 @interface ResultViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
@@ -41,8 +41,8 @@
     AddToBagViewController* addToBagViewController;
     
     SpecialOffersViewController *specialOffersViewController;
-//    
-//    LoginViewController* loginViewController;
+    
+    LoginViewController* loginViewController;
     
     Tabbar *tabbar;
     
@@ -68,7 +68,7 @@
 
 @property (nonatomic, strong) UIActivityIndicatorView* activityIndicator;
 
-//@property (nonatomic, retain)LoginViewController* loginViewController;
+@property (nonatomic, retain)LoginViewController* loginViewController;
 
 @property (nonatomic, strong) ProductDetailsViewController *productDetailsViewController;
 
