@@ -300,11 +300,11 @@
         for(int i = 0;i<[assetsData.productReviewArray count]; i++)
         {
             
-            NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
+            //NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
             //            NSLog(@"rating averageCustomerReview..... :%@",string);
             [averageArray addObject:[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
             
-            string = nil;
+            //string = nil;
         }
         
         
@@ -423,7 +423,7 @@
         for(int i = 0;i<[assetsData.productReviewArray count]; i++)
         {
             
-            NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
+            //NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
             //            NSLog(@"rating averageCustomerReview..... :%@",string);
             [averageArray addObject:[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
         }
@@ -570,7 +570,7 @@
     
     NSString* string = [NSString stringWithFormat:@"%@",[[assestsData.productReviewArray objectAtIndex:indexPath.row] productRatingView]];
     
-    NSString* averageValue = [NSString stringWithFormat:@"  Average customer review  (%@)",[[assestsData.productReviewArray objectAtIndex:indexPath.row] averageCustomerReview]];
+    //NSString* averageValue = [NSString stringWithFormat:@"  Average customer review  (%@)",[[assestsData.productReviewArray objectAtIndex:indexPath.row] averageCustomerReview]];
     
     
     NSString* user = [[[assestsData.productReviewArray objectAtIndex:indexPath.row] userName]description];

@@ -477,22 +477,22 @@
     NSMutableArray *catalogResponse =  [[NSMutableArray alloc]init];
     
     
-    NSString *strId=[[NSString alloc]init];
-    NSString *strName=[[NSString alloc]init];
-    NSString *strQty=[[NSString alloc]init];
-    NSString *strPrice=[[NSString alloc]init];
-    NSString *strImage=[[NSString alloc]init];
-    NSString *strDetail=[[NSString alloc]init];
-    NSString *strTotal=[[NSString alloc]init];
+//    NSString *strId=[[NSString alloc]init];
+//    NSString *strName=[[NSString alloc]init];
+//    NSString *strQty=[[NSString alloc]init];
+//    NSString *strPrice=[[NSString alloc]init];
+//    NSString *strImage=[[NSString alloc]init];
+//    NSString *strDetail=[[NSString alloc]init];
+//    NSString *strTotal=[[NSString alloc]init];
     
     
-    strId = @"3";
-    strName = @"LED3DTV4686 46' Class 3D LED TV w/ 2  Glasses";
-    strQty = @"2";
-    strPrice = @"1050";
-    strImage = @"http://172.16.23.65:8880/images/web/product";
-    strDetail = @"http://172.16.23.65:8880/images/web/product/details/coby_tv_3.png";
-    strTotal = @"2100.00";
+    NSString  *strId = @"3";
+    NSString  *strName = @"LED3DTV4686 46' Class 3D LED TV w/ 2  Glasses";
+    NSString  *strQty = @"2";
+    NSString  *strPrice = @"1050";
+    NSString  *strImage = @"http://172.16.23.65:8880/images/web/product";
+    NSString  *strDetail = @"http://172.16.23.65:8880/images/web/product/details/coby_tv_3.png";
+    NSString  *strTotal = @"2100.00";
     
     
     [dictCat setObject:strId forKey:@"productId"];
@@ -506,18 +506,14 @@
     
     NSMutableDictionary *jsonDictionary = [NSMutableDictionary dictionaryWithObject:catalogResponse forKey:@"products"];
     
-    NSString *strPay=[[NSString alloc]init];
-    
-    strPay = @"Cash on Delivery";
+    NSString *strPay = @"Cash on Delivery";
     
     [jsonDictionary setObject:strPay forKey:@"paymentMethod"];
     
     NSMutableDictionary *dictCustomer = [[NSMutableDictionary alloc]init];
     NSMutableDictionary *dictBilling = [[NSMutableDictionary alloc]init];
     
-    NSString *strEmail=[[NSString alloc]init];
-    
-    strEmail = @"arunkumar.klnmca@gmail.com";
+    NSString *strEmail = @"arunkumar.klnmca@gmail.com";
     
     [dictBilling setObject:strEmail forKey:@"emailID"];
     
@@ -604,10 +600,12 @@
 	[request setHTTPBody:postData]; 
     
 	NSURLConnection *conn=[[NSURLConnection alloc] initWithRequest:request delegate:self]; 
-	NSData* receivedData1 = [NSMutableData data] ; 
+	//NSData* receivedData1 = [NSMutableData data] ;
     
-	if (conn) 
-		receivedData1 = [NSMutableData data] ; 
+	if (conn)
+    {
+        //receivedData1 = [NSMutableData data] ;
+    }
 	else 
 	{ 
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:  @"Error while updating data on network."  
@@ -628,8 +626,8 @@
     NSDictionary* responseDict = [responseString JSONValue];
     //NSLog(@"response :%@", responseDict);
     
-    NSMutableString* strMsg = [[NSMutableString alloc] init];
-    strMsg = [responseDict objectForKey:@"message"];
+//    NSMutableString* strMsg = [[NSMutableString alloc] init];
+//    strMsg = [responseDict objectForKey:@"message"];
     
     NSMutableString* successMsg = [[NSMutableString alloc] init];
     successMsg = [responseDict objectForKey:@"successMessage"];
@@ -756,8 +754,8 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     

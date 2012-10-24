@@ -377,7 +377,7 @@ static ConnectionManager *sharedConnection = nil;
 - (BOOL) checkInternetConnection:(NSURLConnection *)connection{
 	
 	//if([[Reachability sharedReachability] internetConnectionStatus]==0) {
-	NSError *error;
+	NSError *error = nil;
 	[self connection:connection didFailWithError:error]; 
 	return FALSE;
 	//}

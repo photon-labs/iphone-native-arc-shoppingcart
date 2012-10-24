@@ -427,7 +427,7 @@
         
         NSDictionary* dict = [NSDictionary dictionaryWithObject:loginDict forKey:kReview];
         
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ServerUrl" ofType:@"plist"];
+        //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ServerUrl" ofType:@"plist"];
         
         
         if(loginChk == YES)

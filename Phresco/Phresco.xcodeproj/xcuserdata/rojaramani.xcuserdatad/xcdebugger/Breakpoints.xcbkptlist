@@ -16,18 +16,5 @@
          landmarkName = "-addNavigationBar"
          landmarkType = "5">
       </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Phresco/NativeController/Checkout/CheckOutViewController.m"
-         timestampString = "372332742.260574"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "560"
-         endingLineNumber = "560"
-         landmarkName = "-cancelAction:"
-         landmarkType = "5">
-      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

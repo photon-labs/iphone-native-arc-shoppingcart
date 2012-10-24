@@ -418,7 +418,7 @@ static int extraAssetsCounter = 0;
                 [item setObject:strRatio forKey:@"Screen Ratio"];
                 [item setObject:strDefinition forKey:@"TV Definition"];
                 [self.productDetailArray addObject:item];
-            
+                item = nil;
                 NSLog(@"self.prodcut detail array :%@", self.productDetailArray);
             }
             
@@ -878,13 +878,13 @@ static int extraAssetsCounter = 0;
 	// parse the callbackID and retrieve the FeatureName and selector
 	NSArray *split = [key componentsSeparatedByString:@"-"];
 	
-	NSString *name = @"";
+	//NSString *name = @"";
 	NSString *sel = @"";
 	
 	if (nil != split) {
 		
 		if ([split count] > 1) {
-			name = [split objectAtIndex:0];
+			//name = [split objectAtIndex:0];
 			sel = [split objectAtIndex:1];
 		}
 	}
@@ -1460,7 +1460,7 @@ static int extraAssetsCounter = 0;
     
     if(nil != dictionary)
     {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ServerUrl" ofType:@"plist"];
+        //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ServerUrl" ofType:@"plist"];
         ConfigurationReader *configReader = [[ConfigurationReader alloc]init];
         [configReader parseXMLFileAtURL:@"Config" environment:@"myWebservice"];
         

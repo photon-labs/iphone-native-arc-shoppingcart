@@ -400,7 +400,7 @@
             cartCount=[[assetsData.arrayAddtoCart objectAtIndex:i]objectForKey:@"Count"];
             [inputTexts addObject:cartCount];
             
-            price = [cartPrice intValue];
+            //price = [cartPrice intValue];
             
             theInteger = [cartCount intValue];
             
@@ -452,8 +452,8 @@
     } 
     else {
         
-        float heightTable;
-        float iPadHeightTable;
+        float heightTable = 0.0;
+        float iPadHeightTable = 0.0;
         
         if ([assetsData.arrayAddtoCart count] == 1)
         {
@@ -777,9 +777,9 @@
     
     AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
@@ -863,11 +863,11 @@
                 productCountLabel = nil;
                 
                 NSString *strPrice=[[assetsData.arrayAddtoCart objectAtIndex:indexPath.row]objectForKey:@"ListPrice"];
-                int total = [strPrice intValue];
-                
-                int subtotal;
-                
-                subtotal = (theInteger * total);
+//                int total = [strPrice intValue];
+//                
+//                int subtotal;
+//                
+//                subtotal = (theInteger * total);
                 
                 CGRect frame;
                 frame.size.width=100; 
@@ -993,11 +993,11 @@
                 productCountLabel = nil;
                 
                 NSString *strPrice=[[assetsData.arrayAddtoCart objectAtIndex:indexPath.row]objectForKey:@"ListPrice"];
-                int total = [strPrice intValue];
-                
-                int subtotal;
-                
-                subtotal = (theInteger * total);
+//                int total = [strPrice intValue];
+//                
+//                int subtotal;
+//                
+//                subtotal = (theInteger * total);
                 
                 CGRect frame;
                 frame.size.width=60; 

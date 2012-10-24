@@ -98,7 +98,7 @@
         [signOnList addObject:signinUrlPatternMatch];
     }    
     
-    BOOL isSignIn = [self interceptURL:signOnList :[[request URL] absoluteString]];
+    //BOOL isSignIn = [self interceptURL:signOnList :[[request URL] absoluteString]];
     
     debug(@"requestURL: %@", self.requestURL);    
     

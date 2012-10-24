@@ -170,8 +170,8 @@
         [titleLabel setText:@"View My Cart"];
         [self.view addSubview:titleLabel];
         
-        int price;
-        int cart;
+//        int price;
+//        int cart;
         int purchase=0;
         
         AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
@@ -181,9 +181,9 @@
             NSString *cartPrice=[[assetsData.arrayAddtoCart objectAtIndex:i]objectForKey:@"ListPrice"];
             NSString *cartCount=[[assetsData.arrayAddtoCart objectAtIndex:i]objectForKey:@"Count"];
             
-            price = [cartPrice intValue];
-            
-            cart = [cartCount intValue];
+//            price = [cartPrice intValue];
+//            
+//            cart = [cartCount intValue];
             
             purchase = purchase + ([cartPrice intValue] * [cartCount intValue]);
             
@@ -564,12 +564,12 @@
         if(indexPath.row == 2) {
             
             NSString *strPrice=[[assetsData.arrayAddtoCart objectAtIndex:indexPath.section]objectForKey:@"ListPrice"];
-            NSString *strCount=[[assetsData.arrayAddtoCart objectAtIndex:indexPath.section]objectForKey:@"Count"];
-            int total = [strPrice intValue];
-            int sum =  [strCount intValue];
-            int subtotal;
-            
-            subtotal = (sum * total);
+//            NSString *strCount=[[assetsData.arrayAddtoCart objectAtIndex:indexPath.section]objectForKey:@"Count"];
+//            int total = [strPrice intValue];
+//            int sum =  [strCount intValue];
+//            int subtotal;
+//            
+//            subtotal = (sum * total);
             
             Price.text = [NSString stringWithFormat:@" $%@",strPrice];
             [cell.contentView addSubview:Price];
@@ -621,12 +621,12 @@
         if(indexPath.row == 2) {
             
             NSString *strPrice=[[assetsData.arrayAddtoCart objectAtIndex:indexPath.section]objectForKey:@"ListPrice"];
-            NSString *strCount=[[assetsData.arrayAddtoCart objectAtIndex:indexPath.section]objectForKey:@"Count"];
-            int total = [strPrice intValue];
-            int sum =  [strCount intValue];
-            int subtotal;
+            //NSString *strCount=[[assetsData.arrayAddtoCart objectAtIndex:indexPath.section]objectForKey:@"Count"];
+            //int total = [strPrice intValue];
+            //int sum =  [strCount intValue];
+            //int subtotal;
             
-            subtotal = (sum * total);
+            //subtotal = (sum * total);
             
             Price.text = [NSString stringWithFormat:@" $%@",strPrice];
             [cell.contentView addSubview:Price];

@@ -49,7 +49,7 @@ NSString* parseURL(NSString *urlString)
 BOOL interceptURL(NSArray *URLInterceptList, NSString *urlString)
 {
 	
-	BOOL found;
+	BOOL found = NO;
 	
 	if(nil != URLInterceptList)
 	{
