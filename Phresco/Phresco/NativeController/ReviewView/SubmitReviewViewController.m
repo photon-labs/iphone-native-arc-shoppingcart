@@ -457,12 +457,8 @@
             
             NSLog(@"urlString in postComments %@",urlString);
             
-            SBJsonWriter* json =[SBJsonWriter alloc];
-            
-            NSString* jsonString  = [json stringWithObject:dict];
-            
-            NSData* postData = [jsonString dataUsingEncoding:NSASCIIStringEncoding];
-            
+            NSData* postData = [NSJSONSerialization dataWithJSONObject:dict
+                                                               options:NSJSONWritingPrettyPrinted error:nil];
             NSMutableURLRequest *request  = [[NSMutableURLRequest alloc] init];
             [request setURL:[NSURL URLWithString:urlString]];
             [request setHTTPMethod:@"POST"];
@@ -472,14 +468,9 @@
             
             NSURLResponse *urlResponse;
             NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:nil];
-            
             NSString* jsonData = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-            
-            
             NSDictionary* response = [jsonData JSONValue];
-            
-            NSMutableString* successMsg = [[NSMutableString alloc] init];
-            successMsg = [response objectForKey:@"successMessage"];
+            NSMutableString* successMsg = [response objectForKey:@"successMessage"];
             
             if([successMsg isEqualToString:@"Success"]) {
                 
@@ -487,7 +478,6 @@
                 [alertSuccess show];
                 alertSuccess = nil;
                 [activityIndicator stopAnimating];
-                
             }
             
             /// }//End of userLogged BOOL condition
@@ -583,7 +573,7 @@
 		
 		x = x + 102;
         
-       	button = nil;
+       	//button = nil;
 		
 	}
     

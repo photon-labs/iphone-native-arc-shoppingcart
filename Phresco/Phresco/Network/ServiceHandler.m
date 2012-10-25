@@ -176,24 +176,26 @@
 {		
 	NSData *responseData = [responseDataDict objectForKey:kConnectionDataReceived];
 	
-    NSMutableDictionary *catalogResponse =[[NSMutableDictionary alloc]init]; 
+     
 	
-    NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+//    NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+//    
+//    debug(@"prod desc STR:%@ ",responseResultString);
+//    
+//    responseData = nil;
+////    SBJsonParser *jsonParser = [SBJsonParser new];
+////    
+////    // Parse the JSON into an Object		
+////    id data = [jsonParser objectWithString:responseResultString error:NULL];
+////    
+////    responseResultString = nil;
+////    
+////    //Release SBJSon Object
+////    jsonParser = nil;
     
-    debug(@"prod desc STR:%@ ",responseResultString);
+    NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
     
-    responseData = nil;
-    SBJsonParser *jsonParser = [SBJsonParser new];
-    
-    // Parse the JSON into an Object		
-    id data = [jsonParser objectWithString:responseResultString error:NULL];
-    
-    responseResultString = nil;
-    
-    //Release SBJSon Object
-    jsonParser = nil;
-    
-    catalogResponse = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary*)data];
+    NSMutableDictionary *catalogResponse  = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary*)data];
 
 	
 	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:catalogResponse waitUntilDone:NO];	
@@ -243,32 +245,11 @@
     NSData *responseData = [responseDataDict objectForKey:kConnectionDataReceived];
 	
     NSMutableDictionary *productDetailsResponse;
-	
-    NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     
-    debug(@"prod desc STR:%@ ",responseResultString);
-    
-    responseData = nil;
-    SBJsonParser *jsonParser = [SBJsonParser new];
-    
-    // Parse the JSON into an Object		
-    id data = [jsonParser objectWithString:responseResultString error:NULL];
-    
-    responseResultString = nil;
-    
-    //Release SBJSon Object
-    jsonParser = nil;
-    
+    NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
+
     productDetailsResponse = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary*)data];
-    
-//    NSDictionary *tempArray = [NSDictionary dictionaryWithDictionary:data];
-//    NSMutableArray *ValueID =  [[NSMutableArray alloc]init];
-//    NSMutableDictionary *dictCat = [[NSMutableDictionary alloc]init];
-//    productDetailsResponse =  [[NSMutableArray alloc]init];
-//    ValueID =  [tempArray objectForKey:@"product"];
-//    
-    
-	
+    	
 	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productDetailsResponse waitUntilDone:NO];	
    
 }
@@ -315,44 +296,17 @@
 
 -(void) productServiceDone:(NSMutableDictionary*) responseDataDict 
 {
-    
-    
     NSData *responseData = [responseDataDict objectForKey:kConnectionDataReceived];
 	
-	
-    NSMutableDictionary *productServiceResponse;
+    NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
     
-    NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSMutableDictionary *productServiceResponse = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary*)data];
     
-    debug(@"prod desc STR:%@ ",responseResultString);
+	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productServiceResponse waitUntilDone:NO];
     
-    responseData = nil;
-    SBJsonParser *jsonParser = [SBJsonParser new];
-    
-    // Parse the JSON into an Object		
-    id data = [jsonParser objectWithString:responseResultString error:NULL];
-    
-    responseResultString = nil;
-    
-    //Release SBJSon Object
-    jsonParser = nil;
-    //Added
-//    NSDictionary *tempArray = [NSDictionary dictionaryWithDictionary:data];
-//    NSMutableArray *ValueID =  [[NSMutableArray alloc]init];
-//    NSMutableDictionary *dictCat = [[NSMutableDictionary alloc]init];
-//    productDetailsResponse =  [[NSMutableArray alloc]init];
-//    ValueID =  [tempArray objectForKey:@"product"];
-//    
-    productServiceResponse = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary*)data];
-	
-	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productServiceResponse waitUntilDone:NO];	
-    
-      
 }
 
-
 ////To display the product 
-
 - (void) productReviewService:(id)callBackTargetMethod: (SEL)callBackSelectorMethod
 {
 	self.callBackTarget = callBackTargetMethod;
@@ -394,24 +348,7 @@
 {
     NSData *responseData = [responseDataDict objectForKey:kConnectionDataReceived];
     NSMutableDictionary *productReviewResponse;
-    NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    
-    debug(@"prod desc STR:%@ ",responseResultString);
-    responseData = nil;
-    SBJsonParser *jsonParser = [SBJsonParser new];
-    
-    // Parse the JSON into an Object		
-    id data = [jsonParser objectWithString:responseResultString error:NULL];
-    
-    responseResultString = nil;
-    
-    //Release SBJSon Object
-    jsonParser = nil;
-    //Added
-//    NSDictionary *tempArray = [NSDictionary dictionaryWithDictionary:data];
-//    NSMutableArray *ValueID =  [[NSMutableArray alloc]init];
-//    NSDictionary *tempReview = [tempArray objectForKey:@"review"];
-//    
+    NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
     productReviewResponse = [NSDictionary dictionaryWithDictionary:(NSDictionary*)data];
     [self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productReviewResponse waitUntilDone:NO];	
     
@@ -463,29 +400,7 @@
 	
 	
     NSMutableDictionary *specialProductsResponse;
-    
-    NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    
-    debug(@"prod desc STR:%@ ",responseResultString);
-    
-    responseData = nil;
-    SBJsonParser *jsonParser = [SBJsonParser new];
-    
-    // Parse the JSON into an Object		
-    id data = [jsonParser objectWithString:responseResultString error:NULL];
-    
-    responseResultString = nil;
-    
-    //Release SBJSon Object
-    jsonParser = nil;
-//    //Added
-//    NSDictionary *tempArray = [NSDictionary dictionaryWithDictionary:data];
-//    NSMutableArray *ValueID =  [[NSMutableArray alloc]init];
-//    NSMutableDictionary *dictCat = [[NSMutableDictionary alloc]init];
-//    productDetailsResponse =  [[NSMutableArray alloc]init];
-//    ValueID =  [tempArray objectForKey:@"product"];
-//    
-	
+    NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
     specialProductsResponse = [NSDictionary dictionaryWithDictionary:(NSDictionary*)data];
 	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:specialProductsResponse waitUntilDone:NO];	
     
@@ -536,27 +451,7 @@
 	
     NSMutableDictionary *searchProductsResponse;
 	
-    NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    
-    debug(@"prod desc STR:%@ ",responseResultString);
-    
-    responseData = nil;
-    SBJsonParser *jsonParser = [SBJsonParser new];
-    
-    // Parse the JSON into an Object		
-    id data = [jsonParser objectWithString:responseResultString error:NULL];
-    
-    responseResultString = nil;
-    
-    //Release SBJSon Object
-    jsonParser = nil;
-    
-//    NSDictionary *tempArray = [NSDictionary dictionaryWithDictionary:data];
-//    NSMutableArray *ValueID =  [[NSMutableArray alloc]init];
-//    NSMutableDictionary *dictCat = [[NSMutableDictionary alloc]init];
-//    productDetailsResponse =  [[NSMutableArray alloc]init];
-//    ValueID =  [tempArray objectForKey:@"product"];
-//    
+   NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];    
 	searchProductsResponse = [NSDictionary dictionaryWithDictionary:(NSDictionary*)data];
 	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:searchProductsResponse waitUntilDone:NO];	
     
@@ -603,31 +498,8 @@
     
     NSData *responseData = [responseDataDict objectForKey:kConnectionDataReceived];
     NSMutableDictionary *productReviewCommentsResponse;
-    NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    
-    debug(@"prod desc STR:%@ ",responseResultString);
-    responseData = nil;
-    SBJsonParser *jsonParser = [SBJsonParser new];
-    
-    // Parse the JSON into an Object		
-    id data = [jsonParser objectWithString:responseResultString error:NULL];
-    
-    responseResultString = nil;
-    
-    //Release SBJSon Object
-    jsonParser = nil;
-    //Added
-//    NSDictionary *tempArray = [NSDictionary dictionaryWithDictionary:data];
-//    NSMutableArray *ValueID =  [[NSMutableArray alloc]init];
-//    NSDictionary *tempReview = [tempArray objectForKey:@"review"];
-//    
-//    NSDictionary *tempComments = [NSDictionary dictionaryWithDictionary:tempReview];
-//    productDetailsResponse =  [[NSMutableArray alloc]init];
-//    ValueID =  [tempComments objectForKey:@"comments"];
-
+        NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
     productReviewCommentsResponse =[NSDictionary dictionaryWithDictionary:(NSDictionary*)data];
-    
-    
     [self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productReviewCommentsResponse waitUntilDone:NO];	
     
 

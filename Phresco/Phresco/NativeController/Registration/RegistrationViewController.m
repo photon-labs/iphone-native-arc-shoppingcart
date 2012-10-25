@@ -570,10 +570,14 @@
                 // http://172.16.17.180:9990/eshop/rest/api/post/register/
                 NSLog(@"urlString %@",urlString);
                 
-                SBJsonWriter* json =[SBJsonWriter alloc];
-                NSString* jsonString  = [json stringWithObject:dict];
-                NSLog(@"jsonString :%@", jsonString);
-                NSData* postData = [jsonString dataUsingEncoding:NSASCIIStringEncoding];
+//                SBJsonWriter* json =[SBJsonWriter alloc];
+//                NSString* jsonString  = [json stringWithObject:dict];
+//                NSLog(@"jsonString :%@", jsonString);
+                
+                //convert object to data
+                NSData* postData = [NSJSONSerialization dataWithJSONObject:dict
+                                                                   options:NSJSONWritingPrettyPrinted error:nil];
+               // NSData* postData = [jsonString dataUsingEncoding:NSASCIIStringEncoding];
                 NSMutableURLRequest *request  = [[NSMutableURLRequest alloc] init];
                 [request setURL:[NSURL URLWithString:urlString]];
                 [request setHTTPMethod:@"POST"];

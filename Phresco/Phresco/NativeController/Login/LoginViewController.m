@@ -497,12 +497,8 @@
         NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi,kpost,klogin];
         
         NSLog(@"urlString %@",urlString);
-        
-        SBJsonWriter* json =[SBJsonWriter alloc];
-        
-        NSString* jsonString  = [json stringWithObject:dict];
-        
-        NSData* postData = [jsonString dataUsingEncoding:NSASCIIStringEncoding];
+        NSData* postData = [NSJSONSerialization dataWithJSONObject:dict
+                                                           options:NSJSONWritingPrettyPrinted error:nil];
         
         NSMutableURLRequest *request  = [[NSMutableURLRequest alloc] init];
         [request setURL:[NSURL URLWithString:urlString]];
@@ -628,9 +624,7 @@
             [cancelButton setUserInteractionEnabled:NO];
             
         }
-        json = nil;
-        request = nil;
-        //}
+       
     }
     
 }

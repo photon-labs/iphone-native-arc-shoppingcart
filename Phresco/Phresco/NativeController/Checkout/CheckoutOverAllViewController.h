@@ -32,8 +32,6 @@
 	NSMutableArray	*productNameArray;
     NSMutableIndexSet *expandedSections;
     NSMutableData *receivedData;
-	NSURLResponse *__autoreleasing *response; //passing address of non-local object to __autoreleasing parameter for write-back
-	 NSError *__autoreleasing  *error;
 	NSData *data;
 	NSString *responseString;
     NSString *stringTotalPrice;

@@ -783,7 +783,7 @@
         
         NSString *strId = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailId]];
         
-        NSString *strCount = [[NSString alloc] init];
+        NSString *strCount = @" ";
         
         for(int i=0; i<[assetsData.arrayAddtoCart count]; i++) {
             
@@ -861,7 +861,7 @@
         NSString *strName = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailName]];
         
         NSString *strId = [NSString stringWithFormat:@"%@",[[assetsData.productDetailArray objectAtIndex:[sender tag]] productDetailId]];
-        NSString *strCount = nil;
+        NSString *strCount = @"";
         
         for(int i=0; i<[assetsData.arrayAddtoCart count]; i++) {
             
@@ -930,6 +930,8 @@
     assetsData.productDetailArray = [[NSMutableArray alloc] init];
     
 	[self.view removeFromSuperview];
+    
+    
 }
 
 

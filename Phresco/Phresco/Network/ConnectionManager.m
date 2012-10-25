@@ -234,10 +234,7 @@ static ConnectionManager *sharedConnection = nil;
 		
 		if( (NSURLConnection *)connection == conn)
 		{
-			id connobj = [urlConnectionsArray objectAtIndex:i];
-			
-			connobj = nil;
-			
+
 			[urlConnectionsArray removeObjectAtIndex:i];			
 		}
 	}

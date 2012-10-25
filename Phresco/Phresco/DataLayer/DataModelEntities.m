@@ -398,30 +398,29 @@ static int extraAssetsCounter = 0;
         
         for(int i = 0; i<[productDetailModelArray count]; i++)
         {
-            NSDictionary *assetProperties = (NSDictionary*)[productDetailModelArray objectAtIndex:i];
+            NSMutableDictionary *assetProperties = (NSMutableDictionary*)[productDetailModelArray objectAtIndex:i];
             productService *service = [[productService alloc] init];
             [service setProperties:(NSMutableDictionary*)assetProperties];
             [self.productDetailArray addObject:service];
             // Get all object
             NSMutableArray *items = [data valueForKeyPath:@"product.details"];
-            NSEnumerator *enumerator = [items objectEnumerator];
-            NSMutableDictionary *item= [[NSMutableDictionary alloc]init];
             
-            while (item = (NSMutableDictionary*)[enumerator nextObject]) {
-                NSMutableString *strTVType = [item objectForKey:@"TV Type"];
-                NSMutableString *strScreen = [item objectForKey:@"Screen Size"];
-                NSMutableString *strRatio = [item objectForKey:@"Screen Ratio"];
-                NSMutableString *strDefinition = [item objectForKey:@"TV Definition"];
+            for(int i=0;i<[items count];i++)
+            {
+                NSMutableDictionary *itemDict = [NSMutableDictionary dictionary];
+                NSMutableDictionary *tempDict = [NSMutableDictionary dictionary];
+                itemDict = [items objectAtIndex:i];
+                NSString *strTVType = [itemDict objectForKey:@"TV Type"];
+                NSString *strScreen = [itemDict objectForKey:@"Screen Size"];
+                NSString *strRatio = [itemDict objectForKey:@"Screen Ratio"];
+                NSString *strDefinition = [itemDict objectForKey:@"TV Definition"];
                 
-                [item setObject:strTVType forKey:@"TV Type"];
-                [item setObject:strScreen forKey:@"Screen Size"];
-                [item setObject:strRatio forKey:@"Screen Ratio"];
-                [item setObject:strDefinition forKey:@"TV Definition"];
-                [self.productDetailArray addObject:item];
-                item = nil;
-                NSLog(@"self.prodcut detail array :%@", self.productDetailArray);
-            }
-            
+                [tempDict setObject:strTVType forKey:@"TV Type"];
+                [tempDict setObject:strScreen forKey:@"Screen Size"];
+                [tempDict setObject:strRatio forKey:@"Screen Ratio"];
+                [tempDict setObject:strDefinition forKey:@"TV Definition"];
+                [self.productDetailArray addObject:tempDict];
+            }            
             service = nil;
         }
     }
@@ -1542,15 +1541,10 @@ static int extraAssetsCounter = 0;
     
     if(nil != dictionary)
     {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ServerUrl" ofType:@"plist"];
         ConfigurationReader *configReader = [[ConfigurationReader alloc]init];
         [configReader parseXMLFileAtURL:@"Config" environment:@"myWebservice"];
         
-        /*if(filePath)
-         {*/
         AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-        
-        //NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
         
         NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
         protocol = [protocol stringByTrimmingCharactersInSet:
@@ -1578,7 +1572,6 @@ static int extraAssetsCounter = 0;
         self.searchProductRatingView = [dictionary objectForKey:kspecialProductRating];
         
         self.searchProductPrice = [dictionary objectForKey:kspecialProductPrice];
-        // }
     }
 }
 
