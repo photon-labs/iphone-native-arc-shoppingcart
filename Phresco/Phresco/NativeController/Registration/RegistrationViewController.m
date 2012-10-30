@@ -11,9 +11,6 @@
 #import "ServiceHandler.h"
 #import "Constants.h"
 #import "DataModelEntities.h"
-#import "SBJsonWriter.h"
-#import "SBJsonParser.h"
-#import "NSString+SBJSON.h"
 #import "Tabbar.h"
 #import "SharedObjects.h"
 #import "ConfigurationReader.h"
@@ -570,14 +567,10 @@
                 // http://172.16.17.180:9990/eshop/rest/api/post/register/
                 NSLog(@"urlString %@",urlString);
                 
-//                SBJsonWriter* json =[SBJsonWriter alloc];
-//                NSString* jsonString  = [json stringWithObject:dict];
-//                NSLog(@"jsonString :%@", jsonString);
                 
                 //convert object to data
                 NSData* postData = [NSJSONSerialization dataWithJSONObject:dict
                                                                    options:NSJSONWritingPrettyPrinted error:nil];
-               // NSData* postData = [jsonString dataUsingEncoding:NSASCIIStringEncoding];
                 NSMutableURLRequest *request  = [[NSMutableURLRequest alloc] init];
                 [request setURL:[NSURL URLWithString:urlString]];
                 [request setHTTPMethod:@"POST"];
@@ -587,12 +580,8 @@
                 
                 NSURLResponse *urlResponse;
                 NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:nil];
-                NSString* jsonData = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-                NSDictionary* response = [jsonData JSONValue];
-                NSLog(@"response :%@", response);
-//                NSMutableString* strMsg = [[NSMutableString alloc] init];
-//                strMsg = [response objectForKey:@"message"];
-//                NSLog(@"%@",strMsg);
+                
+                NSDictionary *response = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
                 NSMutableString* successMsg = [response objectForKey:@"successMessage"];
                 if([successMsg isEqualToString:@"Success"]) {
                     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Registered Successfully" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];

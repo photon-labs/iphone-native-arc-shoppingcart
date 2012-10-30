@@ -11,8 +11,6 @@
 #import "DataModelEntities.h"
 #import "SharedObjects.h"
 #import "Constants.h"
-#import "SBJsonWriter.h"
-#import "NSString+SBJSON.h"
 #import "AddToBagViewController.h"
 #import "SpecialOffersViewController.h"
 #import "Tabbar.h"
@@ -468,8 +466,8 @@
             
             NSURLResponse *urlResponse;
             NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:nil];
-            NSString* jsonData = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-            NSDictionary* response = [jsonData JSONValue];
+            
+            NSDictionary *response = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
             NSMutableString* successMsg = [response objectForKey:@"successMessage"];
             
             if([successMsg isEqualToString:@"Success"]) {

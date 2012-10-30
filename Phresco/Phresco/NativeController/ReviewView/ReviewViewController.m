@@ -302,7 +302,7 @@
             
             //NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
             //            NSLog(@"rating averageCustomerReview..... :%@",string);
-            [averageArray addObject:[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
+           // [averageArray addObject:[[assetsData.productReviewArray objectAtIndex:i] averageCustomerReview]];
             
             //string = nil;
         }
@@ -515,14 +515,8 @@
             [reviewTextview  addSubview:myRatings];
             [imagePoll addObject:myRatings];
         }
-        
-        
-        
     }
-    
 }
-
-
 
 #pragma mark TableView Delegates
 
@@ -561,100 +555,93 @@
         
     }
     
-    
    	cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    [[cell commentsLabel] setText:[[assestsData.productReviewArray objectAtIndex:indexPath.row]userComments]];
-    [[cell disImage] setImage:[UIImage imageNamed:@"nav_arrow.png"]];
-    
-    
-    NSString* string = [NSString stringWithFormat:@"%@",[[assestsData.productReviewArray objectAtIndex:indexPath.row] productRatingView]];
-    
-    //NSString* averageValue = [NSString stringWithFormat:@"  Average customer review  (%@)",[[assestsData.productReviewArray objectAtIndex:indexPath.row] averageCustomerReview]];
-    
-    
-    NSString* user = [[[assestsData.productReviewArray objectAtIndex:indexPath.row] userName]description];
-    
-    [[cell userNameLabel] setText:user];
-    
-    
-    NSString* date = [NSString stringWithFormat:@"%@",[[assestsData.productReviewArray objectAtIndex:indexPath.row] commentedDate]];
-    
-    [[cell dateLabel] setText:date];
-    
-    
-    
-    NSInteger tagValue = (NSInteger)[[assestsData.productReviewArray objectAtIndex:indexPath.row] productDetailId];
-    [submitReview setTag:tagValue];
-    
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-	{
-        float x = 20;
-        
-        float  y =  5;
-        
-        float  width = 25;
-        
-        float height = 25;
-        
-        NSMutableArray *imageFramesWhiteArray = [[NSMutableArray alloc]init];
-        for(int i = 0; i<5;i++)
-        {
-            UIImageView *ratingsView = [[UIImageView alloc]init];
-            ratingsView.frame = CGRectMake(x,y,width,height);
-            [ratingsView setImage:[UIImage imageNamed:@"white_star.png"]];
-            x = x + 25;
-            [ratingsView setTag:i];
-            [cell.contentView  addSubview:ratingsView];
-            [imageFramesWhiteArray addObject:ratingsView];
-        }
-        
-        float xBlue = 20;
-        NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
-        for(int i = 0; i<[string intValue];i++)
-        {
-            UIImageView *ratingsView = [[UIImageView alloc]init];
-            ratingsView.frame = CGRectMake(xBlue,y,width,height);
-            [ratingsView setImage:[UIImage imageNamed:@"blue_star.png"]];
-            xBlue = xBlue + 25;
-            [ratingsView setTag:i];
-            [cell.contentView  addSubview:ratingsView];
-            [imageFramesArray addObject:ratingsView];
-        }
-    }
-    else {
-        float x = 10;
-        
-        float  y =  2;
-        
-        float  width = 15;
-        
-        float height = 15;
-        NSMutableArray *imageFramesWhiteArray = [[NSMutableArray alloc]init];
-        for(int i = 0; i<5;i++)
-        {
-            UIImageView *ratingsView = [[UIImageView alloc]init];
-            ratingsView.frame = CGRectMake(x,y,width,height);
-            [ratingsView setImage:[UIImage imageNamed:@"white_star.png"]];
-            x = x + 15;
-            [ratingsView setTag:i];
-            [cell.contentView  addSubview:ratingsView];
-            [imageFramesWhiteArray addObject:ratingsView];
-        }
-        
-        float xBlue = 10;
-        NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
-        for(int i = 0; i<[string intValue];i++)
-        {
-            UIImageView *ratingsView = [[UIImageView alloc]init];
-            ratingsView.frame = CGRectMake(xBlue,y,width,height);
-            [ratingsView setImage:[UIImage imageNamed:@"blue_star.png"]];
-            xBlue = xBlue + 15;
-            [ratingsView setTag:i];
-            [cell.contentView  addSubview:ratingsView];
-            [imageFramesArray addObject:ratingsView];
-        }
-    }
+//   [[cell commentsLabel] setText:[[assestsData.productReviewArray objectAtIndex:indexPath.row]userComments]];
+//    
+//    [[cell disImage] setImage:[UIImage imageNamed:@"nav_arrow.png"]];
+//    
+//    NSString* string = [NSString stringWithFormat:@"%@",[[assestsData.productReviewArray objectAtIndex:indexPath.row] productRatingView]];
+//    
+//    NSString* user = [[[assestsData.productReviewArray objectAtIndex:indexPath.row] userName]description];
+//    
+//    [[cell userNameLabel] setText:user];
+//    
+//    NSString* date = [NSString stringWithFormat:@"%@",[[assestsData.productReviewArray objectAtIndex:indexPath.row] commentedDate]];
+//    
+//    [[cell dateLabel] setText:date];
+//    
+//    NSInteger tagValue = (NSInteger)[[assestsData.productReviewArray objectAtIndex:indexPath.row] productDetailId];
+//    [submitReview setTag:tagValue];
+//    
+//    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+//	{
+//        float x = 20;
+//        
+//        float  y =  5;
+//        
+//        float  width = 25;
+//        
+//        float height = 25;
+//        
+//        NSMutableArray *imageFramesWhiteArray = [[NSMutableArray alloc]init];
+//        for(int i = 0; i<5;i++)
+//        {
+//            UIImageView *ratingsView = [[UIImageView alloc]init];
+//            ratingsView.frame = CGRectMake(x,y,width,height);
+//            [ratingsView setImage:[UIImage imageNamed:@"white_star.png"]];
+//            x = x + 25;
+//            [ratingsView setTag:i];
+//            [cell.contentView  addSubview:ratingsView];
+//            [imageFramesWhiteArray addObject:ratingsView];
+//        }
+//        
+//        float xBlue = 20;
+//        NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
+//        for(int i = 0; i<[string intValue];i++)
+//        {
+//            UIImageView *ratingsView = [[UIImageView alloc]init];
+//            ratingsView.frame = CGRectMake(xBlue,y,width,height);
+//            [ratingsView setImage:[UIImage imageNamed:@"blue_star.png"]];
+//            xBlue = xBlue + 25;
+//            [ratingsView setTag:i];
+//            [cell.contentView  addSubview:ratingsView];
+//            [imageFramesArray addObject:ratingsView];
+//        }
+//    }
+//    else {
+//        float x = 10;
+//        
+//        float  y =  2;
+//        
+//        float  width = 15;
+//        
+//        float height = 15;
+//        NSMutableArray *imageFramesWhiteArray = [[NSMutableArray alloc]init];
+//        for(int i = 0; i<5;i++)
+//        {
+//            UIImageView *ratingsView = [[UIImageView alloc]init];
+//            ratingsView.frame = CGRectMake(x,y,width,height);
+//            [ratingsView setImage:[UIImage imageNamed:@"white_star.png"]];
+//            x = x + 15;
+//            [ratingsView setTag:i];
+//            [cell.contentView  addSubview:ratingsView];
+//            [imageFramesWhiteArray addObject:ratingsView];
+//        }
+//        
+//        float xBlue = 10;
+//        NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
+//        for(int i = 0; i<[string intValue];i++)
+//        {
+//            UIImageView *ratingsView = [[UIImageView alloc]init];
+//            ratingsView.frame = CGRectMake(xBlue,y,width,height);
+//            [ratingsView setImage:[UIImage imageNamed:@"blue_star.png"]];
+//            xBlue = xBlue + 15;
+//            [ratingsView setTag:i];
+//            [cell.contentView  addSubview:ratingsView];
+//            [imageFramesArray addObject:ratingsView];
+//        }
+//    }
     
     return cell;
 }
@@ -720,15 +707,15 @@
         
         tempReviewCommentsViewController.ratingCount =[[NSString alloc] init];
         
-        [tempReviewCommentsViewController.dateLabel setText:[[assetsData.productReviewArray objectAtIndex:[indexPath row]]commentedDate]];
-        
-        [tempReviewCommentsViewController.commentsLabel setText:[[assetsData.productReviewArray objectAtIndex:[indexPath row]]userComments]];
-        
-        NSString* user = [[[assetsData.productReviewArray objectAtIndex:indexPath.row] userName]description];
-        [tempReviewCommentsViewController.userNameLabel setText:user];
-        
-        NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productReviewArray objectAtIndex:indexPath.row] productRatingView]];
-        
+//        [tempReviewCommentsViewController.dateLabel setText:[[assetsData.productReviewArray objectAtIndex:[indexPath row]]commentedDate]];
+//        
+//        [tempReviewCommentsViewController.commentsLabel setText:[[assetsData.productReviewArray objectAtIndex:[indexPath row]]userComments]];
+//        
+//        NSString* user = [[[assetsData.productReviewArray objectAtIndex:indexPath.row] userName]description];
+//        [tempReviewCommentsViewController.userNameLabel setText:user];
+//        
+//        NSString* string = [NSString stringWithFormat:@"%@",[[assetsData.productReviewArray objectAtIndex:indexPath.row] productRatingView]];
+//        
         ///Star Rating
         
         float xBlue = 10;
@@ -741,18 +728,18 @@
         
         NSMutableArray *imageFramesArray = [[NSMutableArray alloc]init];
         
-        for(int i = 0; i<[string intValue];i++)
-        {
-            tempReviewCommentsViewController.ratingImage = [[UIImageView alloc]init];
-            tempReviewCommentsViewController.ratingImage.frame = CGRectMake(xBlue,y,width,height);
-            [tempReviewCommentsViewController.ratingImage setImage:[UIImage imageNamed:@"blue_star.png"]];
-            xBlue = xBlue + 15;
-            [tempReviewCommentsViewController.ratingImage setTag:i];
-            [tempReviewCommentsViewController.view  addSubview:tempReviewCommentsViewController.ratingImage];
-            [imageFramesArray addObject:tempReviewCommentsViewController.ratingImage];
-        }
-        
-        tempReviewCommentsViewController = nil;
+//        for(int i = 0; i<[string intValue];i++)
+//        {
+//            tempReviewCommentsViewController.ratingImage = [[UIImageView alloc]init];
+//            tempReviewCommentsViewController.ratingImage.frame = CGRectMake(xBlue,y,width,height);
+//            [tempReviewCommentsViewController.ratingImage setImage:[UIImage imageNamed:@"blue_star.png"]];
+//            xBlue = xBlue + 15;
+//            [tempReviewCommentsViewController.ratingImage setTag:i];
+//            [tempReviewCommentsViewController.view  addSubview:tempReviewCommentsViewController.ratingImage];
+//            [imageFramesArray addObject:tempReviewCommentsViewController.ratingImage];
+//        }
+//        
+//        tempReviewCommentsViewController = nil;
         
     }
 }

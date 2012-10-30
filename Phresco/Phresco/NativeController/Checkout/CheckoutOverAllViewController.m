@@ -14,9 +14,6 @@
 #import "OrderStatusViewController.h"
 #import "CheckOutViewController.h"
 #import "BrowseViewController.h"
-#import "SBJsonWriter.h"
-#import "NSString+SBJSON.h"
-#import "SBJsonParser.h"
 #import "ServiceHandler.h"
 #import "Constants.h"
 #import "ViewCartViewController.h"
@@ -549,10 +546,7 @@
     
     NSString *urlString;
     
-    /* if(filePath)
-     {*/
-    
-    
+      
     NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
     protocol = [protocol stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -574,20 +568,23 @@
     NSLog(@"urlString %@",urlString);
     // }
     
-    SBJsonWriter *jsonWriter = [SBJsonWriter new];
+//    SBJsonWriter *jsonWriter = [SBJsonWriter new];
+//    
+//    //Just for error tracing
+//    jsonWriter.humanReadable = YES;
+//    NSString *json = [jsonWriter stringWithObject:jsonDictionary];
     
-    //Just for error tracing
-    jsonWriter.humanReadable = YES;
-    NSString *json = [jsonWriter stringWithObject:jsonDictionary];
     
-    if (!json){
-        
-        NSLog(@"-JSONRepresentation failed. Error trace is: %@", [jsonWriter errorTrace]);
-    }
+    NSData* postData = [NSJSONSerialization dataWithJSONObject:jsonDictionary
+                                                       options:NSJSONWritingPrettyPrinted error:nil];
+//    if (!json){
+//        
+//        NSLog(@"-JSONRepresentation failed. Error trace is: %@", [jsonWriter errorTrace]);
+//    }
+//    
+//    jsonWriter =nil;
     
-    jsonWriter =nil;
-    
-    NSData *postData = [json dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES]; 
+    //NSData *postData = [json dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init]; 
 	[request setURL:[NSURL URLWithString:urlString]]; 
 	[request setHTTPMethod:@"POST"]; 
@@ -615,14 +612,8 @@
 	data = nil;
 	
 	data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-	responseString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
     
-    NSDictionary* responseDict = [responseString JSONValue];
-    //NSLog(@"response :%@", responseDict);
-    
-//    NSMutableString* strMsg = [[NSMutableString alloc] init];
-//    strMsg = [responseDict objectForKey:@"message"];
-    
+    NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     NSMutableString* successMsg = [responseDict objectForKey:@"successMessage"];
     
     if([successMsg isEqualToString:@"Success"]) {

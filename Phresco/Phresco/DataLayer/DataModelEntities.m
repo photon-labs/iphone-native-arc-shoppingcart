@@ -339,13 +339,10 @@ static int extraAssetsCounter = 0;
 
 -(void) updateCatalogModel:(NSDictionary*) data
 {
-    NSLog(@"data :::::%@", data);
     if(nil != data)
 	{
 		NSArray *CatalogModelArray = [data objectForKey:@"category"];
-        NSLog(@"CatalogModelArray :::::%@  %d", CatalogModelArray,[CatalogModelArray count]);
         
-		
 		for(int i = 0; i < [CatalogModelArray count]; i++)
 		{
 			NSDictionary *assetProperties = (NSDictionary*)[CatalogModelArray objectAtIndex:i];
@@ -353,9 +350,7 @@ static int extraAssetsCounter = 0;
 			CatalogService *service = [[CatalogService alloc] init];
 			
 			[service setProperties:(NSMutableDictionary*)assetProperties];
-			
-			// add FeaturedAsset objects to Data model Array
-			[self.catalogArray addObject:service];
+						[self.catalogArray addObject:service];
 			
 			service = nil;
 		}
@@ -427,30 +422,39 @@ static int extraAssetsCounter = 0;
 }
 
 -(void) updateProductReviewModel:(NSDictionary*) data{
-    
-    
+   
     if(nil != data)
     {
         NSArray* productReviewModelArray = [data objectForKey:@"review"];
-//        NSArray* productReviewModelArray2 = [data objectForKey:@"average"];
-//        NSArray* productReviewModelArray = [data objectForKey:@"comments"];
-//
-        NSLog(@"productReviewModelArray :%@", productReviewModelArray);
         
         for(int i = 0; i<[productReviewModelArray count]; i++)
         {
-            NSArray* productReviewModelArray1 = [data objectForKey:@"comments"];
-            
-            NSDictionary *assetProperties = (NSDictionary*)[productReviewModelArray1 objectAtIndex:i];
-            NSLog(@"productReviewModelArray1 :%@", productReviewModelArray1);
+            NSDictionary* assetProperties = (NSDictionary*)[productReviewModelArray objectAtIndex:i];
             productReview *service = [[productReview alloc] init];
-            
             [service setProperties:(NSMutableDictionary*)assetProperties];
-            
             [self.productReviewArray addObject:service];
             
-            service = nil;
+            // Get all object
+           // NSMutableArray *items = [data valueForKeyPath:@"review.comments"];
             
+//            for(int i=0;i<[items count];i++)
+//            {
+//                NSMutableDictionary *itemDict = [NSMutableDictionary dictionary];
+//                NSMutableDictionary *tempDict = [NSMutableDictionary dictionary];
+//                itemDict = [items objectAtIndex:i];
+//                NSString *strTVType = [itemDict objectForKey:@"TV Type"];
+//                NSString *strScreen = [itemDict objectForKey:@"Screen Size"];
+//                NSString *strRatio = [itemDict objectForKey:@"Screen Ratio"];
+//                NSString *strDefinition = [itemDict objectForKey:@"TV Definition"];
+//                
+//                [tempDict setObject:strTVType forKey:@"TV Type"];
+//                [tempDict setObject:strScreen forKey:@"Screen Size"];
+//                [tempDict setObject:strRatio forKey:@"Screen Ratio"];
+//                [tempDict setObject:strDefinition forKey:@"TV Definition"];
+//                [self.productDetailArray addObject:tempDict];
+//            }
+
+            service = nil;
         }
     }
 }

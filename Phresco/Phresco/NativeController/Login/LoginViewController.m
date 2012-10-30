@@ -12,9 +12,6 @@
 #import "ServiceHandler.h"
 #import "SharedObjects.h"
 #import "RegistrationViewController.h"
-#import "SBJsonWriter.h"
-#import "NSString+SBJSON.h"
-#import "SBJsonParser.h"
 #import "AppDelegate.h"
 #import "Tabbar.h"
 #import "SubmitReviewViewController.h"
@@ -510,10 +507,7 @@
         NSURLResponse *urlResponse;
         NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:nil];
         
-        NSString* jsonData = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-        
-        NSDictionary* response = [jsonData JSONValue];
-        
+        NSDictionary *response = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
         strMsg = [response objectForKey:@"message"];
         
         successMsg = [response objectForKey:@"successMessage"];

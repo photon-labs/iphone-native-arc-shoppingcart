@@ -10,7 +10,6 @@
 #import "ConnectionManager.h"
 #import "SharedObjects.h"
 #import "DataModelEntities.h"
-#import "JSON.h"
 #import "DebugOutput.h"
 #import "Constants.h"
 #import "ConfigurationReader.h"
@@ -103,8 +102,6 @@
 	
 	NSData *responseData = [responseDataDict objectForKey:kConnectionDataReceived];
 	
-//	NSString *string = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-	
 	NSMutableDictionary *configResponse;
 	
 	NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
@@ -114,23 +111,9 @@
     
     ////////////////////////////////
     
-    debug(@"prod desc STR:%@ ",responseResultString);
-    
-    responseData = nil;
-    SBJsonParser *jsonParser = [SBJsonParser new];
-    
-    // Parse the JSON into an Object		
-    id data = [jsonParser objectWithString:responseResultString error:NULL];
-    
-    
-    responseResultString = nil;
-    
-    //Release SBJSon Object
-    
-    jsonParser = nil;
-    
-    //Pass the obtained config response to the callback target(launch flow). The data parsing will be done there
-    //after version check and other criterias
+
+    NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
+
     configResponse = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary*)data];
     
 	[self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:configResponse waitUntilDone:NO];	
@@ -176,23 +159,6 @@
 {		
 	NSData *responseData = [responseDataDict objectForKey:kConnectionDataReceived];
 	
-     
-	
-//    NSString *responseResultString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-//    
-//    debug(@"prod desc STR:%@ ",responseResultString);
-//    
-//    responseData = nil;
-////    SBJsonParser *jsonParser = [SBJsonParser new];
-////    
-////    // Parse the JSON into an Object		
-////    id data = [jsonParser objectWithString:responseResultString error:NULL];
-////    
-////    responseResultString = nil;
-////    
-////    //Release SBJSon Object
-////    jsonParser = nil;
-    
     NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
     
     NSMutableDictionary *catalogResponse  = [NSMutableDictionary dictionaryWithDictionary:(NSDictionary*)data];
@@ -346,13 +312,23 @@
 
 -(void) productReviewServiceDone:(NSMutableDictionary*) responseDataDict
 {
+//    NSData *responseData = [responseDataDict objectForKey:kConnectionDataReceived];
+//   
+//    NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
+//     NSMutableDictionary *productReviewResponse = [NSDictionary dictionaryWithDictionary:(NSDictionary*)data];
+//    [self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productReviewResponse waitUntilDone:NO];	
+//    
+
     NSData *responseData = [responseDataDict objectForKey:kConnectionDataReceived];
     NSMutableDictionary *productReviewResponse;
     NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
     productReviewResponse = [NSDictionary dictionaryWithDictionary:(NSDictionary*)data];
-    [self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productReviewResponse waitUntilDone:NO];	
+    [self.callBackTarget performSelectorOnMainThread:self.callBackSelector withObject:productReviewResponse waitUntilDone:NO];
     
-  }
+
+
+}
+
 
 
 #pragma mark Special Products

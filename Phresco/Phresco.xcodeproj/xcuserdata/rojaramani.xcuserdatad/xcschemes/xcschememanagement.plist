@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>LogicTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Phresco.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>EA99371E163FAEE40005DC86</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA993735163FAF100005DC86</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA993761163FB9400005DC86</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EAAA05F7161C0E2E00BD06EF</key>
 		<dict>
 			<key>primary</key>
