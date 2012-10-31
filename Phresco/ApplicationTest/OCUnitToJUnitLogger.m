@@ -16,12 +16,14 @@
     GDataXMLElement *suitesElement;
     GDataXMLElement *currentSuiteElement;
     GDataXMLElement *currentCaseElement;
+    NSString *Path;
 }
 
 @property (retain) GDataXMLDocument *document;
 @property (retain) GDataXMLElement *suitesElement;
 @property (retain) GDataXMLElement *currentSuiteElement;
 @property (retain) GDataXMLElement *currentCaseElement;
+@property (retain) NSString *Path;
 
 - (void)writeResultFile;
 
@@ -33,11 +35,12 @@ static OCUnitToJUnitLogger *instance = nil;
 static void __attribute__ ((constructor)) OCUnitToJUnitLoggerStart(void)
 {
     instance = [OCUnitToJUnitLogger new];
+   
+    
 }
 
 static void __attribute__ ((destructor)) OCUnitToJUnitLoggerStop(void)
 {
-    
 	[instance release];
 }
 
@@ -53,6 +56,14 @@ static void __attribute__ ((destructor)) OCUnitToJUnitLoggerStop(void)
 #pragma mark Init / Dealloc
 - (id)init;
 {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if([fileManager fileExistsAtPath:[[NSBundle mainBundle] pathForResource:@"Path" ofType:@"txt"]]) {
+        Path =[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Path" ofType:@"txt"] usedEncoding:nil error:nil];
+        NSLog(@"dPath = %@",Path);
+    } else {
+        Path = @"";
+    }
+    
     if ((self = [super init]))
     {
         NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
@@ -61,7 +72,7 @@ static void __attribute__ ((destructor)) OCUnitToJUnitLoggerStop(void)
         [center addObserver:self selector:@selector(testCaseStarted:) name:SenTestCaseDidStartNotification object:nil];
         [center addObserver:self selector:@selector(testCaseStopped:) name:SenTestCaseDidStopNotification object:nil];
         [center addObserver:self selector:@selector(testCaseFailed:) name:SenTestCaseDidFailNotification object:nil];
-
+        
         document = [[GDataXMLDocument alloc] init];
 		[document initWithRootElement:[GDataXMLElement elementWithName:@"testsuites"]];
 		self.suitesElement = [document rootElement];
@@ -84,11 +95,13 @@ static void __attribute__ ((destructor)) OCUnitToJUnitLoggerStop(void)
 - (void)writeResultFile;
 {
     if (self.document)
-	{		
-		[[document XMLData] writeToFile:@"Phresco/OCUnitReports/ocunit.xml" atomically:NO];
-        
+	{	NSMutableString *strPath = [[NSMutableString alloc]initWithString:Path];
+        [strPath appendFormat:@"Phresco/OCUnitReports/Appunit.xml"];
+        NSLog(@"strPath = %@",strPath);
+		[[document XMLData] writeToFile:strPath atomically:NO];
+        [[document XMLData] writeToFile:@"Phresco/OCUnitReports/Appunit.xml" atomically:NO];
 	}
-
+    
 }
 
 #pragma mark -
@@ -104,6 +117,7 @@ static void __attribute__ ((destructor)) OCUnitToJUnitLoggerStop(void)
 {
     SenTestSuiteRun *testSuiteRun = (SenTestSuiteRun *)[notification object];
 	[instance writeResultFile];
+
     if (currentSuiteElement)
     {
         [currentSuiteElement addAttribute:[GDataXMLNode attributeWithName:@"name" stringValue:[[testSuiteRun test] name]]];
@@ -160,9 +174,9 @@ static void __attribute__ ((destructor)) OCUnitToJUnitLoggerStop(void)
     
     [failureElement setStringValue:[[notification exception] description]];
     
-    [currentCaseElement addChild:failureElement]; 
-        
-
+    [currentCaseElement addChild:failureElement];
+    
+    
 }
 
 @end

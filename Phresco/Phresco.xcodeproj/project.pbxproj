@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA6086881640F4C600C260C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAA05FC161C0E2E00BD06EF /* UIKit.framework */; };
+		EA6086891640F4C600C260C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAA05FE161C0E2E00BD06EF /* Foundation.framework */; };
+		EA60868F1640F4C600C260C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA60868D1640F4C600C260C4 /* InfoPlist.strings */; };
+		EA6086921640F4C600C260C4 /* ApplicationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6086911640F4C600C260C4 /* ApplicationTest.m */; };
+		EA6086971640F4E000C260C4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA993747163FAF2C0005DC86 /* SenTestingKit.framework */; };
+		EA60869E1640F79000C260C4 /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EA60869D1640F79000C260C4 /* OCUnitToJUnitLogger.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA60869F1640F7A300C260C4 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99374B163FB05E0005DC86 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA6086A01640F7FD00C260C4 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA99374F163FB0850005DC86 /* libxml2.2.dylib */; };
 		EA993765163FB9400005DC86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAA05FC161C0E2E00BD06EF /* UIKit.framework */; };
 		EA993766163FB9400005DC86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAA05FE161C0E2E00BD06EF /* Foundation.framework */; };
 		EA99376C163FB9400005DC86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA99376A163FB9400005DC86 /* InfoPlist.strings */; };
@@ -253,7 +261,24 @@
 		EAEAFF50161DA750002897DD /* viewmycart_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = EAEAFEAE161DA750002897DD /* viewmycart_btn.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EA6086981640F53400C260C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAAA05EF161C0E2E00BD06EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA05F7161C0E2E00BD06EF;
+			remoteInfo = Phresco;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		EA6086851640F4C600C260C4 /* ApplicationTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA60868C1640F4C600C260C4 /* ApplicationTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApplicationTest-Info.plist"; sourceTree = "<group>"; };
+		EA60868E1640F4C600C260C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA6086901640F4C600C260C4 /* ApplicationTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationTest.h; sourceTree = "<group>"; };
+		EA6086911640F4C600C260C4 /* ApplicationTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationTest.m; sourceTree = "<group>"; };
+		EA6086931640F4C600C260C4 /* ApplicationTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplicationTest-Prefix.pch"; sourceTree = "<group>"; };
+		EA60869D1640F79000C260C4 /* OCUnitToJUnitLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCUnitToJUnitLogger.m; sourceTree = "<group>"; };
 		EA993747163FAF2C0005DC86 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		EA99374A163FB05E0005DC86 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		EA99374B163FB05E0005DC86 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
@@ -552,6 +577,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA6086811640F4C600C260C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6086A01640F7FD00C260C4 /* libxml2.2.dylib in Frameworks */,
+				EA6086971640F4E000C260C4 /* SenTestingKit.framework in Frameworks */,
+				EA6086881640F4C600C260C4 /* UIKit.framework in Frameworks */,
+				EA6086891640F4C600C260C4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA99375E163FB9400005DC86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -579,6 +615,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA60868A1640F4C600C260C4 /* ApplicationTest */ = {
+			isa = PBXGroup;
+			children = (
+				EA60869D1640F79000C260C4 /* OCUnitToJUnitLogger.m */,
+				EA6086901640F4C600C260C4 /* ApplicationTest.h */,
+				EA6086911640F4C600C260C4 /* ApplicationTest.m */,
+				EA60868B1640F4C600C260C4 /* Supporting Files */,
+			);
+			path = ApplicationTest;
+			sourceTree = "<group>";
+		};
+		EA60868B1640F4C600C260C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA60868C1640F4C600C260C4 /* ApplicationTest-Info.plist */,
+				EA60868D1640F4C600C260C4 /* InfoPlist.strings */,
+				EA6086931640F4C600C260C4 /* ApplicationTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EA993749163FB05E0005DC86 /* OCUnitReportLogger-1.0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,6 +676,7 @@
 				EAAA0602161C0E2E00BD06EF /* Phresco */,
 				EA993749163FB05E0005DC86 /* OCUnitReportLogger-1.0 */,
 				EA993767163FB9400005DC86 /* LogicTest */,
+				EA60868A1640F4C600C260C4 /* ApplicationTest */,
 				EAAA05FB161C0E2E00BD06EF /* Frameworks */,
 				EAAA05F9161C0E2E00BD06EF /* Products */,
 			);
@@ -629,6 +687,7 @@
 			children = (
 				EAAA05F8161C0E2E00BD06EF /* Phresco.app */,
 				EA993762163FB9400005DC86 /* LogicTest.octest */,
+				EA6086851640F4C600C260C4 /* ApplicationTest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1237,6 +1296,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EA6086841640F4C600C260C4 /* ApplicationTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA6086941640F4C600C260C4 /* Build configuration list for PBXNativeTarget "ApplicationTest" */;
+			buildPhases = (
+				EA6086801640F4C600C260C4 /* Sources */,
+				EA6086811640F4C600C260C4 /* Frameworks */,
+				EA6086821640F4C600C260C4 /* Resources */,
+				EA6086831640F4C600C260C4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA6086991640F53400C260C4 /* PBXTargetDependency */,
+			);
+			name = ApplicationTest;
+			productName = ApplicationTest;
+			productReference = EA6086851640F4C600C260C4 /* ApplicationTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		EA993761163FB9400005DC86 /* LogicTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA993771163FB9400005DC86 /* Build configuration list for PBXNativeTarget "LogicTest" */;
@@ -1294,11 +1372,20 @@
 			targets = (
 				EAAA05F7161C0E2E00BD06EF /* Phresco */,
 				EA993761163FB9400005DC86 /* LogicTest */,
+				EA6086841640F4C600C260C4 /* ApplicationTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA6086821640F4C600C260C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA60868F1640F4C600C260C4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA99375F163FB9400005DC86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1500,6 +1587,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		EA6086831640F4C600C260C4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		EA993760163FB9400005DC86 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1516,6 +1616,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA6086801640F4C600C260C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA60869F1640F7A300C260C4 /* GDataXMLNode.m in Sources */,
+				EA6086921640F4C600C260C4 /* ApplicationTest.m in Sources */,
+				EA60869E1640F79000C260C4 /* OCUnitToJUnitLogger.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA99375D163FB9400005DC86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1582,7 +1692,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EA6086991640F53400C260C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAAA05F7161C0E2E00BD06EF /* Phresco */;
+			targetProxy = EA6086981640F53400C260C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		EA60868D1640F4C600C260C4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA60868E1640F4C600C260C4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		EA99376A163FB9400005DC86 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1618,6 +1744,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EA6086951640F4C600C260C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Phresco.app/Phresco";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ApplicationTest/ApplicationTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "ApplicationTest/ApplicationTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
+				TEST_HOST = "";
+				VALID_ARCHS = "armv6 armv7";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EA6086961640F4C600C260C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Phresco.app/Phresco";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ApplicationTest/ApplicationTest-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "ApplicationTest/ApplicationTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
+				TEST_HOST = "";
+				VALID_ARCHS = "armv6 armv7";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		EA993772163FB9400005DC86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1727,6 +1904,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Phresco/Phresco-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1740,6 +1918,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Phresco/Phresco-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1747,6 +1926,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA6086941640F4C600C260C4 /* Build configuration list for PBXNativeTarget "ApplicationTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6086951640F4C600C260C4 /* Debug */,
+				EA6086961640F4C600C260C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EA993771163FB9400005DC86 /* Build configuration list for PBXNativeTarget "LogicTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1754,6 +1941,7 @@
 				EA993773163FB9400005DC86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAAA05F2161C0E2E00BD06EF /* Build configuration list for PBXProject "Phresco" */ = {
 			isa = XCConfigurationList;

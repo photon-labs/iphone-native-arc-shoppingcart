@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<testsuites><testsuite name="LogicTest" tests="1" errors="0" failures="1" skipped="0" time="0.000199"><testcase name="-[LogicTest testExample]" classname="LogicTest" time="0.000199"><failure name="-[LogicTest testExample]" classname="LogicTest">Unit tests are not implemented yet in LogicTest</failure></testcase></testsuite></testsuites>

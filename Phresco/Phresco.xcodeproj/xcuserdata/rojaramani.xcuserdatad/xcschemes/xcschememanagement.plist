@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ApplicationTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>LogicTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>EA6086841640F4C600C260C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EA99371E163FAEE40005DC86</key>
 		<dict>
 			<key>primary</key>
@@ -28,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>EA993761163FB9400005DC86</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA99377D163FD12D0005DC86</key>
 		<dict>
 			<key>primary</key>
 			<true/>
