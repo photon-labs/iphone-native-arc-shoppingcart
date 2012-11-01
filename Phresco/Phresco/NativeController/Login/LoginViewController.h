@@ -81,5 +81,6 @@
 
 -(void) createLoginScreen;
 
+- (void)registerButtonSelected:(id)sender;
 
 @end

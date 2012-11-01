@@ -43,4 +43,6 @@
 
 -(void) setProductDetail;
 
+-(void) addToCart:(id) sender;
+
 @end

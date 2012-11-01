@@ -1765,7 +1765,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "";
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = "armv6 armv7 i386";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -1790,7 +1790,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "";
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = "armv6 armv7 i386";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -1904,7 +1904,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Phresco/Phresco-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = "armv6 armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1918,7 +1918,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Phresco/Phresco-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = "armv6 armv7 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

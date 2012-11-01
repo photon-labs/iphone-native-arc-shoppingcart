@@ -49,5 +49,7 @@
 
 - (BOOL)validateEmail:(NSString *)inputText;
 
+- (void)registerButtonSelected:(id)sender;
+
 
 @end

@@ -35,13 +35,13 @@
 }
 @property(nonatomic, strong)  UITableView* viewCartTable;
 
-@property(nonatomic, strong)UILabel* Quantity;
+@property(nonatomic, strong) UILabel* Quantity;
 
-@property(nonatomic, strong)UILabel*  Product;
+@property(nonatomic, strong) UILabel*  Product;
 
-@property(nonatomic, strong)UILabel*  Price;
+@property(nonatomic, strong) UILabel*  Price;
 
-@property(nonatomic, strong)UILabel*  PriceLabel;
+@property(nonatomic, strong) UILabel*  PriceLabel;
 
 @property (nonatomic, strong) NSString *cartPurchaseTotal;
 
@@ -54,8 +54,12 @@
 @property (nonatomic, strong) SpecialOffersViewController *specialOffersViewController;
 
 -(void) loadNavigationBar;
+
 -(void) initializeTableView;
--(void)goBack:(id)sender;
+
+-(void) goBack:(id) sender;
+
+- (void) browseButtonSelected:(id) sender;
 @end
 
 
