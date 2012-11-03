@@ -56,13 +56,13 @@ static void __attribute__ ((destructor)) OCUnitToJUnitLoggerStop(void)
 #pragma mark Init / Dealloc
 - (id)init;
 {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if([fileManager fileExistsAtPath:[[NSBundle mainBundle] pathForResource:@"Path" ofType:@"txt"]]) {
-        Path =[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Path" ofType:@"txt"] usedEncoding:nil error:nil];
-        NSLog(@"dPath = %@",Path);
-    } else {
-        Path = @"";
-    }
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+//    if([fileManager fileExistsAtPath:[[NSBundle mainBundle] pathForResource:@"Path" ofType:@"txt"]]) {
+//        Path =[NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Path" ofType:@"txt"] usedEncoding:nil error:nil];
+//        NSLog(@"dPath = %@",Path);
+//    } else {
+//        Path = @"";
+//    }
     
     if ((self = [super init]))
     {
@@ -95,13 +95,15 @@ static void __attribute__ ((destructor)) OCUnitToJUnitLoggerStop(void)
 - (void)writeResultFile;
 {
     if (self.document)
-	{	NSMutableString *strPath = [[NSMutableString alloc]initWithString:Path];
-        [strPath appendFormat:@"Phresco/OCUnitReports/Appunit.xml"];
-        NSLog(@"strPath = %@",strPath);
-		[[document XMLData] writeToFile:strPath atomically:NO];
+	{
+       // NSMutableString *strPath = [[NSMutableString alloc]initWithString:Path];
+//        [strPath appendFormat:@"Phresco/OCUnitReports/Appunit.xml"];
+//        NSLog(@"strPath = %@",strPath);
+//		[[document XMLData] writeToFile:strPath atomically:NO];
+        
         [[document XMLData] writeToFile:@"Phresco/OCUnitReports/Appunit.xml" atomically:NO];
-	}
-    
+        
+    }
 }
 
 #pragma mark -

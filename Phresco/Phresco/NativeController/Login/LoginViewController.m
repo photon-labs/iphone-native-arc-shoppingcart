@@ -416,43 +416,7 @@
 }
 
 
-- (void)loginButtonSelected:(id)sender
-{
-    NSString* str1 =emailAddress.text ;
-    
-    NSString* str2 =password.text ;
-    
-    if( ([str1 length] == 0) && ([str2 length] > 0) ){
-        
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Please Enter  Email address " delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
-        
-        [alert show];
-        alert = nil;
-    }
-    else if( ([str1 length] > 0 ) && ([str2 length]== 0) )
-    {
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Please Enter  password " delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
-        
-        [alert show];
-    alert = nil;
-    }
-    
-    else if(([str1 length] == 0 ) && ([str2 length]== 0) ){
-        
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Please Enter Email address and password " delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
-        
-        [alert show];
-        alert = nil;
-    }
-    
-    else {
-        
-        
-        activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        activityIndicator.frame = CGRectMake(130, 250, 50, 40);
-        [self.view addSubview:activityIndicator];
-        
-        [activityIndicator startAnimating];
+- (void)serviceCall {
         
         ServiceHandler *serviceHandler = [[ServiceHandler alloc] init];
         
@@ -496,7 +460,7 @@
         NSLog(@"urlString %@",urlString);
         NSData* postData = [NSJSONSerialization dataWithJSONObject:dict
                                                            options:NSJSONWritingPrettyPrinted error:nil];
-        
+    NSLog(@"post data");
         NSMutableURLRequest *request  = [[NSMutableURLRequest alloc] init];
         [request setURL:[NSURL URLWithString:urlString]];
         [request setHTTPMethod:@"POST"];
@@ -525,17 +489,17 @@
         
         index= [userID intValue];
         
-        
+        NSLog(@"Else condition");
         if(index == 0 )
         {
             isLogin = NO;
         }
-        else
-        {
-            isLogin =  YES;
-            homeViewController.array_ = loginArray;
-        }
-        
+    else
+     {
+        isLogin =  YES;
+        homeViewController.array_ = loginArray;
+
+    }
         //Pop up screen
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             [activityIndicator stopAnimating];
@@ -559,7 +523,9 @@
             [viewController_ addSubview:myImageView];
             [viewController_ addSubview:label];
             [self.view addSubview:viewController_];
-            
+            if(unitTestCheck == NO) {
+                [self.view addSubview:viewController_];
+            }
             okButton = [[UIButton alloc] init];
             
             [okButton setFrame:CGRectMake(240, 160, 100, 60)];
@@ -598,9 +564,11 @@
                                         [UIImage imageNamed :@"popup_bg.png"]];
             [viewController_ addSubview:myImageView];
             [viewController_ addSubview:label];
-            [self.view addSubview:viewController_];
             
-            
+            if(unitTestCheck == NO) {
+                
+                [self.view addSubview:viewController_];
+            }
             okButton = [[UIButton alloc] init];
             
             [okButton setFrame:CGRectMake(120, 80, 50, 30)];
@@ -620,9 +588,88 @@
         }
        
     }
+
+///Unit test validation
+
+- (void)loginButtonSelected:(id)sender
+{
+    
+    NSLog(@"login button selected:");
+    if(unitTestCheck == NO) {
+        
+        NSLog(@"login button selected:if condition");
+        [self showAlerts];
+        
+        
+    }
+    else {
+        NSLog(@"login button selected: else condition");
+        [self serviceCall];
+    }
+}
+
+-(void)showAlerts {
+    
+    
+    NSString* str1 =emailAddress.text ;
+    
+    NSString* str2 =password.text ;
+    
+    
+    NSLog(@"email and pwd :%@ %@", emailAddress.text, password.text);
+    
+    if( ([str1 length] == 0) && ([str2 length] > 0) ){
+        
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Please Enter  Email address " delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+        
+        [alert show];
+        alert = nil;
+    }
+    else if( ([str1 length] > 0 ) && ([str2 length]== 0) )
+    {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Please Enter  password " delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+        
+        [alert show];
+        alert = nil;
+    }
+    
+    else  if(([str1 length] == 0 ) && ([str2 length]== 0) ){
+        
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Please Enter Email address and password " delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+        
+        [alert show];
+        alert = nil;
+    }
+    
+    else {
+        
+        [self serviceCall];
+        
+        
+    }
+    
     
 }
 
+
+
+-(void)testLoginButton:(id)sender userName:(NSString*)user  passWord:(NSString*)pwd {
+    
+    emailAddress = [[UITextField alloc] init];
+    password =[[UITextField alloc] init];
+    
+    emailAddress.text = user;
+    NSLog(@"emailAddress.text :%@", emailAddress.text);
+    
+    password.text = pwd;
+    NSLog(@"password.text :%@", password.text);
+    
+    unitTestCheck = YES;
+    [self loginButtonSelected:nil];
+    
+    
+}
+////End of unit test validation
 - (void)okButtonSelected:(id)sender
 {
     

@@ -14,19 +14,44 @@
 {
     [super setUp];
     
-    // Set-up code here.
+//    appDelegate = [[UIApplication sharedApplication]delegate];
+//    loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    
+}
+
+
+-(void)testAppDelegate
+{
+    
+    //STAssertNotNil(appDelegate, @"Cannot find the application delegate");
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
     
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testLogin
 {
-    STFail(@"Unit tests are not implemented yet in ApplicationTest");
+
+    [loginVC testLoginButton:nil userName:@"john@phresco.com" passWord:@"john"];
+    STAssertTrue([loginVC.successMsg isEqualToString:@"Login Success"],@"Login Success", @"pass");
+    
+    [loginVC testLoginButton:nil userName:@"john@phresco.com" passWord:@" "];
+    STAssertTrue([loginVC.successMsg isEqualToString:@"Login failed"],@"Login failed", @"invalid password");
+    
+    [loginVC testLoginButton:nil userName:@" " passWord:@"123"];
+    STFail(@"Please enter Email id");
+    
+    [loginVC testLoginButton:nil userName:@"john@phresco.com" passWord:@" "];
+    STFail(@"Please enter password");
+    
+    [loginVC testLoginButton:nil userName:@" " passWord:@" "];
+  STFail(@"PLease enter email id and password");
+
+    
 }
+
 
 @end

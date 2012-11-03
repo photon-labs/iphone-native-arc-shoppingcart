@@ -7,7 +7,18 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "AppDelegate.h"
+#import "HomeViewController.h"
+#import "ViewController.h"
+#import "BrowseViewController.h"
+#import "LoginViewController.h"
+@class LoginViewController;
 
-@interface ApplicationTest : SenTestCase
+@interface ApplicationTest : SenTestCase {
+    
+@private
+    AppDelegate* appDelegate;
+    LoginViewController* loginVC;
+}
 
 @end

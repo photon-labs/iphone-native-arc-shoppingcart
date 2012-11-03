@@ -71,6 +71,14 @@
 		EAC8D4F2161D9E6400D80B5A /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8D4ED161D9E6300D80B5A /* UIUtils.m */; };
 		EAC8D4F3161D9E6400D80B5A /* UIWebView_PageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8D4EF161D9E6300D80B5A /* UIWebView_PageTransition.m */; };
 		EAC8D4F4161D9E6400D80B5A /* WebUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC8D4F1161D9E6300D80B5A /* WebUtils.m */; };
+		EACA355516450FAE0062B88E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEF47CB1643FFB000278D99 /* SenTestingKit.framework */; };
+		EACA355616450FAE0062B88E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAA05FC161C0E2E00BD06EF /* UIKit.framework */; };
+		EACA355716450FAE0062B88E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAA05FE161C0E2E00BD06EF /* Foundation.framework */; };
+		EACA355D16450FAE0062B88E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EACA355B16450FAE0062B88E /* InfoPlist.strings */; };
+		EACA356016450FAE0062B88E /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA355F16450FAE0062B88E /* Test.m */; };
+		EACA3567164510200062B88E /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA99374F163FB0850005DC86 /* libxml2.2.dylib */; };
+		EACA35681645102B0062B88E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EA99374B163FB05E0005DC86 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EACA3569164510320062B88E /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EA60869D1640F79000C260C4 /* OCUnitToJUnitLogger.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EACC79B41637B6090099A7B2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC79B21637B6090099A7B2 /* LoginViewController.m */; };
 		EACC79B51637B6090099A7B2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACC79B31637B6090099A7B2 /* LoginViewController.xib */; };
 		EACC79BE1637C1940099A7B2 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACC79BC1637C1940099A7B2 /* RegistrationViewController.m */; };
@@ -262,7 +270,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EA6086981640F53400C260C4 /* PBXContainerItemProxy */ = {
+		EACA3565164510180062B88E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAAA05EF161C0E2E00BD06EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA05F7161C0E2E00BD06EF;
+			remoteInfo = Phresco;
+		};
+		EAEF478B1643F3A300278D99 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAAA05EF161C0E2E00BD06EF /* Project object */;
 			proxyType = 1;
@@ -371,6 +386,12 @@
 		EAC8D4EF161D9E6300D80B5A /* UIWebView_PageTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebView_PageTransition.m; sourceTree = "<group>"; };
 		EAC8D4F0161D9E6300D80B5A /* WebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUtils.h; sourceTree = "<group>"; };
 		EAC8D4F1161D9E6300D80B5A /* WebUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebUtils.m; sourceTree = "<group>"; };
+		EACA355416450FAE0062B88E /* Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACA355A16450FAE0062B88E /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
+		EACA355C16450FAE0062B88E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EACA355E16450FAE0062B88E /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		EACA355F16450FAE0062B88E /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		EACA356116450FAE0062B88E /* Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test-Prefix.pch"; sourceTree = "<group>"; };
 		EACC79B11637B6090099A7B2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		EACC79B21637B6090099A7B2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EACC79B31637B6090099A7B2 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -574,6 +595,7 @@
 		EAEAFEAC161DA750002897DD /* subtotal_bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtotal_bg2.png; sourceTree = "<group>"; };
 		EAEAFEAD161DA750002897DD /* updatecart_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = updatecart_btn.png; sourceTree = "<group>"; };
 		EAEAFEAE161DA750002897DD /* viewmycart_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewmycart_btn.png; sourceTree = "<group>"; };
+		EAEF47CB1643FFB000278D99 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -609,6 +631,17 @@
 				EAAA05FD161C0E2E00BD06EF /* UIKit.framework in Frameworks */,
 				EAAA05FF161C0E2E00BD06EF /* Foundation.framework in Frameworks */,
 				EAAA0601161C0E2E00BD06EF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EACA355016450FAE0062B88E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACA3567164510200062B88E /* libxml2.2.dylib in Frameworks */,
+				EACA355516450FAE0062B88E /* SenTestingKit.framework in Frameworks */,
+				EACA355616450FAE0062B88E /* UIKit.framework in Frameworks */,
+				EACA355716450FAE0062B88E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +710,7 @@
 				EA993749163FB05E0005DC86 /* OCUnitReportLogger-1.0 */,
 				EA993767163FB9400005DC86 /* LogicTest */,
 				EA60868A1640F4C600C260C4 /* ApplicationTest */,
+				EACA355816450FAE0062B88E /* Test */,
 				EAAA05FB161C0E2E00BD06EF /* Frameworks */,
 				EAAA05F9161C0E2E00BD06EF /* Products */,
 			);
@@ -688,6 +722,7 @@
 				EAAA05F8161C0E2E00BD06EF /* Phresco.app */,
 				EA993762163FB9400005DC86 /* LogicTest.octest */,
 				EA6086851640F4C600C260C4 /* ApplicationTest.octest */,
+				EACA355416450FAE0062B88E /* Test.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -701,6 +736,7 @@
 				EAAA05FC161C0E2E00BD06EF /* UIKit.framework */,
 				EAAA05FE161C0E2E00BD06EF /* Foundation.framework */,
 				EAAA0600161C0E2E00BD06EF /* CoreGraphics.framework */,
+				EAEF47CB1643FFB000278D99 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -831,6 +867,26 @@
 				EAC8D4E7161D9C5A00D80B5A /* Webview.m */,
 			);
 			path = WebviewContainer;
+			sourceTree = "<group>";
+		};
+		EACA355816450FAE0062B88E /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				EACA355E16450FAE0062B88E /* Test.h */,
+				EACA355F16450FAE0062B88E /* Test.m */,
+				EACA355916450FAE0062B88E /* Supporting Files */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		EACA355916450FAE0062B88E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EACA355A16450FAE0062B88E /* Test-Info.plist */,
+				EACA355B16450FAE0062B88E /* InfoPlist.strings */,
+				EACA356116450FAE0062B88E /* Test-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		EACFA7431622DF5F0066D798 /* Browse */ = {
@@ -1308,7 +1364,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				EA6086991640F53400C260C4 /* PBXTargetDependency */,
+				EAEF478C1643F3A300278D99 /* PBXTargetDependency */,
 			);
 			name = ApplicationTest;
 			productName = ApplicationTest;
@@ -1350,6 +1406,25 @@
 			productReference = EAAA05F8161C0E2E00BD06EF /* Phresco.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EACA355316450FAE0062B88E /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EACA356216450FAE0062B88E /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				EACA354F16450FAE0062B88E /* Sources */,
+				EACA355016450FAE0062B88E /* Frameworks */,
+				EACA355116450FAE0062B88E /* Resources */,
+				EACA355216450FAE0062B88E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EACA3566164510180062B88E /* PBXTargetDependency */,
+			);
+			name = Test;
+			productName = Test;
+			productReference = EACA355416450FAE0062B88E /* Test.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1373,6 +1448,7 @@
 				EAAA05F7161C0E2E00BD06EF /* Phresco */,
 				EA993761163FB9400005DC86 /* LogicTest */,
 				EA6086841640F4C600C260C4 /* ApplicationTest */,
+				EACA355316450FAE0062B88E /* Test */,
 			);
 		};
 /* End PBXProject section */
@@ -1584,6 +1660,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EACA355116450FAE0062B88E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACA355D16450FAE0062B88E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1601,6 +1685,19 @@
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 		EA993760163FB9400005DC86 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		EACA355216450FAE0062B88E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1690,13 +1787,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EACA354F16450FAE0062B88E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACA3569164510320062B88E /* OCUnitToJUnitLogger.m in Sources */,
+				EACA35681645102B0062B88E /* GDataXMLNode.m in Sources */,
+				EACA356016450FAE0062B88E /* Test.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EA6086991640F53400C260C4 /* PBXTargetDependency */ = {
+		EACA3566164510180062B88E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EAAA05F7161C0E2E00BD06EF /* Phresco */;
-			targetProxy = EA6086981640F53400C260C4 /* PBXContainerItemProxy */;
+			targetProxy = EACA3565164510180062B88E /* PBXContainerItemProxy */;
+		};
+		EAEF478C1643F3A300278D99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAAA05F7161C0E2E00BD06EF /* Phresco */;
+			targetProxy = EAEF478B1643F3A300278D99 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1741,6 +1853,14 @@
 			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
+		EACA355B16450FAE0062B88E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EACA355C16450FAE0062B88E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1762,10 +1882,12 @@
 				INFOPLIST_FILE = "ApplicationTest/ApplicationTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lxml2";
+				OTHER_TEST_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "";
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "i386 armv6 armv7";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -1787,10 +1909,12 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "ApplicationTest/ApplicationTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-lxml2";
+				OTHER_TEST_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "";
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "i386 armv6 armv7";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -1904,7 +2028,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Phresco/Phresco-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "i386 armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1918,8 +2042,57 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Phresco/Phresco-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "i386 armv6 armv7";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EACA356316450FAE0062B88E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Phresco.app/Phresco";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "Test/Test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
+				TEST_HOST = "";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EACA356416450FAE0062B88E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Phresco.app/Phresco";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "Test/Test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
+				TEST_HOST = "";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -1933,6 +2106,7 @@
 				EA6086961640F4C600C260C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA993771163FB9400005DC86 /* Build configuration list for PBXNativeTarget "LogicTest" */ = {
 			isa = XCConfigurationList;
@@ -1960,6 +2134,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EACA356216450FAE0062B88E /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACA356316450FAE0062B88E /* Debug */,
+				EACA356416450FAE0062B88E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

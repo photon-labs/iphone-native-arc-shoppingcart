@@ -33,7 +33,7 @@
     
     int index;
     BOOL isLogin;
-    
+    BOOL unitTestCheck;
     
     NSMutableString* strMsg;
     
@@ -51,6 +51,8 @@
     
     HomeViewController *homeViewController;
     
+    
+    
 }
 
 @property (nonatomic, strong) UITextField *emailAddress;
@@ -64,6 +66,7 @@
 @property (nonatomic, strong) UIButton *cancelButton;
 @property (nonatomic, strong) UIActivityIndicatorView* activityIndicator;
 @property  BOOL isLogin;
+@property  BOOL unitTestCheck;
 
 @property (nonatomic, strong)NSMutableString* strMsg;
 @property (nonatomic, strong) NSMutableString* successMsg;
@@ -82,5 +85,8 @@
 -(void) createLoginScreen;
 
 - (void)registerButtonSelected:(id)sender;
+
+-(void)testLoginButton:(id)sender userName:(NSString*)user  passWord:(NSString*)pwd ;
+
 
 @end
