@@ -1,0 +1,13 @@
+<environments>
+    
+<environment default="true" desc="Production Environment is used for Development purpose only" name="Production">
+        <WebService appliesTo="tech-iphone-native" desc="" name="ws">
+            <protocol>http</protocol>
+            <host>172.16.17.180</host>
+            <port>2020</port>
+            <username/>
+            <password/>
+            <context>eshop</context>
+        </WebService>
+    </environment>
+</environments>
