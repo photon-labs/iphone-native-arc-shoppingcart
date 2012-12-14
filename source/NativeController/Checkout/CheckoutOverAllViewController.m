@@ -323,7 +323,7 @@
         
         UIButton *cancelCart = [[UIButton alloc] initWithFrame:CGRectMake(180, 330 , 109, 31)];
         
-        [cancelCart setBackgroundImage:[UIImage imageNamed:@"submitorder_btn.png"] forState:UIControlStateNormal];
+        [cancelCart setBackgroundImage:[UIImage imageNamed:@"paynow.png"] forState:UIControlStateNormal];
         
         [cancelCart addTarget:self action:@selector(reviewAction:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -463,19 +463,41 @@
 
 -(void)reviewAction:(id)sender
 {
+    CardIOPaymentViewController *scanViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
+    scanViewController.appToken = @"0f07b7ddb5d448b38d3e27e3f26b7818"; // get your app token from the card.io website
+    [self presentModalViewController:scanViewController animated:YES];
+}
+
+- (void)userDidCancelPaymentViewController:(CardIOPaymentViewController *)scanViewController {
+    NSLog(@"User canceled payment info");
+    // Handle user cancellation here...
+    [scanViewController dismissModalViewControllerAnimated:YES];
+}
+
+- (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)info inPaymentViewController:(CardIOPaymentViewController *)scanViewController {
+    // The full card number is available as info.cardNumber, but don't log that!
+    NSLog(@"Received card info. Number: %@, expiry: %02i/%u, cvv: %@.",info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv);
+    // Use the card info...
+    [scanViewController dismissModalViewControllerAnimated:YES];
+    
+    [self confirmOrder];
+}
+
+-(void) confirmOrder
+{
     [activityIndicator startAnimating];
     
 	NSMutableDictionary *dictCat = [[NSMutableDictionary alloc]init];
     NSMutableArray *catalogResponse =  [[NSMutableArray alloc]init];
     
     
-//    NSString *strId=[[NSString alloc]init];
-//    NSString *strName=[[NSString alloc]init];
-//    NSString *strQty=[[NSString alloc]init];
-//    NSString *strPrice=[[NSString alloc]init];
-//    NSString *strImage=[[NSString alloc]init];
-//    NSString *strDetail=[[NSString alloc]init];
-//    NSString *strTotal=[[NSString alloc]init];
+    //    NSString *strId=[[NSString alloc]init];
+    //    NSString *strName=[[NSString alloc]init];
+    //    NSString *strQty=[[NSString alloc]init];
+    //    NSString *strPrice=[[NSString alloc]init];
+    //    NSString *strImage=[[NSString alloc]init];
+    //    NSString *strDetail=[[NSString alloc]init];
+    //    NSString *strTotal=[[NSString alloc]init];
     
     
     NSString  *strId = @"3";
@@ -545,7 +567,7 @@
     
     NSString *urlString;
     
-      
+    
     NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:kwebserviceprotocol];
     protocol = [protocol stringByTrimmingCharactersInSet:
                 [NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -560,51 +582,51 @@
     
     NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:kwebservicecontext];
     context = [context stringByTrimmingCharactersInSet:
-               [NSCharacterSet whitespaceAndNewlineCharacterSet]]; 
+               [NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi,korderproduct,kpost,korderdetail];
     
     NSLog(@"urlString %@",urlString);
     // }
     
-//    SBJsonWriter *jsonWriter = [SBJsonWriter new];
-//    
-//    //Just for error tracing
-//    jsonWriter.humanReadable = YES;
-//    NSString *json = [jsonWriter stringWithObject:jsonDictionary];
+    //    SBJsonWriter *jsonWriter = [SBJsonWriter new];
+    //
+    //    //Just for error tracing
+    //    jsonWriter.humanReadable = YES;
+    //    NSString *json = [jsonWriter stringWithObject:jsonDictionary];
     
     
     NSData* postData = [NSJSONSerialization dataWithJSONObject:jsonDictionary
                                                        options:NSJSONWritingPrettyPrinted error:nil];
-//    if (!json){
-//        
-//        NSLog(@"-JSONRepresentation failed. Error trace is: %@", [jsonWriter errorTrace]);
-//    }
-//    
-//    jsonWriter =nil;
+    //    if (!json){
+    //
+    //        NSLog(@"-JSONRepresentation failed. Error trace is: %@", [jsonWriter errorTrace]);
+    //    }
+    //
+    //    jsonWriter =nil;
     
     //NSData *postData = [json dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init]; 
-	[request setURL:[NSURL URLWithString:urlString]]; 
-	[request setHTTPMethod:@"POST"]; 
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+	[request setURL:[NSURL URLWithString:urlString]];
+	[request setHTTPMethod:@"POST"];
 	[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json" forHTTPHeaderField:@"accept"];
-	[request setHTTPBody:postData]; 
+	[request setHTTPBody:postData];
     
-	NSURLConnection *conn=[[NSURLConnection alloc] initWithRequest:request delegate:self]; 
+	NSURLConnection *conn=[[NSURLConnection alloc] initWithRequest:request delegate:self];
 	//NSData* receivedData1 = [NSMutableData data] ;
     
 	if (conn)
     {
         //receivedData1 = [NSMutableData data] ;
     }
-	else 
-	{ 
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:  @"Error while updating data on network."  
-													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil]; 
-		[alert show]; 
+	else
+	{
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:  @"Error while updating data on network."
+													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+		[alert show];
 		//alert =nil;
-	} 
+	}
 	
 	/*...NSURLResponse...*/
 	
@@ -628,20 +650,16 @@
     else {
         [activityIndicator stopAnimating];
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:  @"Order cannot be placed. Please try again"  
-													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil]; 
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:  @"Order cannot be placed. Please try again"
+													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
 		[alert show]; 
 		//alert =nil;
     }
-    
-    
 }
 
 -(void)cancelAction:(id)sender
 {
 	[self.view removeFromSuperview];
-    
-    
 }
 
 
