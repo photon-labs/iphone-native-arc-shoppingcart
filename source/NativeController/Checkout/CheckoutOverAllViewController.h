@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CardIO.h"
+
 @class OrderStatusViewController;
 @class BrowseViewController;
 @class SpecialOffersViewController;
 @class Tabbar;
-@interface CheckoutOverAllViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface CheckoutOverAllViewController : UIViewController<UITableViewDelegate,UITableViewDataSource, CardIOPaymentViewControllerDelegate>
 {
     UIButton *btnSaved;
     NSString *strFirst;
