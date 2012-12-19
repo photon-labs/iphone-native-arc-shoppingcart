@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0609330616819F2B00472ED5 /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0609330516819F2B00472ED5 /* libCardIO.a */; };
 		06DC39311671B058006E699C /* paynow.png in Resources */ = {isa = PBXBuildFile; fileRef = 06DC39301671B058006E699C /* paynow.png */; };
-		06DC393D1671B0DD006E699C /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DC393C1671B0DD006E699C /* libCardIO.a */; };
 		06DC393F1671B317006E699C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DC393E1671B317006E699C /* QuartzCore.framework */; };
 		06DC39411671B321006E699C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DC39401671B321006E699C /* OpenGLES.framework */; };
 		06DC39431671B32A006E699C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DC39421671B32A006E699C /* MobileCoreServices.framework */; };
@@ -278,12 +278,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0609330116819F2B00472ED5 /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
+		0609330216819F2B00472ED5 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		0609330316819F2B00472ED5 /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		0609330416819F2B00472ED5 /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+		0609330516819F2B00472ED5 /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
 		06DC39301671B058006E699C /* paynow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paynow.png; sourceTree = "<group>"; };
-		06DC39381671B0DD006E699C /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
-		06DC39391671B0DD006E699C /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
-		06DC393A1671B0DD006E699C /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewController.h; sourceTree = "<group>"; };
-		06DC393B1671B0DD006E699C /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
-		06DC393C1671B0DD006E699C /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
 		06DC393E1671B317006E699C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		06DC39401671B321006E699C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		06DC39421671B32A006E699C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -636,21 +636,21 @@
 				EAAA05FD161C0E2E00BD06EF /* UIKit.framework in Frameworks */,
 				EAAA05FF161C0E2E00BD06EF /* Foundation.framework in Frameworks */,
 				EAAA0601161C0E2E00BD06EF /* CoreGraphics.framework in Frameworks */,
-				06DC393D1671B0DD006E699C /* libCardIO.a in Frameworks */,
+				0609330616819F2B00472ED5 /* libCardIO.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06DC39371671B0DD006E699C /* CardIO */ = {
+		0609330016819F2B00472ED5 /* CardIO */ = {
 			isa = PBXGroup;
 			children = (
-				06DC39381671B0DD006E699C /* CardIO.h */,
-				06DC39391671B0DD006E699C /* CardIOCreditCardInfo.h */,
-				06DC393A1671B0DD006E699C /* CardIOPaymentViewController.h */,
-				06DC393B1671B0DD006E699C /* CardIOPaymentViewControllerDelegate.h */,
-				06DC393C1671B0DD006E699C /* libCardIO.a */,
+				0609330116819F2B00472ED5 /* CardIO.h */,
+				0609330216819F2B00472ED5 /* CardIOCreditCardInfo.h */,
+				0609330316819F2B00472ED5 /* CardIOPaymentViewController.h */,
+				0609330416819F2B00472ED5 /* CardIOPaymentViewControllerDelegate.h */,
+				0609330516819F2B00472ED5 /* libCardIO.a */,
 			);
 			path = CardIO;
 			sourceTree = "<group>";
@@ -1047,7 +1047,7 @@
 		EA2FCECD16564584000F2C9C /* NativeController */ = {
 			isa = PBXGroup;
 			children = (
-				06DC39371671B0DD006E699C /* CardIO */,
+				0609330016819F2B00472ED5 /* CardIO */,
 				EA2FCECE16564584000F2C9C /* AddToBag */,
 				EA2FCECF16564584000F2C9C /* Browse */,
 				EA2FCED016564584000F2C9C /* Checkout */,
