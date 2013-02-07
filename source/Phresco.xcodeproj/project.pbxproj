@@ -21,7 +21,6 @@
 		EA2FCEEB16564584000F2C9C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCEDC16564584000F2C9C /* ViewController.m */; };
 		EA2FCEEC16564584000F2C9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCEDF16564584000F2C9C /* AppDelegate.m */; };
 		EA2FCEED16564584000F2C9C /* Phresco-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA2FCEE016564584000F2C9C /* Phresco-Info.plist */; };
-		EA2FCEEF16564584000F2C9C /* phresco-env-config.xml in Resources */ = {isa = PBXBuildFile; fileRef = EA2FCEE416564584000F2C9C /* phresco-env-config.xml */; };
 		EA2FCEF716564658000F2C9C /* Webview.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCEF016564658000F2C9C /* Webview.m */; };
 		EA2FCEF816564658000F2C9C /* WebContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCEF216564658000F2C9C /* WebContainer.m */; };
 		EA2FCEF916564658000F2C9C /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCEF416564658000F2C9C /* NavigationBar.m */; };
@@ -291,12 +290,6 @@
 		06DC39451671B33C006E699C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		06DC39481671B347006E699C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		06DC394A1671B35B006E699C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		EA2FCE6F16563CE3000F2C9C /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64.m; path = base64/Base64.m; sourceTree = SOURCE_ROOT; };
-		EA2FCE7016563CE3000F2C9C /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = base64/Base64.h; sourceTree = SOURCE_ROOT; };
-		EA2FCE7116563CE3000F2C9C /* NSData-AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData-AES.h"; path = "base64/NSData-AES.h"; sourceTree = SOURCE_ROOT; };
-		EA2FCE7216563CE3000F2C9C /* NSData-AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData-AES.m"; path = "base64/NSData-AES.m"; sourceTree = SOURCE_ROOT; };
-		EA2FCE7316563CE3000F2C9C /* rijndael.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rijndael.c; path = base64/rijndael.c; sourceTree = SOURCE_ROOT; };
-		EA2FCE7416563CE3000F2C9C /* rijndael.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rijndael.h; path = base64/rijndael.h; sourceTree = SOURCE_ROOT; };
 		EA2FCEAE16564584000F2C9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		EA2FCECA16564584000F2C9C /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		EA2FCECB16564584000F2C9C /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
@@ -309,7 +302,6 @@
 		EA2FCEE016564584000F2C9C /* Phresco-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Phresco-Info.plist"; sourceTree = "<group>"; };
 		EA2FCEE116564584000F2C9C /* Phresco-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Phresco-Prefix.pch"; sourceTree = "<group>"; };
 		EA2FCEE216564584000F2C9C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		EA2FCEE416564584000F2C9C /* phresco-env-config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "phresco-env-config.xml"; sourceTree = "<group>"; };
 		EA2FCEF016564658000F2C9C /* Webview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Webview.m; sourceTree = "<group>"; };
 		EA2FCEF116564658000F2C9C /* WebContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebContainer.h; sourceTree = "<group>"; };
 		EA2FCEF216564658000F2C9C /* WebContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebContainer.m; sourceTree = "<group>"; };
@@ -1285,10 +1277,8 @@
 				EA2FCEE016564584000F2C9C /* Phresco-Info.plist */,
 				EA2FCEE116564584000F2C9C /* Phresco-Prefix.pch */,
 				EA2FCEE216564584000F2C9C /* Constants.h */,
-				EA2FCEE416564584000F2C9C /* phresco-env-config.xml */,
 				EA99374F163FB0850005DC86 /* libxml2.2.dylib */,
 				EA993747163FAF2C0005DC86 /* SenTestingKit.framework */,
-				EAAA065F161C722000BD06EF /* base64 */,
 				EA993767163FB9400005DC86 /* LogicTest */,
 				EA60868A1640F4C600C260C4 /* ApplicationTest */,
 				EAAA05FB161C0E2E00BD06EF /* Frameworks */,
@@ -1318,20 +1308,6 @@
 				EAEF47CB1643FFB000278D99 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EAAA065F161C722000BD06EF /* base64 */ = {
-			isa = PBXGroup;
-			children = (
-				EA2FCE6F16563CE3000F2C9C /* Base64.m */,
-				EA2FCE7016563CE3000F2C9C /* Base64.h */,
-				EA2FCE7116563CE3000F2C9C /* NSData-AES.h */,
-				EA2FCE7216563CE3000F2C9C /* NSData-AES.m */,
-				EA2FCE7316563CE3000F2C9C /* rijndael.c */,
-				EA2FCE7416563CE3000F2C9C /* rijndael.h */,
-			);
-			name = base64;
-			path = Phresco/base64;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1441,7 +1417,6 @@
 			files = (
 				EA2FCEE516564584000F2C9C /* InfoPlist.strings in Resources */,
 				EA2FCEED16564584000F2C9C /* Phresco-Info.plist in Resources */,
-				EA2FCEEF16564584000F2C9C /* phresco-env-config.xml in Resources */,
 				EA2FCEFA16564658000F2C9C /* WebContainer.xib in Resources */,
 				EA2FCF1E16564679000F2C9C /* Default.png in Resources */,
 				EA2FCF1F16564679000F2C9C /* Icon.png in Resources */,
@@ -1641,7 +1616,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = "if [ \"$RUN_UNIT_TEST_WITH_IOS_SIM\" = \"YES\" ]; then\ntest_bundle_path=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.$WRAPPER_EXTENSION\"\nenvironment_args=\"--setenv DYLD_INSERT_LIBRARIES=/../../Library/PrivateFrameworks/IDEBundleInjection.framework/IDEBundleInjection --setenv XCInjectBundle=$test_bundle_path --setenv XCInjectBundleInto=$TEST_HOST\"\nios-sim launch $(dirname $TEST_HOST) $environment_args --args -SenTest All $test_bundle_path\necho \"Finished running tests with ios-sim\"\nelse\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\nfi\n";
 		};
 		EA993760163FB9400005DC86 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1789,7 +1764,7 @@
 				OTHER_TEST_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
-				TEST_HOST = "";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "i386 armv6 armv7";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1816,7 +1791,7 @@
 				OTHER_TEST_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_AFTER_BUILD = YES;
-				TEST_HOST = "";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "i386 armv6 armv7";
 				WRAPPER_EXTENSION = octest;
 			};
