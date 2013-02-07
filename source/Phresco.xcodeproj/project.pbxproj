@@ -90,6 +90,7 @@
 		EA6086921640F4C600C260C4 /* ApplicationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6086911640F4C600C260C4 /* ApplicationTest.m */; };
 		EA6086971640F4E000C260C4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA993747163FAF2C0005DC86 /* SenTestingKit.framework */; };
 		EA6086A01640F7FD00C260C4 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA99374F163FB0850005DC86 /* libxml2.2.dylib */; };
+		EA69624D16C3F8A0003FB2C9 /* phresco-env-config.xml in Resources */ = {isa = PBXBuildFile; fileRef = EA69624C16C3F8A0003FB2C9 /* phresco-env-config.xml */; };
 		EA993765163FB9400005DC86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAA05FC161C0E2E00BD06EF /* UIKit.framework */; };
 		EA993766163FB9400005DC86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAA05FE161C0E2E00BD06EF /* Foundation.framework */; };
 		EA99376C163FB9400005DC86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA99376A163FB9400005DC86 /* InfoPlist.strings */; };
@@ -408,6 +409,7 @@
 		EA6086911640F4C600C260C4 /* ApplicationTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationTest.m; sourceTree = "<group>"; };
 		EA6086931640F4C600C260C4 /* ApplicationTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplicationTest-Prefix.pch"; sourceTree = "<group>"; };
 		EA60869D1640F79000C260C4 /* OCUnitToJUnitLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCUnitToJUnitLogger.m; sourceTree = "<group>"; };
+		EA69624C16C3F8A0003FB2C9 /* phresco-env-config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "phresco-env-config.xml"; sourceTree = "<group>"; };
 		EA993747163FAF2C0005DC86 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		EA99374F163FB0850005DC86 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		EA993762163FB9400005DC86 /* LogicTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1252,6 +1254,7 @@
 		EAAA05ED161C0E2E00BD06EF = {
 			isa = PBXGroup;
 			children = (
+				EA69624C16C3F8A0003FB2C9 /* phresco-env-config.xml */,
 				06DC394A1671B35B006E699C /* AVFoundation.framework */,
 				06DC39481671B347006E699C /* AudioToolbox.framework */,
 				06DC39441671B33C006E699C /* CoreMedia.framework */,
@@ -1599,6 +1602,7 @@
 				EAA462A716566344000F43D6 /* updatecart_btn.png in Resources */,
 				EAA462A816566344000F43D6 /* viewmycart_btn.png in Resources */,
 				06DC39311671B058006E699C /* paynow.png in Resources */,
+				EA69624D16C3F8A0003FB2C9 /* phresco-env-config.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
