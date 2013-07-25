@@ -9,19 +9,22 @@ try
 	
 	
 	clickOnButton(RegistrationButton);
+	target.logElementTree();
 	
     mainwindow.scrollViews()[0].textFields()[0].setValue(first);
     waitForFewSeconds(2);
 	mainwindow.scrollViews()[0].textFields()[1].setValue(last);
     waitForFewSeconds(2);
 	mainwindow.scrollViews()[0].textFields()[2].setValue(Email_id); 
-    waitForFewSeconds(2);
-	mainwindow.scrollViews()[0].secureTextFields()[0].setValue(password); 
-    waitForFewSeconds(2);
+    waitForFewSeconds(3);
+	target.frontMostApp().keyboard().typeString("\n");	
+	target.frontMostApp().mainWindow().scrollViews()[0].secureTextFields()[0].setValue(password); 
+    waitForFewSeconds(3);
+	target.frontMostApp().keyboard().typeString("\n");
 	mainwindow.scrollViews()[0].secureTextFields()[1].setValue(password);
-    waitForFewSeconds(2);
+    waitForFewSeconds(3);
 	
-    application.keyboard().buttons()[RETURN].tap();
+    target.frontMostApp().keyboard().typeString("\n");
     waitForFewSeconds(2);
     clickOnButton(register_);
     waitForFewSeconds(2);

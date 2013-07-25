@@ -214,9 +214,8 @@ function clickOnTableCell(CellValues){
 */
 function searchForProduct(productName){
 	if(productName!==null){	
-		var image=mainwindow.images()[0];
-		var searchField=image.textFields()[SEARCH_FIELD];
-		var searchButton=image.buttons()[SEARCH_BUTTON];
+		var searchField= mainwindow.textFields()[SEARCH_FIELD];
+		var searchButton= mainwindow.buttons()[SEARCH_BUTTON];
 		searchField.tap();
 		waitForFewSeconds(1.5);
 		searchField.setValue(productName);
@@ -248,6 +247,108 @@ function passwordTextFields(passwordTextField ,passwordTextFieldValue){
 	}
 
 
+function TextPresent(text){
+	if (text!=null){
+		for(var i=0;i<=j;i++){
+			var textpresent = mainwindow.staticTexts()[text];
+			if(textpresent.isVisible() && textpresent.isEnabled()){
+				return textpresent;
+				
+				//break;
+			}
+			else{
+				if(i==j){
+					UIALogger.logMessage("---Expected text not exists---");
+					throw error;
+				}
+				else{
+					UIALogger.logMessage("---wait for text present---");
+					waitForFewSeconds(1);
+				}
+			}
+		}
+	}
+	else{
+		UIALogger.logMessage("---Text not exists---");
+	}	
+}
+
+
+
+function clickOnScroll(button){
+
+	var scroll = isScrollViewExist(button);
+	UIALogger.logMessage("---ScrollView Exists---");
+	scroll.tap();
+}
+
+
+
+
+/*
+ It will wait for button till the given time
+ It will Capture the screen if button not exists in given time
+ */
+
+
+
+function isScrollViewExist(button){
+
+	if(button!=null){
+		for(var i=0;i<=j;i++){
+			var scrollview=mainwindow.scrollViews()[0].buttons()[button];
+			if(scrollview.isVisible() && scrollview.isEnabled()){
+				return scrollview;
+			}
+			else{
+				if(i==j){
+					UIALogger.logMessage("Assertion failed  Excepcted value is:"+ scrollview.name()+"     Getting value is: "+ button);
+					UIALogger.logMessage("---ScrollView not Exists---");
+					throw error;
+
+				}
+				else{
+					UIALogger.logMessage("---Waiting for ScrollView to exist---");
+					target.delay(1);
+				}
+			}
+		}
+	}
+
+	else{
+
+		UIALogger.logMessage("-----------ScrollView  Value is empty-------------");
+	}
+}
+
+
+function clickOncellbutton(button){
+
+	if (button!=null){
+		for(var i=0;i<=j;i++){
+			UIALogger.logMessage("---Verifying text to exists---");
+			var cellbutton = target.frontMostApp().mainWindow().tableViews()[0].cells()[0].buttons()[button].tap();
+			if(cellbutton.isVisible() && textpresent.isEnabled()){		
+				UIALogger.logMessage("---button Exists ---");	
+				return cellbutton;	
+				cellbutton.tap();
+			}
+			else{
+				if(i==j){
+					UIALogger.logMessage("---Expected text not exists---");
+					throw error;
+				}
+				else{
+					UIALogger.logMessage("---wait for text present---");
+					waitForFewSeconds(1);
+				}
+			}
+		}
+	}
+	else{
+		UIALogger.logMessage("---Text not exists---");
+	}	
+}
 
 
 
