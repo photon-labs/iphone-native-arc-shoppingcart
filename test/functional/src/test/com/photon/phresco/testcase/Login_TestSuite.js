@@ -4,7 +4,7 @@
 
 
 
-function Login_Test(methodName)
+function Login_ValidTest(methodName)
 {
 	try
 		{
@@ -12,7 +12,8 @@ function Login_Test(methodName)
 			textFields(0, Email_id);
 			passwordTextFields(0, password);	
 			waitForFewSeconds(2);
-			application.keyboard().buttons()[RETURN].tap();
+			target.frontMostApp().keyboard().typeString("\n");
+			//application.keyboard().buttons()[RETURN].tap();
 			clickOnButton(login_);
 			waitForFewSeconds(2);
 			UIATarget.localTarget().logElementTree();    
@@ -35,12 +36,76 @@ function Login_Test(methodName)
             UIALogger.logFail(methodName);
             if(UIALogger.logError())
             {
-               captureScreenshot("Login screenshots"); 
+               captureScreenshot(methodName); 
             }
 }
   
 }
-Login_Test("Login_Test");
 
+function Login_InvalidTest(methodName)
+{
+	try
+		{
+			clickOnButton(LoginButton);
+			textFields(0, Email_invalid);
+			passwordTextFields(0, password);	
+			waitForFewSeconds(2);
+			target.frontMostApp().keyboard().typeString("\n");
+			//application.keyboard().buttons()[RETURN].tap();
+			clickOnButton(login_);
+			waitForFewSeconds(2);
+			UIATarget.localTarget().logElementTree();    
+    		var textValue = mainwindow.staticTexts()[logResult].value();
 
+    
+    		if (textValue === failed){ 
+    		     UIALogger.logMessage("Login failed") ;       			 
+    			}
+   			 else{
+       			 UIALogger.logFail( "Login Fail" ); 
+   			 }
+   	 			clickOnButton(okButton);
+				waitForFewSeconds(2);    
+			 UIALogger.logPass( methodName );
+}      
+	catch(err)
+			{
+            UIALogger.logMessage("There is an error") ;
+            UIALogger.logFail(methodName);
+            if(UIALogger.logError())
+            {
+               captureScreenshot(methodName); 
+            }
+}
+  
+}
+function Login_InvalidPasswordTest(methodName)
+{
+	try
+		{
+			clickOnButton(LoginButton);
+			textFields(0, Email_id);
+			waitForFewSeconds(2);
+			target.frontMostApp().keyboard().typeString("\n");
+			//application.keyboard().buttons()[RETURN].tap();
+			clickOnButton(login_);
+			waitForFewSeconds(2);
+			clickOnButton("logCancel");
+			//target.frontMostApp().mainWindow().buttons()["logCancel"].tap();
+			UIALogger.logPass( methodName );
+}      
+	catch(err)
+			{
+            UIALogger.logMessage("There is an error") ;
+            UIALogger.logFail(methodName);
+            if(UIALogger.logError())
+            {
+               captureScreenshot(methodName); 
+            }
+}
+  
+}
 
+Login_InvalidPasswordTest("Login_InvalidPasswordTest");
+Login_InvalidTest("Login_InvalidTest");
+Login_ValidTest("Login_ValidTest");

@@ -68,37 +68,49 @@ try
 	
 	clickOnTableCell(delInfo);    
     mainwindow.tableViews()[0].cells()[2].textFields()[0].setValue(add);
+	waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[2].textFields()[1].setValue(first);
+	waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[2].textFields()[2].setValue(last);
+	waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[2].textFields()[3].setValue(company);
+	waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[2].textFields()[4].setValue(add1);
+	waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[2].textFields()[5].setValue(add2);
+	waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[2].textFields()[6].setValue(city);
+	waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[2].textFields()[7].setValue(state);
+	waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[2].textFields()[8].setValue(country);
+	waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[2].textFields()[9].setValue(code);
+	waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[2].textFields()[10].setValue(phoneno);
-    
+    waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[billInfo].tap();
-    
+    waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[4].buttons()[checkButton].tap();
-    
-    mainwindow.tableViews()[0].cells()[paytMethods].tap(); 
-    mainwindow.tableViews()[0].cells()[6].buttons()[cashButton].tap(); 
+    waitForFewSeconds(2);
+    mainwindow.tableViews()[0].cells()[paytMethods].tap(); +
+	waitForFewSeconds(2);
+    mainwindow.tableViews()[0].cells()[6].buttons()[cashButton].tap();
+	waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[oderComm].tap();
-    
-    UIATarget.localTarget().logElementTree();
-    
-    var text = mainwindow.tableViews()[0].cells()[8].textViews()[oderTextView].value();
+    waitForFewSeconds(2);
+	var text = mainwindow.tableViews()[0].cells()[8].textViews()[oderTextView].value();
     UIALogger.logMessage("text "+text);
-   
+    waitForFewSeconds(2);
     mainwindow.tableViews()[0].cells()[8].textViews()[oderTextView].setValue("Phresco");
     waitForFewSeconds(2);
     mainwindow.buttons()[revieworder].tap(); 
     waitForFewSeconds(2);
     mainwindow.buttons()[submitButton].tap();
     waitForFewSeconds(5);
-    
+    target.frontMostApp().navigationBar().leftButton().tap();
+	waitForFewSeconds(2)
+	target.frontMostApp().mainWindow().buttons()[6].tap();
 	 UIALogger.logPass(methodName);
 	
     

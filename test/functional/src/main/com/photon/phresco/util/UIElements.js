@@ -26,6 +26,7 @@ var phoneno = "+1 212-398-2449";
 
 
 var Email_id = "john@phresco.com"; 
+var Email_invalid = "johnphresco.com";
 var password = "john";
 var RETURN = "Return";
 //Accessibility labels
@@ -36,7 +37,7 @@ var logAlert = "AlertView";
 var okButton = "loginOkbutton";
 var logResult = "LoginResult"; 
 var logSuccess = "Login Success"
-var failed = "Login Failed";
+var failed = "Login failed";
 var labelResult = "ResultLabel";
 var buttonOk = "OkButton";
 var prodReview = "Review";
@@ -66,3 +67,10 @@ var cashButton = "CashButton";
 var revieworder = "revieworder btn";
 var submitButton = "Submit";
 var oderTextView = "OderTextView";
+var SEARCH_FIELD="0";
+var SEARCH_BUTTON="Searchbutton";
+var productName="CPU";
+
+/*********SpecialOffer Prodcut ID's********/
+
+var LED3DTV4086= "LED3DTV4086 40\" Class 3D LED TV w/ 2 Pairs of 3D Glasses, $ 799, Price:";
