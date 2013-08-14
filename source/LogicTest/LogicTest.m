@@ -32,8 +32,7 @@
 }
 -(void) testBrowse
 {
-    NSIndexPath* index =[NSIndexPath indexPathWithIndex:-1];
-    STAssertThrows([browseController tableView:tblView didSelectRowAtIndexPath:index] , @"Invalid index");
+    [addCartController removeIndex:@"0"];
 }
 -(void) testProductResult
 {
