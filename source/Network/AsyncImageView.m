@@ -52,6 +52,15 @@
 	//TODO error handling, what if connection is nil?
 }
 
+- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
+{
+    return YES;
+}
+
+
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
+}
 
 	//the URL connection calls this repeatedly as data arrives
 - (void)connection:(NSURLConnection *)theConnection didReceiveData:(NSData *)incrementalData {
