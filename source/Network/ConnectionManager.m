@@ -269,6 +269,15 @@ static ConnectionManager *sharedConnection = nil;
 	[connObj setObject:response  forKey:kConnectionServerResponse];	
 	debug(@"end");
 }
+- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
+{
+    return YES;
+}
+
+
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
+}
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
