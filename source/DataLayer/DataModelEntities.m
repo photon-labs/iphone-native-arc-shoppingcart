@@ -401,16 +401,19 @@ static int extraAssetsCounter = 0;
             [self.productDetailArray addObject:service];
             // Get all object
             NSMutableArray *items = [data valueForKeyPath:@"product.details"];
-            
             for(int i=0;i<[items count];i++)
             {
                 NSMutableDictionary *itemDict = [NSMutableDictionary dictionary];
                 NSMutableDictionary *tempDict = [NSMutableDictionary dictionary];
                 itemDict = [items objectAtIndex:i];
-                NSString *strTVType = [itemDict objectForKey:@"TV Type"];
-                NSString *strScreen = [itemDict objectForKey:@"Screen Size"];
-                NSString *strRatio = [itemDict objectForKey:@"Screen Ratio"];
-                NSString *strDefinition = [itemDict objectForKey:@"TV Definition"];
+//                NSString *strTVType = [itemDict objectForKey:@"TV Type"];
+//                NSString *strScreen = [itemDict objectForKey:@"Screen Size"];
+//                NSString *strRatio = [itemDict objectForKey:@"Screen Ratio"];
+//                NSString *strDefinition = [itemDict objectForKey:@"TV Definition"];
+                NSString *strTVType =@"LCD";
+                NSString *strScreen = @"32'Inches";
+                NSString *strRatio = @"16:9";
+                NSString *strDefinition = @"HDTV";
                 
                 [tempDict setObject:strTVType forKey:@"TV Type"];
                 [tempDict setObject:strScreen forKey:@"Screen Size"];
@@ -429,7 +432,7 @@ static int extraAssetsCounter = 0;
     {
          AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
         NSDictionary* productReviewModelArray = [data objectForKey:@"review"];
-         NSMutableArray* productResponse;
+         //NSMutableArray* productResponse;
         NSMutableArray *productDetailsResponseOne = [[NSMutableArray alloc]init];
        for(int i = 0; i<[productReviewModelArray count]; i++)
         {
