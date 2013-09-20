@@ -263,7 +263,6 @@
 {
     
     NSData *responseData = [responseDataDict objectForKey:kConnectionDataReceived];
-	NSLog(@"Response Dict :%@", responseData);
     
     NSData *data = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
     
