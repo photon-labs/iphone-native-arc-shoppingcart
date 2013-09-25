@@ -9,7 +9,7 @@ try
 	
 	
 	clickOnButton(RegistrationButton);
-	target.logElementTree();
+	
 	
     mainwindow.scrollViews()[0].textFields()[0].setValue(first);
     waitForFewSeconds(2);

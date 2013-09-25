@@ -7,7 +7,6 @@ var HelloWorld="Hello World"
 try
     {  
 		isTextPresent(HelloWorld);
-		UIATarget.localTarget().logElementTree(); 
 		UIALogger.logPass("logSuccess"); 
 		
 		

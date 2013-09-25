@@ -16,7 +16,7 @@ function Login_ValidTest(methodName)
 			//application.keyboard().buttons()[RETURN].tap();
 			clickOnButton(login_);
 			waitForFewSeconds(2);
-			UIATarget.localTarget().logElementTree();    
+			  
     		var textValue = mainwindow.staticTexts()[logResult].value();
 
     
@@ -54,7 +54,7 @@ function Login_InvalidTest(methodName)
 			//application.keyboard().buttons()[RETURN].tap();
 			clickOnButton(login_);
 			waitForFewSeconds(2);
-			UIATarget.localTarget().logElementTree();    
+			  
     		var textValue = mainwindow.staticTexts()[logResult].value();
 
     

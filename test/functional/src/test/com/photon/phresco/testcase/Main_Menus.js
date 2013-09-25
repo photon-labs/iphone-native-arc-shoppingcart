@@ -12,11 +12,9 @@ try
 	clickOnButton("7");
 	TextPresent("No items in your cart");	
 	waitForFewSeconds(1);
-	clickOnButton("7");
-	target.logElementTree();
+	clickOnButton("7");	
 	waitForFewSeconds(2);
-	clickOnButton("8");
-	target.logElementTree();
+	clickOnButton("8");	
 	waitForFewSeconds(2);
 	clickOnButton("3");
 	waitForFewSeconds(2);
