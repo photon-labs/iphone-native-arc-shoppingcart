@@ -1,0 +1,13 @@
+<environments>
+    <environment default="true" desc="Production Environment is used for Development purpose only" name="Production">
+        
+    <WebService desc="Webservice Configuration" name="service">
+            <port>7777</port>
+            <password/>
+            <context>nodejseshop</context>
+            <host>localhost</host>
+            <protocol>http</protocol>
+            <username/>
+        </WebService>
+    </environment>
+</environments>
