@@ -46,7 +46,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"BrowseViewController-iPad" bundle:nil];
+		self = [super initWithNibName:@"BrowseViewController" bundle:nil];
 		
 	}
 	else 
@@ -696,7 +696,7 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-        ResultViewController *tempResultViewController = [[ResultViewController alloc] initWithNibName:@"ResultsViewController-iPAd" bundle:nil];
+        ResultViewController *tempResultViewController = [[ResultViewController alloc] initWithNibName:@"ResultViewController" bundle:nil];
         
         self.resultViewController = tempResultViewController;
         
