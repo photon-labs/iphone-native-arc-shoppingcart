@@ -44,13 +44,11 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		NSLog(@"iPad....");
-		self = [super initWithNibName:@"AddtoBagViewController-iPAd" bundle:nil];
+		self = [super initWithNibName:@"AddToBagViewController" bundle:nil];
 		
 	}
 	else 
     {
-        NSLog(@"iPhone....");
         self = [super initWithNibName:@"AddToBagViewController" bundle:nil];
         
     }
@@ -103,7 +101,6 @@
 -(void) loadNavigationBar
 {
 	//add scroll view
-    NSLog(@"Add to cart....");
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
         UIImageView *navBarView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 768, 90)];
@@ -238,14 +235,10 @@
             [inputTexts addObject:cartCount];
             //txtQty.text = cartCount;
             price = [cartPrice intValue];
-            NSLog(@"price Total: %d",price);
             
             theInteger = [cartCount intValue];
-            NSLog(@"cartCount Total: %@",cartCount);
-            NSLog(@"purchase: %d",([cartPrice intValue] * theInteger));
             purchase = purchase + ([cartPrice intValue] * theInteger);
             
-            NSLog(@"Total: %d",purchase);
         }
         
         
@@ -496,8 +489,6 @@
         }
         for(int i = 0;i<[assetsData.productDetailArray count]; i++)
         {
-            NSLog(@"productImageArray :%@", productImageArray);
-           //[productImageArray addObject:[[assetsData.productDetailArray objectAtIndex:i] productDetailImageUrl]];
             
         }
     }
@@ -511,7 +502,6 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:LEAGELNUM] invertedSet];
     NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs]     componentsJoinedByString:@""];
-    NSLog(@"filtered:%@",filtered);
     BOOL basicTest = [string isEqualToString:filtered];
     return basicTest;
 }
@@ -662,7 +652,7 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-        ViewCartViewController  *tempViewCartController = [[ViewCartViewController alloc] initWithNibName:@"ViewCartViewController-iPad" bundle:nil];
+        ViewCartViewController  *tempViewCartController = [[ViewCartViewController alloc] initWithNibName:@"ViewCartViewController" bundle:nil];
         
         tempViewCartController.cartPurchaseTotal = [NSString stringWithFormat:@"%d",purchase];
         
@@ -822,7 +812,6 @@
                 [quantityTextView setEnabled: YES];
                 quantityTextView.isAccessibilityElement = YES;
                 quantityTextView.accessibilityLabel = @"quantityTxtVw";
-                NSLog(@"qnt is %@",quantityTextView.text);
                 quantityTextView.accessibilityValue =cartCount;
                 [cell.contentView addSubview:quantityTextView];
                 quantityTextView = nil;;
@@ -849,7 +838,6 @@
                 
                 priceValue.isAccessibilityElement = YES;
                 priceValue.accessibilityLabel = @"priceVal";
-                NSLog(@"price is %@",priceValue.text);
                 priceValue.accessibilityValue = priceValue.text;
                 
                 [cell.contentView addSubview:priceValue];
@@ -948,7 +936,6 @@
                 
                 quantityTextView.isAccessibilityElement = YES;
                 quantityTextView.accessibilityLabel = @"quantityTxtVw";
-                NSLog(@"Quantity :%@", quantityTextView.text);
                 quantityTextView.accessibilityValue = quantityTextView.text;
                 
                 //        NSNumberFormatter *numberFormatter = [[[NSNumberFormatter alloc] init] autorelease];
@@ -1070,7 +1057,6 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    // NSLog(@"... Delete : %d",indexPath.row);
     [tableView delete:indexPath];
     
     [tableView reloadData];
