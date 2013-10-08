@@ -25,7 +25,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ConfigurationReader : NSObject {
+@interface ConfigurationReader : NSObject<NSXMLParserDelegate> {
     
     UIActivityIndicatorView * activityIndicator;
     
