@@ -49,7 +49,7 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"CheckoutOverAllViewController-iPad" bundle:nil];
+		self = [super initWithNibName:@"CheckoutOverAllViewController" bundle:nil];
 		
 	}
 	else 
@@ -469,14 +469,12 @@
 }
 
 - (void)userDidCancelPaymentViewController:(CardIOPaymentViewController *)scanViewController {
-    NSLog(@"User canceled payment info");
     // Handle user cancellation here...
     [scanViewController dismissModalViewControllerAnimated:YES];
 }
 
 - (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)info inPaymentViewController:(CardIOPaymentViewController *)scanViewController {
     // The full card number is available as info.cardNumber, but don't log that!
-    NSLog(@"Received card info. Number: %@, expiry: %02i/%u, cvv: %@.",info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv);
     // Use the card info...
     [scanViewController dismissModalViewControllerAnimated:YES];
     
@@ -586,26 +584,10 @@
     
     urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi,korderproduct,kpost,korderdetail];
     
-    NSLog(@"urlString %@",urlString);
-    // }
-    
-    //    SBJsonWriter *jsonWriter = [SBJsonWriter new];
-    //
-    //    //Just for error tracing
-    //    jsonWriter.humanReadable = YES;
-    //    NSString *json = [jsonWriter stringWithObject:jsonDictionary];
-    
     
     NSData* postData = [NSJSONSerialization dataWithJSONObject:jsonDictionary
                                                        options:NSJSONWritingPrettyPrinted error:nil];
-    //    if (!json){
-    //
-    //        NSLog(@"-JSONRepresentation failed. Error trace is: %@", [jsonWriter errorTrace]);
-    //    }
-    //
-    //    jsonWriter =nil;
-    
-    //NSData *postData = [json dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
 	[request setURL:[NSURL URLWithString:urlString]];
 	[request setHTTPMethod:@"POST"];
@@ -614,11 +596,10 @@
 	[request setHTTPBody:postData];
     
 	NSURLConnection *conn=[[NSURLConnection alloc] initWithRequest:request delegate:self];
-	//NSData* receivedData1 = [NSMutableData data] ;
     
 	if (conn)
     {
-        //receivedData1 = [NSMutableData data] ;
+        
     }
 	else
 	{
