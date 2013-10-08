@@ -16,6 +16,8 @@
 		06DC39471671B33D006E699C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DC39451671B33C006E699C /* CoreVideo.framework */; };
 		06DC39491671B347006E699C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DC39481671B347006E699C /* AudioToolbox.framework */; };
 		06DC394B1671B35B006E699C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DC394A1671B35B006E699C /* AVFoundation.framework */; };
+		A48B291A1803F03300A30EAC /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48B29191803F03300A30EAC /* ResultViewController.xib */; };
+		A48B291C1803F13C00A30EAC /* ViewCartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48B291B1803F13C00A30EAC /* ViewCartViewController.xib */; };
 		EA2FCEE516564584000F2C9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA2FCEAD16564584000F2C9C /* InfoPlist.strings */; };
 		EA2FCEEA16564584000F2C9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCEDB16564584000F2C9C /* main.m */; };
 		EA2FCEEB16564584000F2C9C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCEDC16564584000F2C9C /* ViewController.m */; };
@@ -63,7 +65,6 @@
 		EA2FCF5D1656478B000F2C9C /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCF5B1656478B000F2C9C /* ProductDetailsViewController.m */; };
 		EA2FCF5E1656478B000F2C9C /* ProductDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2FCF5C1656478B000F2C9C /* ProductDetailsViewController.xib */; };
 		EA2FCF6416564793000F2C9C /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCF5F16564793000F2C9C /* ResultViewController.m */; };
-		EA2FCF6516564793000F2C9C /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2FCF6116564793000F2C9C /* ResultViewController.xib */; };
 		EA2FCF6616564793000F2C9C /* ResultViewCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCF6216564793000F2C9C /* ResultViewCustomCell.m */; };
 		EA2FCF6A1656479B000F2C9C /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCF681656479B000F2C9C /* RegistrationViewController.m */; };
 		EA2FCF6B1656479B000F2C9C /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2FCF691656479B000F2C9C /* RegistrationViewController.xib */; };
@@ -78,7 +79,6 @@
 		EA2FCF84165647A9000F2C9C /* SpecialOffersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCF80165647A9000F2C9C /* SpecialOffersViewController.m */; };
 		EA2FCF85165647A9000F2C9C /* SpecialOffersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2FCF82165647A9000F2C9C /* SpecialOffersViewController.xib */; };
 		EA2FCF89165647B0000F2C9C /* ViewCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCF86165647B0000F2C9C /* ViewCartViewController.m */; };
-		EA2FCF8A165647B0000F2C9C /* ViewCartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2FCF88165647B0000F2C9C /* ViewCartViewController.xib */; };
 		EA2FCF8D165647EF000F2C9C /* ConfigurationReader.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCF8C165647EF000F2C9C /* ConfigurationReader.m */; };
 		EA2FCF9016564C5F000F2C9C /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2FCECB16564584000F2C9C /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EA2FCF9216564C7C000F2C9C /* OCUnitToJUnitLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EA60869D1640F79000C260C4 /* OCUnitToJUnitLogger.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -291,6 +291,8 @@
 		06DC39451671B33C006E699C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		06DC39481671B347006E699C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		06DC394A1671B35B006E699C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A48B29191803F03300A30EAC /* ResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		A48B291B1803F13C00A30EAC /* ViewCartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewCartViewController.xib; sourceTree = "<group>"; };
 		EA2FCEAE16564584000F2C9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		EA2FCECA16564584000F2C9C /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		EA2FCECB16564584000F2C9C /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
@@ -375,7 +377,6 @@
 		EA2FCF5C1656478B000F2C9C /* ProductDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailsViewController.xib; sourceTree = "<group>"; };
 		EA2FCF5F16564793000F2C9C /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		EA2FCF6016564793000F2C9C /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
-		EA2FCF6116564793000F2C9C /* ResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 		EA2FCF6216564793000F2C9C /* ResultViewCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewCustomCell.m; sourceTree = "<group>"; };
 		EA2FCF6316564793000F2C9C /* ResultViewCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewCustomCell.h; sourceTree = "<group>"; };
 		EA2FCF671656479B000F2C9C /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
@@ -399,7 +400,6 @@
 		EA2FCF82165647A9000F2C9C /* SpecialOffersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpecialOffersViewController.xib; sourceTree = "<group>"; };
 		EA2FCF86165647B0000F2C9C /* ViewCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCartViewController.m; sourceTree = "<group>"; };
 		EA2FCF87165647B0000F2C9C /* ViewCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCartViewController.h; sourceTree = "<group>"; };
-		EA2FCF88165647B0000F2C9C /* ViewCartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewCartViewController.xib; sourceTree = "<group>"; };
 		EA2FCF8B165647EF000F2C9C /* ConfigurationReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationReader.h; sourceTree = "<group>"; };
 		EA2FCF8C165647EF000F2C9C /* ConfigurationReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationReader.m; sourceTree = "<group>"; };
 		EA6086851640F4C600C260C4 /* ApplicationTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplicationTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1153,9 +1153,9 @@
 			children = (
 				EA2FCF5F16564793000F2C9C /* ResultViewController.m */,
 				EA2FCF6016564793000F2C9C /* ResultViewController.h */,
-				EA2FCF6116564793000F2C9C /* ResultViewController.xib */,
 				EA2FCF6216564793000F2C9C /* ResultViewCustomCell.m */,
 				EA2FCF6316564793000F2C9C /* ResultViewCustomCell.h */,
+				A48B29191803F03300A30EAC /* ResultViewController.xib */,
 			);
 			path = ProductResults;
 			sourceTree = "<group>";
@@ -1205,7 +1205,7 @@
 			children = (
 				EA2FCF86165647B0000F2C9C /* ViewCartViewController.m */,
 				EA2FCF87165647B0000F2C9C /* ViewCartViewController.h */,
-				EA2FCF88165647B0000F2C9C /* ViewCartViewController.xib */,
+				A48B291B1803F13C00A30EAC /* ViewCartViewController.xib */,
 			);
 			path = ViewCart;
 			sourceTree = "<group>";
@@ -1432,13 +1432,11 @@
 				EA2FCF541656477D000F2C9C /* MoreViewController.xib in Resources */,
 				EA2FCF5916564784000F2C9C /* OrderStatusViewController.xib in Resources */,
 				EA2FCF5E1656478B000F2C9C /* ProductDetailsViewController.xib in Resources */,
-				EA2FCF6516564793000F2C9C /* ResultViewController.xib in Resources */,
 				EA2FCF6B1656479B000F2C9C /* RegistrationViewController.xib in Resources */,
 				EA2FCF7B165647A2000F2C9C /* SubmitReviewViewController.xib in Resources */,
 				EA2FCF7C165647A2000F2C9C /* ReviewCommentsViewController.xib in Resources */,
 				EA2FCF7D165647A2000F2C9C /* ReviewViewController.xib in Resources */,
 				EA2FCF85165647A9000F2C9C /* SpecialOffersViewController.xib in Resources */,
-				EA2FCF8A165647B0000F2C9C /* ViewCartViewController.xib in Resources */,
 				EAA4616716566065000F43D6 /* ViewController_iPhone.xib in Resources */,
 				EAA4616816566065000F43D6 /* ViewController_iPad.xib in Resources */,
 				EAA461791656628F000F43D6 /* apparels_icon.png in Resources */,
@@ -1603,6 +1601,8 @@
 				EAA462A816566344000F43D6 /* viewmycart_btn.png in Resources */,
 				06DC39311671B058006E699C /* paynow.png in Resources */,
 				EA69624D16C3F8A0003FB2C9 /* phresco-env-config.xml in Resources */,
+				A48B291A1803F03300A30EAC /* ResultViewController.xib in Resources */,
+				A48B291C1803F13C00A30EAC /* ViewCartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1754,6 +1754,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -1767,6 +1769,8 @@
 				OTHER_LDFLAGS = "-lxml2";
 				OTHER_TEST_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8C33B250-7495-4E44-926A-932D9A2C7659";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8C33B250-7495-4E44-926A-932D9A2C7659";
 				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "i386 armv6 armv7";
@@ -1782,6 +1786,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -1794,6 +1800,8 @@
 				OTHER_LDFLAGS = "-lxml2";
 				OTHER_TEST_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8C33B250-7495-4E44-926A-932D9A2C7659";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8C33B250-7495-4E44-926A-932D9A2C7659";
 				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "i386 armv6 armv7";
@@ -1808,6 +1816,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -1819,6 +1829,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8C33B250-7495-4E44-926A-932D9A2C7659";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8C33B250-7495-4E44-926A-932D9A2C7659";
 				TEST_AFTER_BUILD = YES;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1831,6 +1843,8 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -1841,6 +1855,8 @@
 				INFOPLIST_FILE = "LogicTest/LogicTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8C33B250-7495-4E44-926A-932D9A2C7659";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8C33B250-7495-4E44-926A-932D9A2C7659";
 				TEST_AFTER_BUILD = YES;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1909,6 +1925,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Phresco-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1918,6 +1936,9 @@
 					"\"$(SRCROOT)/NativeController/CardIO\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8C33B250-7495-4E44-926A-932D9A2C7659";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8C33B250-7495-4E44-926A-932D9A2C7659";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "i386 armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1927,6 +1948,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_OBJC_RETAIN_COUNT = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Phresco-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1936,6 +1959,9 @@
 					"\"$(SRCROOT)/NativeController/CardIO\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8C33B250-7495-4E44-926A-932D9A2C7659";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8C33B250-7495-4E44-926A-932D9A2C7659";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "i386 armv6 armv7";
 				WRAPPER_EXTENSION = app;
 			};
