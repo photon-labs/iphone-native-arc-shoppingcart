@@ -35,7 +35,7 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"HomeViewController-iPAd" bundle:nil];
+		self = [super initWithNibName:@"HomeViewController" bundle:nil];
 		
 	}
 	else 
@@ -430,7 +430,7 @@
 	if([button.titleLabel.text isEqualToString:@"Login"])
 	{
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-                       LoginViewController *tempLoginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController-iPad" bundle:nil];
+                       LoginViewController *tempLoginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
                        
                        self.loginViewController = tempLoginViewController;
                        
@@ -454,7 +454,7 @@
     else if([button.titleLabel.text isEqualToString:@"Register"])
     {
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-                       RegistrationViewController *tempRegistrationViewController = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController-iPAd" bundle:nil];
+                       RegistrationViewController *tempRegistrationViewController = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
                        
                        self.registrationViewController = tempRegistrationViewController;
                        
@@ -522,7 +522,7 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-               BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController-iPad" bundle:nil];
+               BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController" bundle:nil];
                
                self.browseViewController = tempBrowseViewController;
                
@@ -566,7 +566,7 @@
     
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             
-            SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController-iPad" bundle:nil];
+            SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
             
             self.specialOffersViewController = tempSpecialOffersViewController;
             
