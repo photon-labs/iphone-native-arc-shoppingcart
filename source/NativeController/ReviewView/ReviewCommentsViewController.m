@@ -36,7 +36,7 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"ReviewCommentsViewController-iPad" bundle:nil];
+		self = [super initWithNibName:@"ReviewCommentsViewController" bundle:nil];
 	}
 	else 
     {
