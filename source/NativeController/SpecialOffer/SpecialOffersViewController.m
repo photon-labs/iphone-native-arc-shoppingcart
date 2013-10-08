@@ -48,7 +48,7 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"SpecialOffersViewController-iPad" bundle:nil];
+		self = [super initWithNibName:@"SpecialOffersViewController" bundle:nil];
 		
 	}
 	else 
