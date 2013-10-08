@@ -54,15 +54,11 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		NSLog(@"iPad....");
-		self = [super initWithNibName:@"ReviewViewController-iPAd" bundle:nil];
-		
+		self = [super initWithNibName:@"ReviewViewController" bundle:nil];
 	}
 	else 
     {
-        NSLog(@"iPhone....");
         self = [super initWithNibName:@"ReviewViewController" bundle:nil];
-        
     }
 
     return self;
@@ -390,7 +386,6 @@
         for(int i = 0; i<[assetsData.keyValueArray  count];i++)
         {
             NSString *strValue = [[assetsData.keyValueArray objectAtIndex:i]objectForKey:@"value"];
-            NSLog(@"strValue:%d",[strValue intValue]);
             yWidth = [strValue intValue]*20;
             UIImageView *myRatings = [[UIImageView alloc]init];
             myRatings.frame = CGRectMake(x,yRate,yWidth,height);
@@ -660,7 +655,7 @@
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
         
-        ReviewCommentsViewController *tempReviewCommentsViewController = [[ReviewCommentsViewController alloc] initWithNibName:@"ReviewCommentsViewController-iPad" bundle:nil];
+        ReviewCommentsViewController *tempReviewCommentsViewController = [[ReviewCommentsViewController alloc] initWithNibName:@"ReviewViewController" bundle:nil];
         
         self.reviewCommentsViewController = tempReviewCommentsViewController;
         
@@ -772,7 +767,7 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-        SubmitReviewViewController* tempSubmitReviewViewCotroller = [[SubmitReviewViewController alloc]initWithNibName:@"SubmitReviewViewController-iPad" bundle:nil];
+        SubmitReviewViewController* tempSubmitReviewViewCotroller = [[SubmitReviewViewController alloc]initWithNibName:@"SubmitReviewViewController" bundle:nil];
         
         self.submitReviewViewController = tempSubmitReviewViewCotroller;
         [self.view addSubview:submitReviewViewController.view];
