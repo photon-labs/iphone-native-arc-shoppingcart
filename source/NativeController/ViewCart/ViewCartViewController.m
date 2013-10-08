@@ -38,7 +38,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"ViewCartController-iPad" bundle:nil];
+		self = [super initWithNibName:@"ViewCartViewController" bundle:nil];
 		
 	}
 	else 
@@ -158,9 +158,6 @@
             {
                 [button addTarget:self action:@selector(specialOfferButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
             }
-            
-         //   [button release];
-            
         }
         
         UILabel* titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(300,161,250,45)];
@@ -199,17 +196,17 @@
         [lblSubtotal setTextColor:[UIColor blueColor]];
         
         [self.view addSubview:lblSubtotal];
-        
+
         UIButton *checkout = [[UIButton alloc] initWithFrame:CGRectMake(310, 830 , 180, 60)];
-        
+    
         [checkout setBackgroundImage:[UIImage imageNamed:@"checkout_btn.png"] forState:UIControlStateNormal];
-        
-        [checkout addTarget:self action:@selector(viewAction:) forControlEvents:UIControlEventTouchUpInside];
-        
+    
+        [checkout addTarget:self action:@selector(viewAction) forControlEvents:UIControlEventTouchUpInside];
+    
         checkout.accessibilityLabel = @"CheckOut";
-        
+    
         [self.view addSubview:checkout];
-        
+    
     }
     else {
         
@@ -308,7 +305,6 @@
         
         [self.view addSubview:subTotalView];
         
-        //subTotalView =nil;
         lblSubtotal = [[UILabel alloc] initWithFrame:CGRectMake(210, 310 , 120, 20)];
         [lblSubtotal setFont:[UIFont fontWithName:@"Helvetica" size:13]];
         lblSubtotal.backgroundColor = [UIColor clearColor];
@@ -321,7 +317,7 @@
         
         [checkout setBackgroundImage:[UIImage imageNamed:@"checkout_btn.png"] forState:UIControlStateNormal];
         
-        [checkout addTarget:self action:@selector(viewAction:) forControlEvents:UIControlEventTouchUpInside];
+        [checkout addTarget:self action:@selector(viewAction) forControlEvents:UIControlEventTouchUpInside];
         
         checkout.accessibilityLabel = @"CheckOut";
         
@@ -343,8 +339,7 @@
     ServiceHandler *serviceHandler = [[ServiceHandler alloc] init];
     
     [serviceHandler catalogService:self :@selector(finishedCatalogService:)];
-    
-    
+ 
     
 }
 
@@ -394,16 +389,16 @@
     [super viewWillAppear:YES];
     [viewCartTable reloadData];
 }
--(void)viewAction:()sender
+
+-(void)viewAction
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-        CheckOutViewController  *checkViewCartController = [[CheckOutViewController alloc] initWithNibName:@"CheckOutViewController-iPad" bundle:nil];
+        CheckOutViewController  *checkViewCartController = [[CheckOutViewController alloc] initWithNibName:@"CheckOutViewController" bundle:nil];
         checkViewCartController.checkTotalPrice =[NSString stringWithFormat:@"%@",cartPurchaseTotal];
         self.checkCartController = checkViewCartController;
         
         [self.view addSubview:checkCartController.view];
-        
         checkViewCartController =nil;
     }
     else {
