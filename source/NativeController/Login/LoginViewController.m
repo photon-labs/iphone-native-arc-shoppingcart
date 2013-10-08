@@ -47,7 +47,7 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"LoginViewController-iPad" bundle:nil];
+		self = [super initWithNibName:@"LoginViewController" bundle:nil];
 		
 	}
 	else
@@ -457,10 +457,8 @@
         
         NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi,kpost,klogin];
         
-        NSLog(@"urlString %@",urlString);
         NSData* postData = [NSJSONSerialization dataWithJSONObject:dict
                                                            options:NSJSONWritingPrettyPrinted error:nil];
-    NSLog(@"post data");
         NSMutableURLRequest *request  = [[NSMutableURLRequest alloc] init];
         [request setURL:[NSURL URLWithString:urlString]];
         [request setHTTPMethod:@"POST"];
@@ -489,7 +487,6 @@
         
         index= [userID intValue];
         
-        NSLog(@"Else condition");
         if(index == 0 )
         {
             isLogin = NO;
@@ -593,17 +590,10 @@
 
 - (void)loginButtonSelected:(id)sender
 {
-    
-    NSLog(@"login button selected:");
     if(unitTestCheck == NO) {
-        
-        NSLog(@"login button selected:if condition");
         [self showAlerts];
-        
-        
     }
     else {
-        NSLog(@"login button selected: else condition");
         [self serviceCall];
     }
 }
@@ -615,43 +605,29 @@
     
     NSString* str2 =password.text ;
     
-    
-    NSLog(@"email and pwd :%@ %@", emailAddress.text, password.text);
-    
     if( ([str1 length] == 0) && ([str2 length] > 0) ){
         
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Please Enter  Email address " delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
-        
         [alert show];
         alert = nil;
     }
     else if( ([str1 length] > 0 ) && ([str2 length]== 0) )
     {
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Please Enter  password " delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
-        
         [alert show];
         alert = nil;
     }
-    
     else  if(([str1 length] == 0 ) && ([str2 length]== 0) ){
         
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"" message:@"Please Enter Email address and password " delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
-        
         [alert show];
         alert = nil;
     }
-    
     else {
-        
         [self serviceCall];
-        
-        
     }
     
-    
 }
-
-
 
 -(void)testLoginButton:(id)sender userName:(NSString*)user  passWord:(NSString*)pwd {
     
@@ -659,10 +635,8 @@
     password =[[UITextField alloc] init];
     
     emailAddress.text = user;
-    NSLog(@"emailAddress.text :%@", emailAddress.text);
     
     password.text = pwd;
-    NSLog(@"password.text :%@", password.text);
     
     unitTestCheck = YES;
     [self loginButtonSelected:nil];
