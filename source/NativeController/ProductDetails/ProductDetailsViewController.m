@@ -33,7 +33,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"ProductDetailsViewController-iPAd" bundle:nil];
+		self = [super initWithNibName:@"ProductDetailsViewController" bundle:nil];
 		
 	}
 	else 
@@ -283,7 +283,6 @@
         
         [reviewButton addTarget:self action:@selector(reviewButtonSelected:) forControlEvents:UIControlEventTouchUpInside];;
         
-      //  [reviewButton release];
         
         //add price label and price
         UILabel *priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(productImageView.frame.origin.x + productImageView.frame.size.width + 125, productImageView.frame.origin.y + 60, 140, 60)];
@@ -298,7 +297,6 @@
         
         [scrollView addSubview:priceLabel];
         
-     //   [priceLabel release];
         
         //add price to the scroll view
         
@@ -314,7 +312,6 @@
         
         [scrollView addSubview:price];
         
-     //   [price release];
         
         //add addtocart button to scroll view
         
@@ -348,7 +345,6 @@
         
         [scrollView addSubview:productImageView];
         
-      //  [productImageView release];
         
         //add ratings to the view
         //Note: This logic has to be changed when integrating with the services
@@ -397,7 +393,6 @@
         
         [reviewButton addTarget:self action:@selector(reviewButtonSelected:) forControlEvents:UIControlEventTouchUpInside]; 
         
-      //  [reviewButton release];
         
         //add price label and price
         UILabel *priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(productImageView.frame.origin.x + productImageView.frame.size.width + 25, productImageView.frame.origin.y + 25, 70, 40)];
@@ -412,7 +407,6 @@
         
         [scrollView addSubview:priceLabel];
         
-      //  [priceLabel release];
         
         //add price to the scroll view
         
@@ -428,7 +422,6 @@
         
         [scrollView addSubview:price];
         
-      //  [price release];
         
         //add addtocart button to scroll view
         
@@ -443,7 +436,6 @@
         
         [self.scrollView addSubview:addToCart];
         
-       // [addToCart release];
     }
 }
 
@@ -548,7 +540,6 @@
         
         [self.scrollView addSubview:productDetailBg];
         
-      //  [productDetailBg release];
         
         //add the detail header to scroll view
         
@@ -558,7 +549,6 @@
         
         [self.scrollView addSubview:productDetailHeader];
         
-      //  [productDetailHeader release];
         
         //add the product detail BG with contents to scroll view
         
@@ -568,20 +558,19 @@
         
         [self.scrollView addSubview:productDetailBgContent];
         
-      //  [productDetailBgContent release];
         
         //add the product description to scroll view
         
         AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
         
-        NSString *strType = [NSString stringWithFormat:@"TV TYPE:%@",[[assetsData.productDetailArray objectAtIndex:1] productTVType]];
+        NSString *strType = [NSString stringWithFormat:@"TV Type:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"TV Type"]];
         
-        NSString *strScreen = [NSString stringWithFormat:@"Screen Size:%@",[[assetsData.productDetailArray objectAtIndex:1] productScreen]];
+        NSString *strScreen = [NSString stringWithFormat:@"Screen Size:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"Screen Size"]];
         
-        NSString *strRatio = [NSString stringWithFormat:@"Screen Ratio:%@",[[assetsData.productDetailArray objectAtIndex:1] productRatio]];
+        NSString *strRatio = [NSString stringWithFormat:@"Screen Ratio:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"Screen Ratio"]];
         
-        NSString *strDef = [NSString stringWithFormat:@"TV definition:%@",[[assetsData.productDetailArray objectAtIndex:1] productDefinition]];
-         
+        NSString *strDef = [NSString stringWithFormat:@"TV definition:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"TV Definition"]];
+        
         
         
         NSMutableArray *productDesc = [[NSMutableArray alloc] initWithObjects:strType, strScreen,
@@ -611,7 +600,6 @@
             
             y = y + 120;
             
-        ///    [descLabel release];
         }
     }
     else {
@@ -622,7 +610,6 @@
         
         [self.scrollView addSubview:productDetailBg];
         
-       // [productDetailBg release];
         
         //add the detail header to scroll view
         
@@ -632,7 +619,6 @@
         
         [self.scrollView addSubview:productDetailHeader];
         
-       // [productDetailHeader release];
         
         //add the product detail BG with contents to scroll view
         
@@ -642,16 +628,7 @@
         
         [self.scrollView addSubview:productDetailBgContent];
         
-      //  [productDetailBgContent release];
-        
-        //add the product description to scroll view
-        
         AssetsDataEntity *assetsData = [SharedObjects sharedInstance].assetsDataEntity;
-//        NSLog(@"strType :%@", [NSString stringWithFormat:@"TV TYPE:%@",[[[[assetsData.productDetailArray objectForKey:@"products"] objectForKey:@"details"] objectAtIndex:0] objectForKey@"TV TYPE"]]);
-        
-    //    NSLog(@"strType :%@", [NSString stringWithFormat:@"TV TYPE:%@",[[[assetsData.productDetailArray objectAtIndex:0] objectAtIndex:1] objectAtIndex:0]]);
-        
-        NSLog(@"strType :%@", [NSString stringWithFormat:@"TV TYPE:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"TV Type"]]);
 
        NSString *strType = [NSString stringWithFormat:@"TV Type:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"TV Type"]];
                 
@@ -662,7 +639,6 @@
         NSString *strDef = [NSString stringWithFormat:@"TV definition:%@",[[assetsData.productDetailArray objectAtIndex:1] objectForKey:@"TV Definition"]];
         
         
-        NSLog(@"strType :%@ \n%@ \n%@ \n%@", strType, strScreen, strRatio, strDef);
 
         
         NSMutableArray *productDesc = [[NSMutableArray alloc] initWithObjects:strType, strScreen,
@@ -707,7 +683,7 @@
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
         
-        ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController-iPAd" bundle:nil];
+        ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController" bundle:nil];
         
         self.reviewViewController = tempReviewViewController;
         
@@ -835,11 +811,10 @@
             [assetsData.dictCart setObject:strId forKey:@"Id"]; 
             
             [assetsData.dictCart setObject:strCount forKey:@"Count"];
-            NSLog(@"strCount:%@ ",strCount);
             [assetsData.arrayAddtoCart addObject:[assetsData.dictCart copy]];
         }
         
-        AddToBagViewController *tempController = [[AddToBagViewController alloc] initWithNibName:@"AddtoBagViewController-iPAd" bundle:nil];
+        AddToBagViewController *tempController = [[AddToBagViewController alloc] initWithNibName:@"AddToBagViewController" bundle:nil];
         self.addToBagController = tempController;
         
         [self.view addSubview:addToBagController.view];
