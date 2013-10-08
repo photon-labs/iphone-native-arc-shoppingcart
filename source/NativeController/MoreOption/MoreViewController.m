@@ -24,7 +24,7 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"MoreViewController-iPad" bundle:nil];
+		self = [super initWithNibName:@"MoreViewController" bundle:nil];
 		
 	}
 	else 
@@ -158,13 +158,11 @@
 
 -(void)couponsButtonSelected:(id)sender
 {
-    NSLog(@"sdjfksdf");
 }
 
 
 -(void)wishListButtonSelected:(id)sender
 {
-    NSLog(@"qweqwe");
     
 }
 -(void)goBack:(id)sender
