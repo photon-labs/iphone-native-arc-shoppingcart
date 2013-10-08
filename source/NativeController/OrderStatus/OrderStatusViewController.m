@@ -24,13 +24,10 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		NSLog(@"iPad....");
-		self = [super initWithNibName:@"OrderStatusViewController-iPad" bundle:nil];
-		
+		self = [super initWithNibName:@"OrderStatusViewController" bundle:nil];
 	}
 	else 
     {
-        NSLog(@"iPhone....");
         self = [super initWithNibName:@"OrderStatusViewController" bundle:nil];
         
     }
