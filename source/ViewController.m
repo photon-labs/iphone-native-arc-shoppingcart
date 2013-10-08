@@ -85,7 +85,6 @@
 	AssetsDataEntity *assetsEntity = [[SharedObjects sharedInstance] assetsDataEntity];
     
     assetsEntity.appInfo = dictionary;
-    NSLog(@"%@", dictionary);
     [assetsEntity updateFeaturedAssetModel:dictionary];
     
     [assetsEntity updatedAppFeatureLayout:dictionary];
@@ -269,7 +268,7 @@
             
             [navBar setHeaderImages:(NSDictionary*)assetsData.headerImagesDict];				
             
-            HomeViewController        *tempHomeViewController = [[HomeViewController alloc] initWithNibName:@"HomeViewController-iPAd" bundle:nil];
+            HomeViewController        *tempHomeViewController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
             
             self.homeViewController = tempHomeViewController;
             
@@ -465,9 +464,6 @@
         
         int index = [assetsData indexOfAssetWithName:title];   
         
-        NSLog(@"Current index %d", index);
-        
-        
         if([button.titleLabel.text isEqualToString:@"Home"])
         {
             if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -477,7 +473,7 @@
                 assetsData.productDetailArray = [[NSMutableArray alloc]init];
                 assetsData.productArray = [[NSMutableArray alloc]init];
                 assetsData.productReviewArray = [[NSMutableArray alloc]init];
-                HomeViewController	*tempHomeViewController = [[HomeViewController alloc] initWithNibName:@"HomeViewController-iPAd" bundle:nil];
+                HomeViewController	*tempHomeViewController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
                 
                 self.homeViewController = tempHomeViewController;
                 [self showTabbar];
@@ -520,7 +516,7 @@
                 assetsData.productArray = [[NSMutableArray alloc]init];
                 assetsData.productReviewArray = [[NSMutableArray alloc]init];
                 
-                AddToBagViewController *tempResultViewController = [[AddToBagViewController alloc] initWithNibName:@"AddToBagViewController-iPAd" bundle:nil];
+                AddToBagViewController *tempResultViewController = [[AddToBagViewController alloc] initWithNibName:@"AddToBagViewController" bundle:nil];
                 
                 self.addToBagViewController = tempResultViewController;
                 
@@ -582,7 +578,7 @@
         {
             if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
                 
-                MoreViewController	*tempmyCartController = [[MoreViewController alloc] initWithNibName:@"MoreViewController-iPad" bundle:nil];
+                MoreViewController	*tempmyCartController = [[MoreViewController alloc] initWithNibName:@"MoreViewController" bundle:nil];
                 
                 self.moreViewController = tempmyCartController;
                 [self.view addSubview:moreViewController.view];
@@ -629,7 +625,7 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-        BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController-iPad" bundle:nil];
+        BrowseViewController	*tempBrowseViewController = [[BrowseViewController alloc] initWithNibName:@"BrowseViewController" bundle:nil];
         
         self.browseViewController = tempBrowseViewController;
         
@@ -674,7 +670,7 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-       SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController-iPad" bundle:nil];
+       SpecialOffersViewController *tempSpecialOffersViewController = [[SpecialOffersViewController alloc] initWithNibName:@"SpecialOffersViewController" bundle:nil];
         
         self.specialOffersViewController = tempSpecialOffersViewController;
         
