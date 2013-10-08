@@ -41,13 +41,11 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		NSLog(@"iPad....");
-		self = [super initWithNibName:@"ResultsViewController-iPAd" bundle:nil];
+		self = [super initWithNibName:@"ResultViewController" bundle:nil];
 		
 	}
 	else 
     {
-        NSLog(@"iPhone....");
         self = [super initWithNibName:@"ResultViewController" bundle:nil];
         
     }
@@ -251,7 +249,7 @@
 {
 	if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-		resultTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 152, 768, 800)];
+		resultTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 152, 768, 780)];
 	}
     else {
         
@@ -382,7 +380,6 @@
         
         return 110;
     }
-	
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -431,29 +428,26 @@
         
         // TODO: Add Code for getting Coupons Image URL
         NSURL	*url = nil;
-        
         if([productImageArray count] > 0 && indexPath.row < [productImageArray count])
         {
             url = [NSURL URLWithString:[productImageArray objectAtIndex:indexPath.row]];
-            
+
             [tasyncImage loadImageFromURL:url];
             
             [cell.contentView addSubview:tasyncImage];
             tasyncImage =nil;            
         }
         
-        
         AssetsDataEntity *assestsData = [SharedObjects sharedInstance].assetsDataEntity;
         
+
         [[cell productName] setText:[[assestsData.productArray objectAtIndex:indexPath.row] productDetailName]];
         
         
         [[cell productPrice] setText: [NSString stringWithFormat:@"%@",[[assestsData.productArray objectAtIndex:indexPath.row] productDetailsPrice]]];
-        // [[cell reviewsButton] addTarget:self action:@selector(reviewButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
         
         
         NSString* string = [NSString stringWithFormat:@"%@",[[assestsData.productArray objectAtIndex:indexPath.row] productRatingView]];
-        //NSInteger rateValue = [string intValue];
         
         index = indexPath.row;
         
@@ -618,7 +612,7 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-        ProductDetailsViewController	*tempProductDetailsViewController = [[ProductDetailsViewController alloc] initWithNibName:@"ProductDetailsViewController-iPAd" bundle:nil];
+        ProductDetailsViewController	*tempProductDetailsViewController = [[ProductDetailsViewController alloc] initWithNibName:@"ProductDetailsViewController" bundle:nil];
         
         self.productDetailsViewController = tempProductDetailsViewController;
         
@@ -662,7 +656,7 @@
     
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-        ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController-iPAd" bundle:nil];
+        ReviewViewController	*tempReviewViewController = [[ReviewViewController alloc] initWithNibName:@"ReviewViewController" bundle:nil];
         
         self.reviewViewController = tempReviewViewController;
         
