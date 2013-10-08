@@ -49,7 +49,7 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"CheckOutViewController-iPad" bundle:nil];
+		self = [super initWithNibName:@"CheckOutViewController" bundle:nil];
 		
 	}
 	else 
@@ -2117,7 +2117,6 @@
                 UIImageView *imgView = (UIImageView *)[cell viewWithTag:1];
                 imgView.image = [UIImage imageNamed:@"descriptionblock_bg.png"];
                 
-                NSLog(@"strConcat:%@",strConcat);
                 UITextView *lblIndex = (UITextView *)[cell viewWithTag:2];
                 lblIndex.text = [NSString stringWithFormat:@"%@",strConcat];
                 
