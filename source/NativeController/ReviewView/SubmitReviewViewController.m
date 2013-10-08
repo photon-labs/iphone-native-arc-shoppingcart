@@ -42,7 +42,7 @@
 {
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
-		self = [super initWithNibName:@"SubmitReviewViewController-iPad" bundle:nil];
+		self = [super initWithNibName:@"SubmitReviewViewController" bundle:nil];
 		
 	}
 	else
@@ -453,7 +453,6 @@
             
             NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@/%@/%@/%@/%@", protocol,host, port, context, kRestApi,korderproduct,kpost,kReview];
             
-            NSLog(@"urlString in postComments %@",urlString);
             
             NSData* postData = [NSJSONSerialization dataWithJSONObject:dict
                                                                options:NSJSONWritingPrettyPrinted error:nil];
