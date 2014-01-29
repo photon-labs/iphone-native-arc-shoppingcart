@@ -81,7 +81,7 @@
         tabbar = [[Tabbar alloc] initWithFrame:CGRectMake(0, 935, 768, 99)];
     }
     else {
-        tabbar = [[Tabbar alloc] initWithFrame:kTabbarRect];
+        tabbar = [[Tabbar alloc] initWithFrame:CGRectMake(0, 413, 320, 70)];
     }
     
     NSMutableArray *names = [NSMutableArray array];
@@ -532,7 +532,10 @@
         return 130;
     }
 }
-
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell setBackgroundColor:[UIColor colorWithRed:29.0/255.0 green:106.0/255.0 blue:150.0/255.0 alpha:1.0]];
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	static NSString *CellIdentifier = @"ReviewCell";

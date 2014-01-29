@@ -70,7 +70,7 @@
     }
     else {
         
-        tabbar = [[Tabbar alloc] initWithFrame:kTabbarRect];
+        tabbar = [[Tabbar alloc] initWithFrame:CGRectMake(0, 413, 320, 70)];
     }
     NSMutableArray *names = [NSMutableArray array];
     

@@ -71,7 +71,7 @@
         tabbar = [[Tabbar alloc] initWithFrame:CGRectMake(0, 935, 768, 99)];
     }
     else {
-        tabbar = [[Tabbar alloc] initWithFrame:kTabbarRect];
+        tabbar = [[Tabbar alloc] initWithFrame:CGRectMake(0, 413, 320, 70)];
     }
     
     NSMutableArray *names = [NSMutableArray array];
@@ -118,7 +118,6 @@
     
     if([countryName isEqualToString:@"USA"])
     {
-        
         [arrayState addObject:@"AL"];
         [arrayState addObject:@"AK"];
         [arrayState addObject:@"AZ"];
@@ -170,8 +169,7 @@
         [arrayState addObject:@"WI"];
         [arrayState addObject:@"WY"];
     }
-    else    {
-        
+    else {
         [arrayState addObject:@"Andhra Pradesh"];
         [arrayState addObject:@"Arunachal Pradesh"];
         [arrayState addObject:@"Assam"];
@@ -207,12 +205,7 @@
         [arrayState addObject:@"Lakshadweep"];
         [arrayState addObject:@"Delhi"];
         [arrayState addObject:@"Pondicherry"];
-        
-        
     }
-    
-    
-    
     if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 	{
         actionSheet = [[UIActionSheet alloc] initWithTitle:nil 
@@ -1155,7 +1148,10 @@
     }
     
 }
-
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell setBackgroundColor:[UIColor colorWithRed:29.0/255.0 green:106.0/255.0 blue:150.0/255.0 alpha:1.0]];
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";

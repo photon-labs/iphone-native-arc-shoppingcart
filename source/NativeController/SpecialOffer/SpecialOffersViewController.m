@@ -73,7 +73,7 @@
     }
     else {
         
-        tabbar = [[Tabbar alloc] initWithFrame:kTabbarRect];
+        tabbar = [[Tabbar alloc] initWithFrame:CGRectMake(0, 413, 320, 70)];
     }
     
     NSMutableArray *names = [NSMutableArray array];
@@ -469,6 +469,10 @@
     [[cell productPrice] setText: [NSString stringWithFormat:@"$ %@",[[assestsData.specialProductsArray objectAtIndex:indexPath.row] specialProductPrice]]];
     
     return cell;
+}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell setBackgroundColor:[UIColor colorWithRed:29.0/255.0 green:106.0/255.0 blue:150.0/255.0 alpha:1.0]];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
