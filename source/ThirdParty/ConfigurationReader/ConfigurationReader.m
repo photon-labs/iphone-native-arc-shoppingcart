@@ -101,6 +101,7 @@
             NSLog(@"currentDate: %@", currentDate);
             [stories addObject:[item copy]];
             NSLog(@"adding story: %@", currentTitle);
+            currentNode = nil;
         }
         // }
     }
